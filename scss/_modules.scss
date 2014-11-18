@@ -1,0 +1,18 @@
+$module-header-height: $unit !default;
+
+.module {
+	position: relative;
+	padding-top: $module-header-height;
+
+	header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: $module-header-height;
+		line-height: $module-header-height;
+	}
+	> * + * {
+		margin-top: $unit;
+	}
+}
