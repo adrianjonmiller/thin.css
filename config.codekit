@@ -2,47 +2,45 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "18270",
 "files": {
-	"\/css\/phramewerk.css": {
+	"\/css\/thin.min.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/phramewerk.css",
+		"inputAbbreviatedPath": "\/css\/thin.min.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/styles.css": {
+	"\/demo\/css\/styles.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/styles.css",
+		"inputAbbreviatedPath": "\/demo\/css\/styles.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/thin.css": {
-		"fileType": 16,
-		"ignore": 1,
+	"\/demo\/css\/styles.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/thin.css",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/demo\/css\/styles.scss",
+		"outputAbbreviatedPath": "\/demo\/css\/styles.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
 		},
-	"\/index.html": {
+	"\/demo\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/README.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/README.html",
+		"inputAbbreviatedPath": "\/demo\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -59,30 +57,14 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/styles.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/styles.scss",
-		"outputAbbreviatedPath": "\/css\/styles.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/thin\/_extends.scss": {
+	"\/scss\/_extends.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_extends.scss",
+		"inputAbbreviatedPath": "\/scss\/_extends.scss",
 		"outputAbbreviatedPath": "\/css\/_extends.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -91,14 +73,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_forms.scss": {
+	"\/scss\/_forms.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_forms.scss",
+		"inputAbbreviatedPath": "\/scss\/_forms.scss",
 		"outputAbbreviatedPath": "\/css\/_forms.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -107,14 +89,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_grid.scss": {
+	"\/scss\/_grid.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_grid.scss",
+		"inputAbbreviatedPath": "\/scss\/_grid.scss",
 		"outputAbbreviatedPath": "\/css\/_grid.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -123,14 +105,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_layout.scss": {
+	"\/scss\/_layout.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_layout.scss",
+		"inputAbbreviatedPath": "\/scss\/_layout.scss",
 		"outputAbbreviatedPath": "\/css\/_layout.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -139,14 +121,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_outline.scss": {
+	"\/scss\/_outline.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_outline.scss",
+		"inputAbbreviatedPath": "\/scss\/_outline.scss",
 		"outputAbbreviatedPath": "\/css\/_outline.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -155,14 +137,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_resets.scss": {
+	"\/scss\/_resets.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_resets.scss",
+		"inputAbbreviatedPath": "\/scss\/_resets.scss",
 		"outputAbbreviatedPath": "\/css\/_resets.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -171,14 +153,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_section.scss": {
+	"\/scss\/_section.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_section.scss",
+		"inputAbbreviatedPath": "\/scss\/_section.scss",
 		"outputAbbreviatedPath": "\/css\/_section.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -187,14 +169,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_theme.scss": {
+	"\/scss\/_theme.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_theme.scss",
+		"inputAbbreviatedPath": "\/scss\/_theme.scss",
 		"outputAbbreviatedPath": "\/css\/_theme.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -203,14 +185,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_typography.scss": {
+	"\/scss\/_typography.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_typography.scss",
+		"inputAbbreviatedPath": "\/scss\/_typography.scss",
 		"outputAbbreviatedPath": "\/css\/_typography.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -219,14 +201,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/_vars.scss": {
+	"\/scss\/_vars.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/thin\/_vars.scss",
+		"inputAbbreviatedPath": "\/scss\/_vars.scss",
 		"outputAbbreviatedPath": "\/css\/_vars.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -235,15 +217,31 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/thin\/thin.scss": {
-		"createSourceMap": 0,
+	"\/scss\/thin.scss": {
+		"createSourceMap": 1,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
 		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/thin\/thin.scss",
-		"outputAbbreviatedPath": "\/css\/thin.css",
+		"inputAbbreviatedPath": "\/scss\/thin.scss",
+		"outputAbbreviatedPath": "\/css\/thin.min.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
+	"\/styles.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styles.scss",
+		"outputAbbreviatedPath": "\/demo\/css\/styles.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,

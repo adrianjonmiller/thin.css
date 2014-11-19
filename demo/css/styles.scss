@@ -5,7 +5,7 @@ $global-footer-height: 50px;
 $module-header-height: 30px;
 $max-width: 1024px;
 
-@import "thin/thin";
+@import "../../scss/thin";
 
 #primary-navigation {
 	> ul {
