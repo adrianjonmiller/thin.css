@@ -1,20 +1,21 @@
 [class^="grid"] {
 	@extend %clearfix;
-	> * + * {
-		margin-top: $unit;
+	& + [class^="grid"] {
+		margin-top: $margin;
 	}
 }
+
 .grid {
-	margin-left: -$unit;
+	margin-left: -$pad;
 
 	@media screen and (min-width: 480px) {
 		@for $i from 2 through 12 {
 			&-#{$i} {
-				margin-left: -$unit;
+				margin-left: -$pad;
 				> * {
 					margin-top: 0;
 					float: left;
-					padding-left: $unit;
+					padding-left: $pad;
 					width: 100%;
 					max-width: percentage(1/$i)
 				}
@@ -23,15 +24,15 @@
 	}
 
 	&-pad {
-		padding: $unit;
+		padding: $pad;
 	}
 	
 	[class^="col-"] {
 		float: left;
-		padding-left: $unit;
+		padding-left: $pad;
 		width: 100%;
 		+ [class^="col-"] {
-			margin-top: $unit;
+			margin-top: $margin;
 		}
 	}
 	@media screen and (min-width: 480px) {

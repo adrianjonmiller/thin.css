@@ -1,5 +1,3 @@
-$global-footer-height: $unit !default;
-
 // Reset Font Size to 14px (12pt)
 html, body {
 	font-size: 87.5%;
@@ -37,12 +35,22 @@ nav ul, .unstyled, [role="nav"], [role="navigation"] {
 	li {
 		list-style: none;
 		margin-left: 0;
+
+		> a + * {
+			display: none;
+		}
+
+		&:hover > * + * {
+			display: block;
+			z-index: 1000;
+		}
 	}
 }
 
 // Remove link styles from navigation links
 nav a {
 	text-decoration: none;
+
 	&:visited {
 		color: inherit;
 	}
