@@ -2,15 +2,12 @@
 	"vars",
 	"extends",
 	"resets",
-	"modules",
 	"typography",
+	"section",
 	"grid",
 	"forms",
+	"layout",
+	"bootstrap",
 	"outline";
 
-
-#primary-navigation {
-	ul {
-		@extend %float-list;
-	}
-}
+@import "theme";

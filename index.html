@@ -6,80 +6,305 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/phramewerk.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
   </head>
-  <body class="outline">
-    <header>
-      <h1>Logo</h1>
-      <nav id="primary-navigation">
-        <ul>
-          <li>
-            <a href="">Menu Item</a>
-          </li>
-          <li>
-            <a href="">Menu Item</a>
-          </li>
-          <li>
-            <a href="">Menu Item</a>
-          </li>
-          <li>
-            <a href="">Menu Item</a>
-          </li>
-        </ul>
-      </nav>
+  <body>
+    <header id="global-header">
+      <div class="container">
+        <div class="module" style="height: 188px;">
+        </div>
+      </div>
     </header>
-    <div class="grid">
-      <div class="col-2-3">
-        <div class="module">
-          <header>Module Header</header>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mattis purus. Sed molestie tincidunt posuere. Vivamus fermentum volutpat commodo. Ut non lectus ligula. Morbi interdum quam et ligula imperdiet malesuada. Sed sollicitudin feugiat diam, nec dignissim metus eleifend quis. Suspendisse orci velit, vestibulum sed ultrices id, sollicitudin eget justo. Pellentesque et nunc at lacus consectetur consequat. Vivamus at urna libero. Pellentesque hendrerit diam nec sem mollis hendrerit. Curabitur nec lectus ligula. Aenean faucibus, sem eget lobortis tristique, ante lorem malesuada ligula, non accumsan odio lorem ut nulla. Aliquam erat volutpat. Mauris cursus ut orci ut rutrum. Maecenas placerat pretium commodo.</p>
+    <div role="main">
+      <div id="main-content" class="container">
+        <h1>Product Name</h1>
+        <a href="">Back to Search Results</a>
+        <section id="product-main">
+          <div class="grid">
+            <div class="col-5-12">
+              <div id="product-gallery" class="module">
+                <ul class="unstyled">
+                  <li><img src="http://placekitten.com/g/300/75"></li>
+                  <li><img src="http://placekitten.com/g/300/200"></li>
+                  <li>
+                    <ul class="unstyled grid-6">
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                    </ul> 
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-7-12">
+              <section id="product-details" class="module">
+                <header class="pd-header">
+                  <div class="grid">
+                    <div class="col-2-3">
+                      <h2 class="pd-price">$200.44</h2>
+                      <br>
+                      <small>Originally $267.25-, you save 25%</small>
+                    </div>
+                    <div class="col-1-3">
+                      <button class="favorite"></button>
+                      <label><input type="radio">Compare</label>
+                    </div>
+                  </div>
+                </header>
+                <div class="grid">
+                  <div class="col-3-4">
+                    <ul class="unstyled grid-6">
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                      <li><img src="http://placekitten.com/g/30/30"></li>
+                    </ul>
+                    <p>Free Shipping</p>
+                    <p>
+                      <a class="review-stars"></a>
+                      <a class="reviews-read">Read 182 Reviews</a>
+                      <a class="review-write">Write a Review</a>
+                    </p>
+                    <p>Availability based on Finish Selected</p>
+                    <input type="text"><button>Add to Cart</button>
+                  </div>
+                  <div class="col-1-4">
+                    <span>Ships to Canada</span>
+                  </div>
+                </div>
+                <hr>
+                <p>
+                  <a href="">Kohler K-394-4 Replacement Parts</a>
+                  <a href="">Return Policy</a>
+                </p>
+                <hr>
+                <p>
+                  <span>Earn 200 - 284 points with the purchase of this product Learn More</span>
+                </p> 
+              </section>
+            </div>
+          </div>
+        </section>
+        <section id="good-better-best">
+          <div class="grid">
+            <div class="col-1-3">
+              <header class="gbb-header">Good</header>
+              <img src="http://placekitten.com/g/200/200">
+              <h4>Very Simple</h4>
+              <p>For a simple, out of the box faucet with the valve included, this Kingston Brass is a great entry faucet. Be aware this will not meet a lot of modern day low flow requirements.</p>
+              <ul class="gbb-product-reviews unstyled">
+                <li>
+                  <span class="gbb-brand-name">Kingston Brass - KB95</span>
+                </li>
+                <li>
+                  <span class="gbb-review-rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                    <span class="rating r4" title="User Rating: 3.8 out of 5">
+                      <div></div>
+                    </span>
+                    <meta itemprop="ratingValue" content="3.8">
+                    <meta itemprop="reviewCount" content="5">
+                  </span>
+                  <span>Read 5 Reviews</span>
+                </li>
+                <li>
+                  <span class="gbb-compare-price">Starting at <strong>$78.71</strong></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-1-3">
+              <header class="gbb-header">Better</header>
+              <img src="http://placekitten.com/g/200/200">
+              <h4>Very Simple</h4>
+              <p>For a simple, out of the box faucet with the valve included, this Kingston Brass is a great entry faucet. Be aware this will not meet a lot of modern day low flow requirements.</p>
+              <ul class="gbb-product-reviews unstyled">
+                <li><span class="gbb-brand-name">Kingston Brass - KB95</span></li>
+                <li><span class="gbb-review-rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                    <span class="rating r4" title="User Rating: 3.8 out of 5">
+                      <div></div>
+                    </span>
+                    <meta itemprop="ratingValue" content="3.8">
+                    <meta itemprop="reviewCount" content="5">
+                  </span>
+                  <span>Read 5 Reviews</span>
+                </li>
+                <li>
+                  <span class="gbb-compare-price">Starting at <strong>$78.71</strong></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-1-3">
+              <header class="gbb-header">Best</header>
+              <img src="http://placekitten.com/g/200/200">
+              <h4>Very Simple</h4>
+              <p>For a simple, out of the box faucet with the valve included, this Kingston Brass is a great entry faucet. Be aware this will not meet a lot of modern day low flow requirements.</p>
+              <ul class="gbb-product-reviews unstyled">
+                <li><span class="gbb-brand-name">Kingston Brass - KB95</span></li>
+                <li><span class="gbb-review-rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                    <span class="rating r4" title="User Rating: 3.8 out of 5">
+                      <div></div>
+                    </span>
+                    <meta itemprop="ratingValue" content="3.8">
+                    <meta itemprop="reviewCount" content="5">
+                  </span>
+                  <span>Read 5 Reviews</span>
+                </li>
+                <li>
+                  <span class="gbb-compare-price">Starting at <strong>$78.71</strong></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="tab-panel">
+            <!-- Nav tabs -->
+            <ul class="unstyled grid-8" role="tablist">
+              <li role="presentation" class="active tab-panel-tab"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+              <li role="presentation" class="tab-panel-tab"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+              <li role="presentation" class="tab-panel-tab"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+              <li role="presentation" class="tab-panel-tab"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+            </ul>
 
-          <p>Nullam mattis neque vel nisi venenatis sollicitudin. Praesent pellentesque commodo tristique. Nam interdum neque velit, congue efficitur tortor finibus nec. Mauris ac massa congue, condimentum dolor in, ultricies enim. Pellentesque imperdiet consectetur magna vitae rhoncus. In hac habitasse platea dictumst. Quisque interdum tellus lorem, vitae aliquet sapien porta a. Vivamus faucibus nunc ut efficitur ultrices. Nunc cursus odio turpis, sed varius est ornare venenatis. Vestibulum in enim eu diam pellentesque condimentum.</p>
+            <!-- Tab panes -->
+            <div class="tab-panel-content">
+              <div role="tabpanel" class="tab-pane module active" id="home">
+                <div class="grid">
+                  <div class="col-2-3">
+                    Product Features:
 
-          <p>Suspendisse potenti. Aenean semper fringilla efficitur. Pellentesque porttitor mattis fringilla. Duis faucibus libero id lorem rutrum porttitor. Curabitur ut sem libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eget venenatis nisl. Cras tempor metus in justo tempus sodales eget sed lacus. Praesent imperdiet eu urna non eleifend. Morbi elit ligula, aliquam sed tincidunt sit amet, vehicula sed sapien. Aenean eget rhoncus lacus. Vivamus scelerisque leo vitae ipsum tristique, ac iaculis dui fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor ex enim.</p>
+Assembled in the U.S.A. (Greensburg, Indiana; Jackson, Tennessee)
+Covered under Delta's limited lifetime faucet and finish warranty
+All-brass faucet body and handle construction
+Includes cover plate (escutcheon) for sinks with 3-holes (8" centers)
+Magnetic docking pullout spray head with touchclean rubber nubbins
+59" spray hose providing a 20" reach
+High-arch gooseneck spout swivels 360 degrees to allow for unobstructed sink access
+Diamond Seal valve cartridge
+A charming teapot-inspired faucet for the home
+Product Specifications:
 
-          <p>Proin non nibh ut tellus hendrerit lobortis ac ut sem. Duis dictum faucibus sem a condimentum. Suspendisse scelerisque nibh eu posuere mattis. Aenean pharetra, nunc quis ultrices suscipit, risus eros sollicitudin tellus, a sollicitudin mauris tortor vitae sem. Donec pharetra ipsum id nisl commodo, ac pharetra massa consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quam tortor, aliquam quis accumsan at, lobortis sit amet odio. Donec sollicitudin mauris sit amet diam tincidunt sodales. Quisque scelerisque purus libero, vitae elementum sem hendrerit eget. Nullam auctor massa a orci molestie, fringilla sagittis elit tincidunt. Morbi quam felis, semper sit amet condimentum eu, laoreet vitae mauris.</p>
+Overall Height: 14-7/8" (measured from counter top to highest point of faucet)
+Spout Height: 7-7/8" (measured from counter top to faucet outlet)
+Spout Reach: 9-1/5" (measured from center of faucet base to center of faucet outlet)
+Number of installation holes required: 1
+1.8 gallons-per-minute flow rate
+Installs onto decks up to 2-1/2" thick
+3/8" O.D. straight, staggered PEX supply tubes, 33-1/2"
+Why Buy From Us:
 
-          <form>
-            <fieldset>
-              <label>Form Label</label>
-              <input type="text">
-            </fieldset>
-            <fieldset>
-              <label><input type="radio"> Form Label</label>
-              
-            </fieldset>
-          </form>
-          <footer>
-            Module Footer
-          </footer>
-        </div>
+We are a Delta Preferred Authorized Online Dealer for Guaranteed Warranty Coverage
+Customer Care Experts Available 7 Days a Week to Serve You Before & After Purchase
+A Showroom Experience from the Comfort of Your Home or Office
+Product Technologies:
+
+MagnaTite Docking: Delta's patented MagnaTite Docking Technology uses a powerful integrated magnet to securely hold your Delta kitchen faucet's pull-down spray in place when not in use. A light tug releases the wand for total flexibility and a full range of motion. When docking the wand after use, the MagnaTite Docking mechanism will guide the spray securely back into place.
+Diamond Seal: Delta DIAMOND Seal Technology utilizes a ceramic disc valve with a real diamond coating to produce a faucet that will last up to 5 million uses. That's an amazing 10 times the industry standard, guaranteeing a lifetime of leak-free, trouble-free performance.
+Eco Friendly: Through a number of technologies and innovations, Delta’s Eco Friendly faucets achieve the impossible: A faucet that feels like more water, while actually conserving water. There are many advantages to this beyond helping protect our nation’s water resources. First, Delta’s Eco Friendly faucets splash less; you won’t have to wipe your counters as much. Second, they use less hot water, preserving your hot water supply and reducing associated water-heating costs. Third, you will feel a little less guilty leaving the water running for longer periods.
+Touch Clean: Only Delta offers faucets equipped with Touch Clean soft, rubber nubbins (spray holes) that allow you to easily wipe away calcium and lime build-up with the touch of a finger. This is particularly helpful for areas with hard water.
+Variations:
+
+9178-DST: This model
+978-DST: This model with detached handle
+9978-DST: Bar/prep (smaller) version of this faucet with detached handle
+About Delta:
+
+Founded in 1954, Delta is America's faucet innovation leader. Their name represents what’s possible in today’s plumbing technologies. They're driven by a quest to discover smarter ways for people to experience and live with water. From Touch2O technology (which turns the faucet on/off with just a touch) and MagnaTite technology (which eliminates droopy pull-down spray heads), to H2Okinetic showers (for a warmer and more luxurious shower experience) and Diamond valve (Which helps the faucet last up to 5 million uses), your life is simplified through innovations. Every kitchen and bathroom is unique, and with a wide range of pricing and features, Delta faucets and fixtures will meet all your needs
+Additional Delta Links
+
+View Manufacturer Warranty
+Shop All Delta Products
+Shop All Delta Leland Collection Products
+                  </div>
+                  <div class="col-1-3">
+                    <section class="module">
+                      <header>Delta 9178-DST Product Specifications</header>
+                    </section>
+                    
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane module" id="profile">profile</div>
+              <div role="tabpanel" class="tab-pane module" id="messages">Message</div>
+              <div role="tabpanel" class="tab-pane module" id="settings">setting</div>
+            </div>
+        </section>
+        <section id="product-similar-purchases" class="module">
+          <header>People Who Viewed Kohler K-394-4 Ultimately Bought</header>
+          <ul class="unstyled grid-6-pad">
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+              Kohler K-T396-4
+              $55.24 - $168.45
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+              Kohler K-T396-4
+              $55.24 - $168.45
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+              Kohler K-T396-4
+              $55.24 - $168.45
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+              Kohler K-T396-4
+              $55.24 - $168.45
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+              Kohler K-T396-4
+              $55.24 - $168.45
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+              Kohler K-T396-4
+              $55.24 - $168.45
+            </li>
+            
+          </ul>
+        </section>
+        <section id="recently-viewed" class="module">
+          <header>Recently View Products</header>
+          <ul class="unstyled grid-6-pad">
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+             
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+            </li>
+            <li>
+              <img src="http://placekitten.com/g/150/150" alt="">
+            </li>
+          </ul>
+        </section>
+      </div> <!--- End Container -->
+    </div> <!--- Main -->
+    <footer id="global-footer">
+      <div class="container">
+        &copy; 2014 All Rights Reserved
       </div>
-      <div class="col-1-3">
-        <div class="module">
-          <header>Module Header</header>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mattis purus. Sed molestie tincidunt posuere. Vivamus fermentum volutpat commodo. Ut non lectus ligula. Morbi interdum quam et ligula imperdiet malesuada. Sed sollicitudin feugiat diam, nec dignissim metus eleifend quis. Suspendisse orci velit, vestibulum sed ultrices id, sollicitudin eget justo. Pellentesque et nunc at lacus consectetur consequat. Vivamus at urna libero. Pellentesque hendrerit diam nec sem mollis hendrerit. Curabitur nec lectus ligula. Aenean faucibus, sem eget lobortis tristique, ante lorem malesuada ligula, non accumsan odio lorem ut nulla. Aliquam erat volutpat. Mauris cursus ut orci ut rutrum. Maecenas placerat pretium commodo.</p>
-
-          <p>Nullam mattis neque vel nisi venenatis sollicitudin. Praesent pellentesque commodo tristique. Nam interdum neque velit, congue efficitur tortor finibus nec. Mauris ac massa congue, condimentum dolor in, ultricies enim. Pellentesque imperdiet consectetur magna vitae rhoncus. In hac habitasse platea dictumst. Quisque interdum tellus lorem, vitae aliquet sapien porta a. Vivamus faucibus nunc ut efficitur ultrices. Nunc cursus odio turpis, sed varius est ornare venenatis. Vestibulum in enim eu diam pellentesque condimentum.</p>
-
-          <p>Suspendisse potenti. Aenean semper fringilla efficitur. Pellentesque porttitor mattis fringilla. Duis faucibus libero id lorem rutrum porttitor. Curabitur ut sem libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eget venenatis nisl. Cras tempor metus in justo tempus sodales eget sed lacus. Praesent imperdiet eu urna non eleifend. Morbi elit ligula, aliquam sed tincidunt sit amet, vehicula sed sapien. Aenean eget rhoncus lacus. Vivamus scelerisque leo vitae ipsum tristique, ac iaculis dui fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec auctor ex enim.</p>
-          <footer>
-            Module Footer
-          </footer>
-        </div>
-      </div>
-    </div>
-    <ul class="grid-4 unstyled">
-      <li>Object</li>
-      <li>Object</li>
-      <li>Object</li>
-      <li>Object</li>
-      <li>Object</li>
-      <li>Object</li>
-    </ul>
-    <footer>
-      &copy; 2014 All Rights Reserved
     </footer>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $('.tabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
   </body>
 </html>

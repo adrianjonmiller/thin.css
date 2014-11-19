@@ -1,0 +1,91 @@
+$unit: 1.4em;
+
+$gutter: 10px;
+$pad: $unit;
+$margin: $unit;
+$global-footer-height: 375px;
+$module-header-height: 30px;
+$max-width: 966px;
+
+$margin-section: $unit;
+
+@import "thin/thin";
+
+#global-header {
+	height: 188px;
+	margin-bottom: $margin;
+}
+
+#global-footer {
+
+}
+
+.module {
+	border: solid thin lightgray;
+}
+
+#product-gallery {
+	padding: $pad;
+}
+
+#product-details {
+	padding: $pad;
+	padding-top: 85px;
+
+	.pd-header {
+		height: 85px;
+		padding: $pad;
+	}
+	hr {
+		margin-left: -$pad;
+		margin-right: -$pad;
+	}
+}
+
+.tab-panel {
+	padding-top: 0;
+	.tab-panel-tab {
+		margin-bottom: -1px;
+		a {
+			display: block;
+			width: 100%;
+			background-color: lightgray;
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 5px 5px 0 0;
+			border: solid thin lightgray;
+			border-bottom: none;
+		}
+
+		&.active a {
+			background-color: white;
+		}
+	}
+	.tab-panel-content {
+		margin-top: 0;
+		.tab-pane {
+			padding: $pad;
+		}
+	}
+}
+
+.header {
+	background-color: lightgray;
+	line-height: 40px;
+	height: 40px;
+}
+
+#good-better-best {
+	padding-top: 0;
+
+	.gbb-header {
+		@extend .header;
+		text-align: center;
+	}
+}
+
+#main-content {
+	border: solid thin lightgray;
+	padding: $pad;
+}

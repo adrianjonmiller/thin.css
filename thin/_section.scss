@@ -1,18 +1,24 @@
-$module-header-height: $unit !default;
-
-.module {
+section {
 	position: relative;
 	padding-top: $module-header-height;
 
-	header {
+	> header {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: $module-header-height;
 		line-height: $module-header-height;
+		background-color: lightgray;
+		padding-left: $pad;
+		padding-right: $pad;
 	}
+
 	> * + * {
-		margin-top: $unit;
+		margin-top: $margin;
+	}
+	
+	+ section {
+		margin-top: $margin-section;
 	}
 }

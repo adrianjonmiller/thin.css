@@ -14,11 +14,11 @@ form {
 	}
 
 	> fieldset + fieldset {
-		margin-top: $unit;
+		margin-top: $margin;
 	}
 
 	input + label {
-		margin-left: $unit;
+		margin-left: $margin;
 	}
 
 	fieldset {
@@ -26,6 +26,17 @@ form {
 		border: none;
 		margin: 0;
 		padding: 0;
+
+		&.inline {
+			display: inline-block;
+			margin-top: $margin;
+		}
+
+		legend {
+			margin: 0;
+			padding: 0;
+		}
+		
 		&:disabled {
 			@extend %disable-select;
 		}
