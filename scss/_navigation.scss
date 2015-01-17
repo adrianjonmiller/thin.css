@@ -1,0 +1,59 @@
+// Unstyle all lists inside a 
+nav ul, .unstyled, [role="nav"], [role="navigation"] {
+ 	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		list-style: none;
+		margin-left: 0;
+
+		> a {
+			width: 100%;
+			display: block;
+			 + div, + nav, + ul {
+				display: none;
+			}
+		}
+
+		&:hover > * + * {
+			display: block;
+			z-index: 1000;
+		}
+	}
+}
+
+// Remove link styles from navigation links
+nav a {
+	text-decoration: none;
+	color: $link-color;
+	&:hover {
+		text-decoration: none;
+	}
+	&:visited {
+		color: initial;
+	}
+}
+
+
+nav[role="mega-dropdown"] {
+	> ul {
+		position: relative;
+		
+		@if($mega-dropdown-cols > 0) {
+			ul {
+		    -webkit-column-count: $mega-dropdown-cols; /* Chrome, Safari, Opera */
+		    -moz-column-count: $mega-dropdown-cols; /* Firefox */
+		    column-count: $mega-dropdown-cols;
+		    -webkit-column-gap: $mega-dropdown-gutter; /* Chrome, Safari, Opera */
+		    -moz-column-gap: $mega-dropdown-gutter; /* Firefox */
+		    column-gap: $mega-dropdown-gutter;
+			}
+		}
+	}
+}
+
+nav[role="dropdown"] {
+	> ul > li {
+		position: relative;
+	}
+}

@@ -4,18 +4,35 @@
   clear: both;
 }
 
-%disable-select {
+%disable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
+  cursor: default;
 }
 
-%float-list {
+%float {
 	@extend %clearfix;
-	> li {
+	> li, > div {
 		float: left;
 	}
+}
+
+
+%overlay {
+  background-color: rgba(black, 0.6);
+  color: #fff;
+}
+
+%badge {
+  $badge-color: $bg !default;
+  width: $badge;
+  height: $badge;
+  line-height: $badge;
+  border-radius: $badge/2;
+  background-color: $badge-color;
 }

@@ -1,15 +1,8 @@
-$unit: 1.4em;
-$pad: $unit;
-$margin: $unit;
-$global-footer-height: 50px;
-$module-header-height: 30px;
-$max-width: 1024px;
-
 @import "../../scss/thin";
 
 #primary-navigation {
 	> ul {
-		@extend %float-list;
+		@extend %float;
 	}
 
 	position: relative;
@@ -39,3 +32,14 @@ $max-width: 1024px;
 		}
 	}
 }
+
+section > header {
+	background-color: $bg;
+}
+
+
+.heading-mega {
+	font-size: 36pt;
+	line-height: 36pt;
+}
+

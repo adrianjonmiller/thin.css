@@ -1,9 +1,44 @@
-$unit: 1.4em !default;
-
+// Base
+$unit: 20px !default;
 $pad: $unit !default;
 $margin: $unit !default;
+$bg: #7e7e7e !default;
 
+// Global
 $global-footer-height: $unit !default;
-$module-header-height: $unit !default;
+$fixed-header-height: 40px !default;
 
+// Section
+$section-header-height: $unit*3 !default;
+$section-margin: $unit !default;
+$section-pad: $pad !default;
+
+// Page Width
 $max-width: 1024px !default;
+
+// Bread Crumbs
+$breadcrumb-separator: ">" !default;
+
+// Grid
+$gutter: $unit !default;
+
+// Form
+$inline-label-width: 100px !default;
+$margin-form: $unit/2 !default;
+$input-height: $unit !default;
+
+// Splash
+$splash-height: 400px !default;
+
+// Overlay
+$overlay: rgba(black, 0.6);
+
+// Xtra
+$badge: 30px;
+
+// Typography 
+$link-color: #00A79D !default;
+
+// Navigation
+$mega-dropdown-cols: 4 !default;
+$mega-dropdown-gutter: $gutter !default;

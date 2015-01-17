@@ -1,24 +1,41 @@
+div + form, section + form, form + form, p + form {
+	margin-top: $margin;
+}
+
 form {
 	label {
 		display: block;
-	}
+		height: $input-height;
+		line-height: $input-height;
 
-	input[type="text"]:required {
-		margin-left: $unit;
-		&:before {
-			content: "*";
-			position: absolute;
-			top: 0;
-			left: 0;
+		> span:first-child {
+			@if $input-height > 0 {
+				line-height: $input-height;
+				height: $input-height;
+			}
+			text-align: right;
+			padding-right: .5em;
+			display: inline-block;
+			min-width: $inline-label-width;
 		}
 	}
 
 	> fieldset + fieldset {
-		margin-top: $margin;
+		margin-top: $margin-form;
 	}
 
 	input + label {
-		margin-left: $margin;
+		margin-left: $margin-form;
+	}
+
+	input[type="text"] {
+		@if $input-height > 0 {
+			height: $input-height;
+		}
+		border: none;
+		background-color: none;
+		border: solid thin lightgray;
+		padding: 0 .5em;
 	}
 
 	fieldset {
@@ -27,18 +44,24 @@ form {
 		margin: 0;
 		padding: 0;
 
-		&.inline {
-			display: inline-block;
-			margin-top: $margin;
-		}
-
 		legend {
+			width: 100%;
+			display: block;
 			margin: 0;
 			padding: 0;
 		}
+
+		&:required {
+			> label:before {
+				content: "*";
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
 		
 		&:disabled {
-			@extend %disable-select;
+			@extend %disable;
 		}
 	}
 }
