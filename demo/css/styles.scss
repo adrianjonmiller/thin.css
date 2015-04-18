@@ -1,45 +1,45 @@
 @import "../../scss/thin";
 
-#primary-navigation {
-	> ul {
-		@extend %float;
-	}
+// #primary-navigation {
+// 	> ul {
+// 		@extend %float;
+// 	}
 
-	position: relative;
+// 	position: relative;
 	
-	li > ul {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		background-color: lightgray;
-		width: 100%;
-	}
-}
+// 	li > ul {
+// 		position: absolute;
+// 		top: 100%;
+// 		left: 0;
+// 		background-color: lightgray;
+// 		width: 100%;
+// 	}
+// }
 
-.menu-style-1 {
+// .menu-style-1 {
 
-	a {
-		padding: 0 $unit;
-		height: 40px;
-		line-height: 40px;
-		position: relative;
-		&:after {
-			content: "";
-			border: solid 10px transparent;
-			border-bottom-color: lightgray;
-			display: none;
-			position: absolute;
-		}
-	}
-}
+// 	a {
+// 		padding: 0 $unit;
+// 		height: 40px;
+// 		line-height: 40px;
+// 		position: relative;
+// 		&:after {
+// 			content: "";
+// 			border: solid 10px transparent;
+// 			border-bottom-color: lightgray;
+// 			display: none;
+// 			position: absolute;
+// 		}
+// 	}
+// }
 
-section > header {
-	background-color: $bg;
-}
+// section > header {
+// 	background-color: $bg;
+// }
 
 
-.heading-mega {
-	font-size: 36pt;
-	line-height: 36pt;
-}
+// .heading-mega {
+// 	font-size: 36pt;
+// 	line-height: 36pt;
+// }
 

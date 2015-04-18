@@ -14,25 +14,3 @@
   pointer-events: none;
   cursor: default;
 }
-
-%float {
-	@extend %clearfix;
-	> li, > div {
-		float: left;
-	}
-}
-
-
-%overlay {
-  background-color: rgba(black, 0.6);
-  color: #fff;
-}
-
-%badge {
-  $badge-color: $bg !default;
-  width: $badge;
-  height: $badge;
-  line-height: $badge;
-  border-radius: $badge/2;
-  background-color: $badge-color;
-}

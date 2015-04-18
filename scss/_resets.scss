@@ -16,10 +16,14 @@ html {
 	height: 100%;
 }
 
-// Reset heading styles
-h1, h2, h3, h4, h5 {
-	font-weight: normal;
-	margin: 0;
+// Text Styles Reset
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, figure {
+		font-size: 1rem;
+		font-weight: normal;
+    margin: 0;
+    padding: 0;
 }
 
 // Image display
@@ -32,5 +36,34 @@ img {
 * {
 	&:focus {
 		outline: none;
+	}
+}
+
+// fieldset 
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+
+	legend {
+		padding: 0;
+		margin: 0;
+		display: block;
+	}
+}
+
+// Navigation reset
+nav {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
 	}
 }
