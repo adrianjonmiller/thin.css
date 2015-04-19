@@ -1,9 +1,10 @@
 $gutter: 1em !default;
-$tablet: 768px;
-$desktop: 1024px;
+$columns: 12 !default;
+$tablet: 768px !default;
+$desktop: 1024px !default;
 
 
 $site-max-width: $desktop !default;
 $global-footer-height: 150px !default;
 
-
+$breakpoints: (grid: 0, tablet: $tablet, desktop: $desktop) !default;

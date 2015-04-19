@@ -9,23 +9,22 @@
 	margin: 0;
 	margin-left: $gutter;
 	padding: 0;
-	&[class*="col-"] {
+	&[class*="col--"] {
 		width: auto;
 		width: -webkit-calc((100%) - #{$gutter});
 		width:         calc((100%) - #{$gutter});
 	}
 }
 
-$breakpoints: (grid: 0, tablet: $tablet, desktop: $desktop);
 // Root Grid
 @each $name, $breakpoint in $breakpoints {
 	@include media-query($breakpoint) {
-		@for $i from 1 through 12 {
-			.#{$name}-#{$i} {
+		@for $i from 1 through $columns {
+			.#{$name}--#{$i} {
 				> .col {
 					width: percentage(1/$i);
 					@for $j from 1 through $i {
-					&.col-#{$j} {
+					&.col--#{$j} {
 							width: percentage($j/$i);
 							width: -webkit-calc((100% * #{$j}/#{$i}) - #{$gutter});
 							width:         calc((100% * #{$j}/#{$i}) - #{$gutter});
@@ -37,45 +36,7 @@ $breakpoints: (grid: 0, tablet: $tablet, desktop: $desktop);
 	}
 }
 
-// // Tablet grid
-// @include media-query($tablet) {
-// @for $i from 1 through 12 {
-
-// 	.tablet-#{$i} {
-// 		> .col {
-// 			width: percentage(1/$i);
-// 			@for $j from 1 to $i {
-// 				&.col-#{$j} {
-// 					width: percentage($j/$i);
-// 					width: -webkit-calc((100% * #{$j}/#{$i}) - #{$gutter});
-// 					width:         calc((100% * #{$j}/#{$i}) - #{$gutter});
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-// }
-
-// // Desktop Grid
-// @include media-query($desktop) {
-// @for $i from 1 through 12 {
-// 	.desktop-#{$i} {
-// 		> .col {
-// 			width: percentage(1/$i);
-// 			@for $j from 1 to $i {
-// 			&.col-#{$j} {
-// 					width: percentage($j/$i);
-// 					width: -webkit-calc((100% * #{$j}/#{$i}) - #{$gutter});
-// 					width:         calc((100% * #{$j}/#{$i}) - #{$gutter});
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-// }
-
-
-[class*="grid-"] {
+[class*="grid--"] {
 	list-style: none;
 	margin: 0;
 	margin-left: -$gutter;
