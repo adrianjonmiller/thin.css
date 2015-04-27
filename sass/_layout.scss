@@ -5,23 +5,30 @@ html {
 body {
 	position: relative;
 	min-height: 100%;
-	padding-bottom: $global-footer-height;
+	padding-bottom: $site-footer-height;
 }
 
 // Footer position
 body > footer {
 	bottom: 0;
-	height: $global-footer-height;
+	height: $site-footer-height;
 	left: 0;
 	position: absolute;
 	width: 100%;
 }
 
-.table {
-	width: 100%;
-	display: table;
-	> * {
-		display: table-cell;
+@if $site-header-height > 0 {
+	body {
+		padding-bottom: $site-header-height;
+	}
+
+	// Header position
+	body > header {
+		height: $site-footer-height;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
 	}
 }
 

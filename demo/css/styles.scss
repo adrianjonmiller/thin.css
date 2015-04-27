@@ -1,45 +1,6 @@
-@import "../../scss/thin";
-
-// #primary-navigation {
-// 	> ul {
-// 		@extend %float;
-// 	}
-
-// 	position: relative;
-	
-// 	li > ul {
-// 		position: absolute;
-// 		top: 100%;
-// 		left: 0;
-// 		background-color: lightgray;
-// 		width: 100%;
-// 	}
-// }
+@import "../../thin";
 
 // .menu-style-1 {
-
-// 	a {
-// 		padding: 0 $unit;
-// 		height: 40px;
-// 		line-height: 40px;
-// 		position: relative;
-// 		&:after {
-// 			content: "";
-// 			border: solid 10px transparent;
-// 			border-bottom-color: lightgray;
-// 			display: none;
-// 			position: absolute;
-// 		}
-// 	}
-// }
-
-// section > header {
-// 	background-color: $bg;
-// }
-
-
-// .heading-mega {
-// 	font-size: 36pt;
-// 	line-height: 36pt;
+// 	position: relative;
 // }
 
