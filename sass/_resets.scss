@@ -84,7 +84,7 @@ form {
 		padding: 0 .5rem;
 		margin: 0;
 
-		&[type="text"] {
+		&[type="text"], &[type="email"] {
 			width: 100%;
 			display: block;
 			height: 2rem;
