@@ -19,12 +19,12 @@ body > footer {
 
 @if $site-header-height > 0 {
 	body {
-		padding-bottom: $site-header-height;
+		padding-top: $site-header-height;
 	}
 
 	// Header position
 	body > header {
-		height: $site-footer-height;
+		height: $site-header-height;
 		position: fixed;
 		top: 0;
 		left: 0;
