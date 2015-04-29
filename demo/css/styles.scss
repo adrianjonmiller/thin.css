@@ -1,6 +1,11 @@
-@import "../../thin";
+@import "../../dist/thin";
 
-// .menu-style-1 {
-// 	position: relative;
-// }
 
+.menu-style-1 {
+	> a {
+		height: 3rem;
+		line-height: 3rem;
+		background: gray;
+		display: block;
+	}
+}

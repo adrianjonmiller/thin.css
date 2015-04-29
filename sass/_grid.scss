@@ -10,7 +10,7 @@
 .col {
 	float: left;
 	margin: 0;
-	margin-left: $grid-gutter;
+	padding-left: $grid-gutter;
 	&[class*="col--"] {
 		width: auto;
 		width: -webkit-calc((100%) - #{$grid-gutter});
@@ -25,13 +25,13 @@
 			.#{$name}-#{$i} {
 				> .col {
 					width: percentage(1/$i);
-					width: -webkit-calc((100% * 1/#{$i}) - #{$grid-gutter});
-					width:         calc((100% * 1/#{$i}) - #{$grid-gutter});
+					// width: -webkit-calc((100% * 1/#{$i}) - #{$grid-gutter});
+					// width:         calc((100% * 1/#{$i}) - #{$grid-gutter});
 					@for $j from 1 through $i {
 					&.col-#{$j} {
 							width: percentage($j/$i);
-							width: -webkit-calc((100% * #{$j}/#{$i}) - #{$grid-gutter});
-							width:         calc((100% * #{$j}/#{$i}) - #{$grid-gutter});
+							// width: -webkit-calc((100% * #{$j}/#{$i}) - #{$grid-gutter});
+							// width:         calc((100% * #{$j}/#{$i}) - #{$grid-gutter});
 						}
 					}
 				}
@@ -48,7 +48,7 @@
 	&.flush {
 		margin-left: 0;
 		.col {
-			margin-left: 0 !important;
+			padding-left: 0 !important;
 		}
 	}
 
@@ -74,19 +74,22 @@
 			float: none;
 			font-size: 1rem;
 			&:first-of-type {
-				margin-left: 0;
+				padding-left: 0;
 			}
 		}
 	}
 }
 
-.grid-table {
+.table {
 	width: 100%;
 	display: table;
 	margin-left: 0;
-	> .col {
+	.table-row {
+		display: table-row;
+	}
+	.table-col {
 		float: none;
-		margin-left: 0;
+		padding-left: 0;
 		display: table-cell;
 	}
 }
