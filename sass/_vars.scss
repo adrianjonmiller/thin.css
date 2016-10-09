@@ -1,3 +1,17 @@
+$inputs: (
+  text: (
+    email,
+    number,
+    password,
+    search,
+    tel,
+    text,
+    time,
+    url
+  )
+);
+
+
 
 // Grid Vars
 $grid-gutter: 1rem !default;
@@ -19,3 +33,14 @@ $lineheight: 1.5rem;
 // Grid Break Points
 $breakpoints: (grid: $breakpoint-mobile, tablet: $breakpoint-tablet, desktop: $breakpoint-desktop) !default;
 $textscale: ($breakpoint-mobile: 130%, $breakpoint-tablet: 120%, $breakpoint-desktop: 87.5%) !default;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-width-large: 1200px;
+$columns: 12;
+
+$grid: (
+  col: 0,
+  tablet: $tablet-width,
+  desktop: $desktop-width
+);
