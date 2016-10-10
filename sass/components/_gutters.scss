@@ -11,7 +11,7 @@
         &-rows  {
           @extend .gutter--#{$name};
           > * {
-            margin-bottom: #{$size};
+            margin-bottom: 1rem;
           }
         }
       }
@@ -27,7 +27,7 @@
           @extend .gutter;
 
           > * {
-            margin-bottom: #{$size};
+            margin-bottom: 1rem;
           }
         }
       }

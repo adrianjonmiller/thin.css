@@ -1,0 +1,17 @@
+fieldset {
+  legend {
+    transform: translate(.25em, 1rem);
+    transition: transform .25s ease-in-out;
+    pointer-events: none;
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+  }
+
+  &.has-content,
+  &.has-focus {
+    legend {
+      transform: translate(.25em,0);
+    }
+  }
+}

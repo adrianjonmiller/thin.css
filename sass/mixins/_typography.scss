@@ -1,25 +1,35 @@
-@mixin typography($scale: $unit, $headings: (small, default, h6, h5, h4, h3, h2, h1)){
-
+@mixin typography($font-size: 11pt, $headings: (small, default, h6, h5, h4, h3, h2, h1)){
   $b: 0;
+  $rem: round($unit * $font-size);
 
-  @if (index($headings, default)) {
+  @if(index($headings, default) != null) {
     $b: index($headings, default);
+  }
+
+  html {
+    font-size: #{$rem};
+
+    body {
+      font-size: $font-size;
+      line-height: 1rem;
+    }
   }
 
   @each $h in $headings {
     $i: index($headings, $h);
 
+
     @if($i > $b) {
       $j: $i - $b;
-      $l: $scale;
+      $l: strip-unit($rem);
 
-      @while $l < pow($scale, $j) {
-        $l: $l + $scale;
+      @while $l < strip-unit($font-size * pow($unit, $j)) {
+        $l: $l + strip-unit($rem);
       }
 
       #{$h} {
-        font-size: 1rem * pow($scale, $j);
-        line-height: $l * 1rem;
+        font-size: round($font-size * pow($unit, $j));
+        line-height: $l/strip-unit($rem) * 1rem;
       }
     }
 
@@ -27,15 +37,8 @@
       $j: $b - $i;
 
       #{$h} {
-        font-size: 1rem / pow($scale, $j);
-        line-height: 1rem * $scale;
-      }
-    }
-
-    @if($i == $b) {
-      body {
-        font-size: 1rem;
-        line-height: $scale * 1rem;
+        font-size: round($font-size/pow($unit, $j));
+        line-height: $rem;
       }
     }
   }

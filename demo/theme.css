@@ -4,4 +4,8 @@ body {
 
 .module {
   background-color: gray;
-  height: 50px; }
+  padding: 1rem; }
+
+input,
+fieldset {
+  color: black; }

@@ -8,6 +8,7 @@
 
 // Mixins
 @import
+  "mixins/offsets",
   "mixins/typography",
   "mixins/widths";
 
@@ -21,10 +22,12 @@
 @import
   "components/aligns",
   "components/gutters",
+  "components/inputs",
   "components/layout",
   "components/popovers",
   "components/segues",
   "components/trays";
 
+@include offsets();
 @include typography();
 @include widths();
