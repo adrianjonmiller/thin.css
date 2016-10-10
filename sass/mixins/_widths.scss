@@ -1,4 +1,4 @@
-@mixin flex-grid($queries: (col: 0, tablet: 480px, desktop: 720px), $columns: 6) {
+@mixin widths($queries: (col: 0, tablet: 480px, desktop: 720px), $columns: 6) {
   $widths: ();
 
   @for $i from 1 through $columns {
@@ -21,5 +21,3 @@
     }
   }
 }
-
-@include flex-grid();

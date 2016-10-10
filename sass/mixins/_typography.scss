@@ -1,8 +1,4 @@
-@import "vars";
-
-@mixin typography($interval: perfect-fourth, $headings: (small, default, h6, h5, h4, h3, h2, h1)){
-
-  $scale: map-get($scale, $interval);
+@mixin typography($scale: $unit, $headings: (small, default, h6, h5, h4, h3, h2, h1)){
 
   $b: 0;
 

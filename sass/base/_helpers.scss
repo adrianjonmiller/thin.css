@@ -22,10 +22,27 @@
 
 // Origin
 .origin {
-  position: relative
+  position: relative;
 }
 
 // Is Hidden
 .is-hidden:not(.is-open) {
   @extend %hide;
+}
+
+// Collapse
+.collapse + *,
+script + * ,
+.is-hidden:not(.is-open) + * {
+  margin-top: 0;
+}
+
+.collapse- {
+  &-half + * {
+    margin-top: .5rem
+  }
+
+  &-quarter + * {
+    margin-top: .25rem
+  }
 }

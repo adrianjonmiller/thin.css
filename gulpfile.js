@@ -25,7 +25,7 @@ gulp.task('build', function () {
 
 
 gulp.task('sass-demo', function () {
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src(['./sass/**/*.scss', './demo/*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./demo/'))
     .pipe(reload({ stream:true }));
@@ -38,6 +38,7 @@ gulp.task('default', function() {
       baseDir: 'demo'
     }
   });
+  gulp.watch(['./demo/**/*.scss'], ['sass-demo']);
   gulp.watch(['./sass/**/*.scss'], ['sass-demo']);
   gulp.watch(['*.html', '*.css', '*.js'], {cwd: 'demo'}, reload);
 });

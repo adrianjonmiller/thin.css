@@ -3,7 +3,8 @@
 // Utilities
 @import
   "utilities/extends",
-  "utilities/functions";
+  "utilities/functions",
+  "utilities/vars";
 
 // Mixins
 @import
@@ -19,7 +20,11 @@
 // Components
 @import
   "components/aligns",
+  "components/gutters",
   "components/layout",
   "components/popovers",
   "components/segues",
   "components/trays";
+
+@include typography();
+@include widths();

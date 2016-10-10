@@ -3,30 +3,31 @@
   margin-top: 0;
 
   + * {
-    margin-top: 1rem;
+    margin-top: $unit * 1rem;
   }
 }
 
-.collapse + *,
-script + * ,
-.is-hidden:not(.is-open) + * {
-  margin-top: 0;
-}
-
-.collapse- {
-  &-half + * {
-    margin-top: .5rem
-  }
-
-  &-quarter + * {
-    margin-top: .25rem
-  }
+html {
+  font-size: 87.5%;
 }
 
 body,
 html {
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+small {
+  display: inline-block;
 }
 
 // Fieldset Resets from @thatemil
@@ -41,10 +42,10 @@ fieldset {
   margin: 0;
   min-width: 0;
 }
+
 body:not(:-moz-handler-blocked) fieldset {
   display: table-cell;
 }
-
 
 // Buttons Reset
 /* Reset `button` and button-style `input` default styles */

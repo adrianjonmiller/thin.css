@@ -43,18 +43,9 @@
       margin-top: auto;
     }
   }
+}
 
-  &--grid {
-    @extend .flex;
-    margin-left: -1rem;
-
-    > * {
-      padding-left: 1rem;
-    }
-  }
-
-  @at-root .grid {
-    @extend .flex;
-    flex-wrap: wrap;
-  }
+.grid {
+  @extend .flex;
+  flex-wrap: wrap;
 }
