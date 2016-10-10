@@ -1,9 +1,25 @@
-@charset "utf-8";	
+@charset "utf-8";
 
+// Utilities
 @import
-	"vars",
-	"mixins",
-	"resets",
-	"extends",
-	"layout",
-	"grid";
+  "utilities/extends",
+  "utilities/functions";
+
+// Mixins
+@import
+  "mixins/typography",
+  "mixins/widths";
+
+// Base
+@import
+  "base/resets",
+  "base/helpers",
+  "base/unstyle";
+
+// Components
+@import
+  "components/aligns",
+  "components/layout",
+  "components/popovers",
+  "components/segues",
+  "components/trays";

@@ -1,0 +1,31 @@
+// Fill
+.fill- {
+  &-h {
+    width: 100%;
+  }
+
+  &-v {
+    height: 100%;
+  }
+}
+
+// Scroll
+.scroll- {
+  &-h {
+    overflow-x: auto;
+  }
+
+  &-v {
+    overflow-y: auto;
+  }
+}
+
+// Origin
+.origin {
+  position: relative
+}
+
+// Is Hidden
+.is-hidden:not(.is-open) {
+  @extend %hide;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "thin",
+  "version": "1.0.0",
+  "description": "Bruttally simple front end framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianjonmiller/thin.git"
+  },
+  "keywords": [
+    "scss",
+    "js",
+    "front-end",
+    "framework"
+  ],
+  "author": "Adrian J. Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianjonmiller/thin/issues"
+  },
+  "homepage": "https://github.com/adrianjonmiller/thin#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.10"
+  }
+}

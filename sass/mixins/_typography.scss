@@ -1,0 +1,46 @@
+@import "vars";
+
+@mixin typography($interval: perfect-fourth, $headings: (small, default, h6, h5, h4, h3, h2, h1)){
+
+  $scale: map-get($scale, $interval);
+
+  $b: 0;
+
+  @if (index($headings, default)) {
+    $b: index($headings, default);
+  }
+
+  @each $h in $headings {
+    $i: index($headings, $h);
+
+    @if($i > $b) {
+      $j: $i - $b;
+      $l: $scale;
+
+      @while $l < pow($scale, $j) {
+        $l: $l + $scale;
+      }
+
+      #{$h} {
+        font-size: 1rem * pow($scale, $j);
+        line-height: $l * 1rem;
+      }
+    }
+
+    @if($i < $b) {
+      $j: $b - $i;
+
+      #{$h} {
+        font-size: 1rem / pow($scale, $j);
+        line-height: 1rem * $scale;
+      }
+    }
+
+    @if($i == $b) {
+      body {
+        font-size: 1rem;
+        line-height: $scale * 1rem;
+      }
+    }
+  }
+}

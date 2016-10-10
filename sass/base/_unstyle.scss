@@ -1,0 +1,13 @@
+.unstyle {
+  @at-root ul#{&},
+  ol#{&} {
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  @at-root a#{&} {
+    
+  }
+}

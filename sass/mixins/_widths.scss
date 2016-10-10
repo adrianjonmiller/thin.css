@@ -1,0 +1,25 @@
+@mixin flex-grid($queries: (col: 0, tablet: 480px, desktop: 720px), $columns: 6) {
+  $widths: ();
+
+  @for $i from 1 through $columns {
+    @for $j from 1 through $i {
+      $per: percentage($j/$i);
+      $list: map-values($widths);
+      @if index($list, $per) == null {
+        $widths: map-merge($widths, ( #{$j}-#{$i}: $per));
+      }
+    }
+  }
+
+  @each $device, $query in $queries {
+    @each $name, $value in $widths {
+      .#{$device}--#{$name} {
+        @media screen and (min-width: #{$query}) {
+          flex-basis: $value;
+        }
+      }
+    }
+  }
+}
+
+@include flex-grid();

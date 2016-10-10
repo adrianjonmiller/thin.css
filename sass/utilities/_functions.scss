@@ -1,0 +1,13 @@
+@import "vars";
+
+@function z($l, $e) {
+
+   $z: index($l, $e);
+
+   @if $z {
+      @return $z;
+   }
+
+   @warn 'There is no item "#{$e}" in this list; choose one of: #{$l}';
+   @return null;
+}

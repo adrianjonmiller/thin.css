@@ -1,0 +1,32 @@
+.tray- {
+  position: fixed;
+  z-index: z($indexes, trays);
+
+  &-bottom {
+    @extend .tray-;
+  	bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &-left {
+    @extend .tray-;
+    bottom: 0;
+    left: 0;
+  	top: 0;
+  }
+
+  &-right {
+    @extend .tray-;
+    bottom: 0;
+    right: 0;
+  	top: 0;
+  }
+
+  &-top {
+    @extend .tray-;
+    left: 0;
+    right: 0;
+  	top: 0;
+  }
+}

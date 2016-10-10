@@ -1,0 +1,17 @@
+// Segue
+.segue {
+  @extend .is-hidden;
+  background: white;
+  bottom: 0;
+  position: fixed;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translate(0, -100%);
+  z-index: z($indexes, segues);
+
+  &.is-open {
+    transform: translate(0, 0%);
+  }
+}
