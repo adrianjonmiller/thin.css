@@ -1,0 +1,14 @@
+@import 'functions/type-scale';
+
+@mixin _typ ($base: 1rem, $r: 2, $n: 5, $o: 2) {
+  $notes: (a, b, c, d, e, f, g);
+
+  @for $octave from -1 through $o {
+    @for $note from 1 through $n {
+      $i: nth($notes, $note);
+      .#{$i}#{$octave} {
+        font-size: scaleType($base, ($octave * $n + $note - 1), $r, $n);
+      }
+    }
+  }
+}

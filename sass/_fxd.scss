@@ -1,0 +1,90 @@
+@import 'functions/set';
+@import 'functions/get';
+@import 'functions/extend';
+
+@mixin _fxd {
+  @include set(fxd) {
+    position: fixed;
+  }
+
+  .fxd {
+    @include get(fxd);
+
+    &- {
+      @include extend(fxd, fxd--bottom) {
+        bottom: 0;
+      }
+
+      &-bottom {
+        @include get(fxd--bottom);
+
+        &-center {
+          @include get(fxd--bottom);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &-left {
+          @include get(fxd--bottom);
+          left: 0;
+        }
+
+        &-right {
+          @include get(fxd--bottom);
+          right: 0;
+        }
+      }
+
+      @include extend(fxd, fxd--center) {
+        top: 50%;
+      }
+
+      &-center {
+        @include get(fxd--center);
+        top: 50%;
+        transform: translate(-50%);
+
+        &-center {
+          @include get(fxd--center);
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &-left {
+          @include get(fxd--center);
+          left: 0;
+        }
+
+        &-right {
+          @include get(fxd--center);
+          right: 0;
+        }
+      }
+
+      @include extend(fxd, fxd--top) {
+        top: 0;
+      }
+
+      &-top {
+        @include get(fxd--top);
+        top: 0;
+
+        &-center {
+          @include get(fxd--top);
+          left: 50%;
+          transform: translate(-50%);
+        }
+
+        &-left {
+          @include get(fxd--top);
+          left: 0;
+        }
+
+        &-right {
+          @include get(fxd--top);
+          right: 0;
+        }
+      }
+    }
+  }
+}

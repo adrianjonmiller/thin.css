@@ -1,0 +1,15 @@
+@mixin extend ($name, $new) {
+  @if index($placeholders, $name) != null {
+    @if (index($placeholders, $new) == null) {
+      $placeholders: append($placeholders, $new) !global;
+      @at-root %#{$new} {
+        @extend %#{$name};
+        @content;
+      }
+    } @else {
+      @debug "Sorry, but `#{$new}` is already defined";
+    }
+  } @else {
+    @debug "Sorry, but `#{$name}` is not defined";
+  }
+}

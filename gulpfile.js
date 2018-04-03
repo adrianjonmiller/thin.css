@@ -7,7 +7,14 @@ var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 var sourcemaps = require('gulp-sourcemaps');
 var reload = browserSync.reload;
+var sassdoc = require('sassdoc');
 
+gulp.task('sassdoc', function () {
+  return gulp.src(__dirname + '/sass/**/*.scss')
+    .pipe(sassdoc({
+      dest: __dirname + '/demo/docs'
+    }));
+});
 
 gulp.task('build', function () {
   var processors = [
@@ -15,7 +22,7 @@ gulp.task('build', function () {
       cssnano(),
   ];
 
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src('./sass/index.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
@@ -25,9 +32,9 @@ gulp.task('build', function () {
 
 
 gulp.task('sass-demo', function () {
-  return gulp.src(['./sass/**/*.scss', './demo/*.scss'])
+  return gulp.src(['./sass/**/*.scss', './demo/sass/*.scss'])
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./demo/'))
+    .pipe(gulp.dest('./demo/css'))
     .pipe(reload({ stream:true }));
 });
 

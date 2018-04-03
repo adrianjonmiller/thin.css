@@ -1,4 +1,4 @@
-@mixin widths($queries: (col: 0, tablet: 480px, desktop: 720px), $columns: 6) {
+@mixin _grd ($columns: 12, $queries: (col: 0, tablet: 480px, desktop: 720px)) {
   $widths: ();
 
   @for $i from 1 through $columns {
@@ -15,7 +15,7 @@
     @each $name, $value in $widths {
       .#{$device}--#{$name} {
         @media screen and (min-width: #{$query}) {
-          flex-basis: $value;
+          width: $value;
         }
       }
     }

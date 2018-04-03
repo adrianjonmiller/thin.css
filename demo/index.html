@@ -6,33 +6,59 @@
     <title>Thin DEMO</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,900" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="theme.css">
-    <link rel="stylesheet" type="text/css" href="thin.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
   </head>
   <body>
-    <div class="container--h">
-      <h1>The THiN framework is a minimalist set of CSS classes. It uses a typographic structure and grid to bring a well balanced visual structure to a web page. Using classic print principals is helps to give the designer a set of tools to help layout a well designed page.</h1>
-      <br>
-      <p class="desktop--offset-1-4">The THiN framework is a minimalist set of CSS classes. It uses a typographic structure and grid to bring a well balanced visual structure to a web page. Using classic print principals is helps to give the designer a set of tools to help layout a well designed page.</p>
-      <div class="grid gutter--rows">
-        <div class="col--2-3">
-          <div class="module">
-            <fieldset>
-              <legend>Name</legend>
-              <input type="text">
-            </fieldset>
-            <fieldset>
-              <legend>Email</legend>
-              <input type="text">
-            </fieldset>
+    <main class="main origin">
+      <div class="home abs--center-center">
+        <div class="flx">
+          <div class="home-logo">
+            <img src="/img/logo.1.0.png" alt="">
+          </div>
+          <div class="home-text">
+            <ul class="rws--xl unstyle">
+              <li>
+                <h1 class="home-text-heading c2">This is the last framework you'll ever <em>not</em> need</h1>
+                <hr>
+              </li>
+              <!-- <li>
+                <a href="" class="d0">See the docs</a>
+              </li> -->
+              <li>
+                <button class="button--outline b0">Download</button>
+              </li>
+              <li class="flx">
+                <code id="bower" class="code selectable">
+                  $ bower install thin-sass
+                </code>
+                <div class="origin">
+                  <button class="button--outline copy b0" data-clipboard-text="bower install thin-sass">Copy</button>
+                  <p class="home-text-success abs--bottom-center paragraph--center"><span class="copy-success is-hidden">Copied</span></p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <script type="text/javascript" src="input.js">
+      <div class="abs--top-right">
+        <a href="" class="b0">Contact</a>
+      </div>
+    </main>
+    <script>
+      var clipboard = new ClipboardJS('.copy');
+      var success = document.querySelector('.copy-success');
 
+      clipboard.on('success', function(e) {
+        success.setAttribute('class', '');
+
+        var timer = setTimeout(function () {
+          success.setAttribute('class', 'is-hidden')
+          clearInterval(timer);
+        }, 3000)
+      });
     </script>
   </body>
 </html>
