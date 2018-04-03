@@ -17,15 +17,10 @@ gulp.task('sassdoc', function () {
 });
 
 gulp.task('build', function () {
-  var processors = [
-      autoprefixer({browsers: ['last 1 version']}),
-      cssnano(),
-  ];
 
   return gulp.src('./sass/index.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(processors))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/'));
 });

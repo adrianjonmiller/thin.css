@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "dev": "gulp",
-    "sassdoc": "gulp sassdoc"
+    "sassdoc": "gulp sassdoc",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/adrianjonmiller/thin#readme",
   "devDependencies": {
+    "autoprefixer": "8.2.0",
     "browser-sync": "2.23.6",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "^3.1.1",
