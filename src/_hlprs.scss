@@ -1,0 +1,121 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @group API
+/// @author Hugo Giraudel
+////
+
+@import 'functions/set';
+@import 'functions/get';
+@import 'functions/extend';
+
+@mixin _hlprs {
+  @include set (hide) {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+  }
+
+  @include set (unstyle) {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    min-width: 0;
+
+    > legend {
+      padding: 0;
+      display: table;
+      float: left;
+    }
+
+    @at-root body:not(:-moz-handler-blocked) fieldset#{&} {
+      display: table-cell;
+    }
+  }
+
+  .selectable {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: element;
+    user-select: all;
+    cursor: text;
+  }
+
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .end {
+    margin-left: auto;
+  }
+
+  // Containers
+  .container- {
+    &-h {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    &-v {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .inverse {
+    color: #ffffff;
+  }
+
+  .is-hidden {
+    &:not(:target) {
+      @include get(hide);
+    }
+  }
+
+  // Fill
+  .fill- {
+    &-h {
+      width: 100%;
+    }
+
+    &-v {
+      height: 100%;
+    }
+  }
+
+  // Scroll
+  .scroll- {
+    &-h {
+      overflow-x: auto;
+    }
+
+    &-v {
+      overflow-y: auto;
+    }
+  }
+
+  .paragraph- {
+    &-center {
+      text-align: center;
+    }
+
+    &-left {
+      text-align: left;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
+
+  .unstyle {
+    @include get(unstyle);
+  }
+}
