@@ -3,3 +3,5 @@ config.codekit
 node_modules
 **/*.DS_Store
 .codekit-cache
+_docs
+old
