@@ -5,5 +5,6 @@ export default {
   docs: path.join(__dirname, '../docs'),
   docsCss: path.join(__dirname, '../docs/assets/css'),
   site: path.join(__dirname, '../docs/_site'),
-  src: path.join(__dirname, '../src')
+  src: path.join(__dirname, '../src'),
+  dist: path.join(__dirname, '../dist')
 }

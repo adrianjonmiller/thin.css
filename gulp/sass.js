@@ -15,4 +15,10 @@ export default class Sass {
       .pipe(gulp.dest(paths.docsCss))
       .pipe(browserSync.stream());
   }
+
+  thinBuild () {
+    return gulp.src(files.sass)
+      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+      .pipe(gulp.dest(paths.dist))
+  }
 }

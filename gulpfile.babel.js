@@ -12,8 +12,16 @@ import Sass from './gulp/sass';
 var jekyll = new Jekyll();
 var sass = new Sass();
 
+gulp.task('thin:build', () => {
+  return sass.thin()
+})
+
 gulp.task('thin:dev', () => {
   return sass.thin()
+})
+
+gulp.task('thin:build', () => {
+  return sass.thinBuild()
 })
 
 gulp.task('jekyll:dev', () => {
