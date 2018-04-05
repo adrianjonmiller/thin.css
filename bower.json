@@ -24,7 +24,7 @@
     "config.codekit",
     "gulpfile.babel.js",
     "package-lock.json",
-    "package.json",
+    "./package.json",
     "README.md",
     ".gitignore",
     ".babelrc"
