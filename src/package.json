@@ -1,0 +1,14 @@
+{
+  "name": "thin",
+  "version": "1.0.0",
+  "description": "Thin Dependencies",
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mathsass": "^0.10.1"
+  }
+}
