@@ -15,11 +15,18 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "gulp",
     "node_modules",
     "bower_components",
     "test",
     "tests",
     "docs",
-    "config.codekit"
+    "config.codekit",
+    "gulpfile.babel.js",
+    "package-lock.json",
+    "package.json",
+    "README.md",
+    ".gitignore",
+    ".babelrc"
   ]
 }
