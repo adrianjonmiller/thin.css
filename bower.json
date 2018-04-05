@@ -6,7 +6,7 @@
     "Adrian Miller <adrianjonmiller@gmail.com>"
   ],
   "description": "A minimalist CSS framework",
-  "main": "['dist/_thin.scss', 'dist/thin.min.css']",
+  "main": "['src/index.scss', 'dist/thin.css']",
   "keywords": [
     "framework",
     "sass",
@@ -19,7 +19,7 @@
     "bower_components",
     "test",
     "tests",
-    "demo",
+    "docs",
     "config.codekit"
   ]
 }
