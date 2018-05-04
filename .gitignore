@@ -5,3 +5,4 @@ node_modules
 .codekit-cache
 _docs
 old
+npm-debug.log

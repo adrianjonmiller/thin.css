@@ -6,7 +6,7 @@
     "Adrian Miller <adrianjonmiller@gmail.com>"
   ],
   "description": "A minimalist CSS framework",
-  "main": "['dist/_thin.scss', 'dist/thin.min.css']",
+  "main": "['src/index.scss', 'dist/thin.css']",
   "keywords": [
     "framework",
     "sass",
@@ -15,11 +15,18 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "gulp",
     "node_modules",
     "bower_components",
     "test",
     "tests",
-    "demo",
-    "config.codekit"
+    "docs",
+    "config.codekit",
+    "gulpfile.babel.js",
+    "package-lock.json",
+    "./package.json",
+    "README.md",
+    ".gitignore",
+    ".babelrc"
   ]
 }
