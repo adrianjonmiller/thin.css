@@ -1,16 +1,8 @@
-@import 'functions/set';
+@import 'globals';
 @import 'functions/get';
 @import 'functions/extend';
 
 @mixin _flx {
-  @include set(flex) {
-    display: flex;
-
-    > * {
-      margin-top: 0;
-    }
-  }
-
   @at-root .flx {
     @include get(flex);
 

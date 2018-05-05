@@ -1,14 +1,10 @@
-@import 'functions/set';
+@import 'globals';
 @import 'functions/get';
 @import 'functions/extend';
 
 @mixin _abs {
   .origin {
     position: relative;
-  }
-
-  @include set(abs) {
-    position: absolute;
   }
 
   .abs {

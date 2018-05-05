@@ -1,0 +1,59 @@
+@import 'functions/set';
+
+// Absolute Position
+@include set(abs) {
+  position: absolute;
+}
+
+// Flex position for grid
+@include set (flex) {
+  display: flex;
+
+  > * {
+    margin-top: 0;
+  }
+}
+
+// Fixed Position
+@include set (fxd) {
+  position: fixed;
+}
+
+// Hide
+@include set (hide) {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+}
+
+// No Select
+@include set (noselect) {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+// Unstyle
+@include set (unstyle) {
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  min-width: 0;
+
+  > legend {
+    padding: 0;
+    display: table;
+    float: left;
+  }
+
+  @at-root body:not(:-moz-handler-blocked) fieldset#{&} {
+    display: table-cell;
+  }
+}
