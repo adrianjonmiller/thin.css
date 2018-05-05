@@ -44,10 +44,6 @@
   	outline:0;
   }
 
-  /* Box Sizing Reset
-  -----------------------------------------------*/
-
-  /* These elements are usually rendered a certain way by the browser */
   button,
   input[type=reset],
   input[type=button],
@@ -59,9 +55,6 @@
   	-moz-box-sizing: border-box;
   	box-sizing: border-box;
   }
-
-  /* Text Inputs
-  -----------------------------------------------*/
 
   input[type=date],
   input[type=datetime],
@@ -82,8 +75,10 @@
   }
 
   input[type=search] {
-  	-webkit-appearance:textfield;
-  	-webkit-box-sizing:content-box;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
   }
 
   ::-webkit-search-decoration {
@@ -96,7 +91,6 @@
   }
 
   select[multiple] {
-  	/* Move the label to the top */
   	vertical-align:top;
   }
 }
