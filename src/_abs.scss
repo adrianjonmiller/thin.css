@@ -1,8 +1,13 @@
-@import 'globals';
+@import 'functions/set';
 @import 'functions/get';
 @import 'functions/extend';
 
+
 @mixin _abs {
+  @include set(abs) {
+    position: absolute;
+  }
+  
   .origin {
     position: relative;
   }
