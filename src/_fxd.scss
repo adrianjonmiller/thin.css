@@ -1,8 +1,12 @@
-@import 'globals';
+@import 'functions/set';
 @import 'functions/get';
 @import 'functions/extend';
 
 @mixin _fxd {
+  // Fixed Position
+@include set (fxd) {
+  position: fixed;
+}
   .fxd {
     @include get(fxd);
 

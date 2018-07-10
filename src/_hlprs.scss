@@ -1,15 +1,37 @@
-////
-/// This is a poster comment.
-/// It will apply annotations to all items from file.
-/// @group API
-/// @author Hugo Giraudel
-////
-
-@import 'globals';
 @import 'functions/get';
+@import 'functions/set';
 @import 'functions/extend';
 
 @mixin _hlprs {
+
+    // Hide
+    @include set (hide) {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    }
+
+    // Unstyle
+    @include set (unstyle) {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    min-width: 0;
+
+    > legend {
+        padding: 0;
+        display: table;
+        float: left;
+    }
+
+    @at-root body:not(:-moz-handler-blocked) fieldset#{&} {
+        display: table-cell;
+    }
+    }
 
   .selectable {
     -webkit-touch-callout: all;
