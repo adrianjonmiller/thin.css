@@ -6,3 +6,4 @@ node_modules
 _docs
 old
 npm-debug.log
+src/vendor

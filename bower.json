@@ -28,5 +28,8 @@
     "README.md",
     ".gitignore",
     ".babelrc"
-  ]
+  ],
+  "dependencies": {
+    "mathsass": "^0.10.1"
+  }
 }
