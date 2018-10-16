@@ -1,54 +1,44 @@
 {
   "name": "thin",
   "version": "1.0.0",
-  "description": "Bruttally simple front end framework",
-  "main": "dist/thin.css",
+  "description": "thin.css cdn",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "test": "test",
-    "thinDev": "gulp thin:dev",
-    "dev": "gulp",
-    "build": "gulp thin:build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon babel app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adrianjonmiller/thin.git"
   },
   "keywords": [
+    "sass",
     "scss",
-    "js",
-    "front-end",
-    "framework"
+    "css",
+    "cdn"
   ],
-  "author": "Adrian J. Miller",
+  "author": "Adrian J Miller",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/adrianjonmiller/thin/issues"
   },
   "homepage": "https://github.com/adrianjonmiller/thin#readme",
-  "devDependencies": {
-    "autoprefixer": "8.2.0",
-    "babel-cli": "6.26.0",
-    "babel-preset-es2015": "6.24.1",
-    "babel-register": "6.26.0",
-    "browser-sync": "2.24.5",
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-cssnano": "2.1.3",
-    "gulp-kss": "0.0.2",
-    "gulp-postcss": "6.4.0",
-    "gulp-rename": "1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "1.12.1",
-    "gulp-watch": "4.3.11",
-    "mathsass": "0.10.1",
-    "mdcss": "1.5.2",
-    "node-sass": "4.9.2",
-    "postcss-scss": "1.0.5",
-    "sass-include-paths": "4.10.0",
-    "sass-math-pow": "0.1.5",
-    "sassdoc": "2.5.0"
-  },
   "dependencies": {
-    "global": "4.3.2"
+    "babel-preset-stage-2": "6.24.1",
+    "express": "4.16.4",
+    "mathsass": "0.10.1",
+    "node-sass": "4.9.4",
+    "path": "0.12.7"
+  },
+  "devDependencies": {
+    "@babel/preset-es2015": "7.0.0-beta.53",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-es2015": "6.24.1",
+    "nodemon": "1.18.4"
   }
 }
