@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon babel app.js"
+    "dev": "nodemon babel app.js",
+    "start": "babel app.js"
   },
   "repository": {
     "type": "git",
