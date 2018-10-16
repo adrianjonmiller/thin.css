@@ -11,7 +11,7 @@ app.get('/debug/thin.css', (req, res) => {
   var version = req.query.version || 'default'
 
   sass.render({
-    file: path.resolve(__dirname, `src/${version}/debug.scss`)
+    file: path.resolve(__dirname, 'src/' + version + '/debug.scss')
   }, function (err, result) {
     if (err) {
       throw err
@@ -19,7 +19,7 @@ app.get('/debug/thin.css', (req, res) => {
 
     res.setHeader('Content-Transfer-Encoding', 'binary');
     res.setHeader('Content-Type', 'text/css');
-    res.send(new Buffer(result.css, 'binary'))
+    res.send(result.css)
   })
 })
 
@@ -27,7 +27,7 @@ app.get('/main.css', (req, res) => {
   var version = req.query.version || 'default'
 
   sass.render({
-    file: path.resolve(__dirname, `public/styles/main.scss`)
+    file: path.resolve(__dirname, 'public/styles/main.scss')
   }, function (err, result) {
     if (err) {
       throw err
@@ -35,7 +35,7 @@ app.get('/main.css', (req, res) => {
 
     res.setHeader('Content-Transfer-Encoding', 'binary');
     res.setHeader('Content-Type', 'text/css');
-    res.send(new Buffer(result.css, 'binary'))
+    res.send(result.css)
   })
 })
 
@@ -43,7 +43,7 @@ app.get('/cdn/thin.css', (req, res) => {
   var version = req.query.version || 'default'
 
   sass.render({
-    file: path.resolve(__dirname, `src/${version}/index.scss`)
+    file: path.resolve(__dirname, 'src/' + version + '/index.scss')
   }, function(err, result) {
     if (err) {
       throw err 
@@ -51,7 +51,7 @@ app.get('/cdn/thin.css', (req, res) => {
 
     res.setHeader('Content-Transfer-Encoding', 'binary');
     res.setHeader('Content-Type', 'text/css');
-    res.send(new Buffer(result.css, 'binary'))
+    res.send(result.css)
   })
 })
 
@@ -59,4 +59,4 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + 'public/index.html'));
 })
 
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+app.listen(port, () => console.log('App listening on port ' + port + '!'))
