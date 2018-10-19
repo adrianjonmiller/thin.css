@@ -1,25 +1,32 @@
-* {
-  font-family: 'Avenir', 'Helvetica', 'sans-serif';
-  font-weight: 200;
+body {
+  font-family: 'Lato', 'Helvetica', 'sans-serif';
+  font-weight: 300;
 }
 
 .section {
-  transform: translate(30rem, -50%);
+  transform: translate(25rem, -50%);
   max-height: 100vh;
   overflow: auto;
   padding: 3rem;
   padding-left: 5rem;
   border-left: solid thin #ddd;
-  min-height: 40rem;
+  min-height: 45rem;
 
   &:not(:target) {
     display: none;
   }
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 100;
+}
+
 .nav {
   transform: translate(10rem, -50%);
-  width: 20rem;
+  width: 15rem;
 }
 
 .className {
@@ -35,6 +42,7 @@
   border-bottom: solid thin transparent;
   line-height: .9em;
   margin-bottom: -1px;
+  color: #555;
 }
 
 $sections: 'abs', 'fll', 'flt', 'flx', 'fxd', 'grd', 'gtr', 'hlp', 'rst', 'rws', 'typ';
