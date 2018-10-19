@@ -1,3 +1,55 @@
-body {
-  // background: blue;
+* {
+  font-family: 'Avenir', 'Helvetica', 'sans-serif';
+  font-weight: 200;
+}
+
+.section {
+  transform: translate(30rem, -50%);
+  max-height: 100vh;
+  overflow: auto;
+  padding: 3rem;
+  padding-left: 5rem;
+  border-left: solid thin #ddd;
+  min-height: 40rem;
+
+  &:not(:target) {
+    display: none;
+  }
+}
+
+.nav {
+  transform: translate(10rem, -50%);
+  width: 20rem;
+}
+
+.className {
+  width: 20rem;
+}
+
+.classDescription {
+  width: 40rem;
+}
+
+.link {
+  display: block;
+  border-bottom: solid thin transparent;
+  line-height: .9em;
+  margin-bottom: -1px;
+}
+
+$sections: 'abs', 'fll', 'flt', 'flx', 'fxd', 'grd', 'gtr', 'hlp', 'rst', 'rws', 'typ';
+
+.main {
+  padding: 3rem;
+  border: solid thin #ddd;
+}
+
+.section:target ~ .main {
+  display: none;
+}
+
+@each $section in $sections {
+  ##{$section}:target ~ nav .link[href="##{$section}"] {
+    border-bottom-color: #ddd;
+  }
 }

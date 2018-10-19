@@ -1,4 +1,4 @@
-@mixin _grd ($columns: 12, $queries: (col: 0, tablet: 480px, desktop: 720px)) {
+@mixin _grd ($columns: 6, $queries: (col: 0, tablet: 480px, desktop: 720px)) {
   $widths: ();
 
   @for $i from 1 through $columns {

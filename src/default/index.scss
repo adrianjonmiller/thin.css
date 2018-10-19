@@ -1,6 +1,6 @@
 // Base
-@import 'rsts';
-@import 'hlprs';
+@import 'rst';
+@import 'hlp';
 
 // Modules
 @import 'abs';
@@ -13,8 +13,8 @@
 @import 'rws';
 @import 'typ';
 
-@include _rsts;
-@include _hlprs;
+@include _rst;
+@include _hlp;
 @include _abs;
 @include _fll;
 @include _flt;

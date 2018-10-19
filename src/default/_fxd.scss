@@ -36,14 +36,13 @@
       }
 
       @include extend(fxd, fxd--center) {
+        transform: translateY(-50%);
         top: 50%;
       }
 
       &-center {
         @include get(fxd--center);
-        top: 50%;
-        transform: translate(-50%);
-
+        
         &-center {
           @include get(fxd--center);
           left: 50%;
