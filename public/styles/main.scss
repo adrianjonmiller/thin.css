@@ -11,6 +11,7 @@ body {
   padding-left: 5rem;
   border-left: solid thin #ddd;
   min-height: 45rem;
+  width: calc(100vw - 25rem);
 
   &:not(:target) {
     display: none;
@@ -35,6 +36,11 @@ h4 {
 
 .classDescription {
   width: 40rem;
+  display: none;
+}
+
+.classImage {
+  box-shadow: 0 0 0 1px rgba(black, 0.1);
 }
 
 .link {
