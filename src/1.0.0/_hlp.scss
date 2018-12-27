@@ -1,0 +1,91 @@
+@import 'functions/get';
+@import 'functions/set';
+@import 'functions/extend';
+
+@mixin _hlp {
+
+    // Hide
+    @include set (hide) {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    }
+
+  .selectable {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: element;
+    user-select: all;
+    cursor: text;
+  }
+
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .end {
+    margin-left: auto;
+  }
+
+  // Containers
+  .container- {
+    &-h {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    &-v {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .inverse {
+    color: #ffffff;
+  }
+
+  .is-hidden {
+    &:not(:target) {
+      @include get(hide);
+    }
+  }
+
+  // Fill
+  .fill- {
+    &-h {
+      width: 100%;
+    }
+
+    &-v {
+      height: 100%;
+    }
+  }
+
+  // Scroll
+  .scroll- {
+    &-h {
+      overflow-x: auto;
+    }
+
+    &-v {
+      overflow-y: auto;
+    }
+  }
+
+  .paragraph- {
+    &-center {
+      text-align: center;
+    }
+
+    &-left {
+      text-align: left;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+
+  + * {
+    margin-top: 1rem;
+  }
+}
+
+html {
+  font-family: "Helvetica", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+small {
+  display: inline-block;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+// Fieldset Resets from @thatemil
+legend {
+  padding: 0;
+  display: table;
+
+  + input {
+    margin-top: 0;
+  }
+}
+
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 0;
+}
+
+input,
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type="search"],
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="search"] {
+  display: block;
+  width: 100%;
+  -webkit-appearance: text;
+  border: none;
+  min-height: 2rem;
+  font-size: inherit;
+  padding: 0 .5rem;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+
+// Buttons Reset
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Make `a` like a button */
+[role="button"] {
+    color: inherit;
+    cursor: default;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    white-space: pre;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}

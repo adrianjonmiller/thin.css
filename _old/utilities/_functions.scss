@@ -1,0 +1,30 @@
+@function z($l, $e) {
+
+   $z: index($l, $e);
+
+   @if $z {
+      @return $z;
+   }
+
+   @warn 'There is no item "#{$e}" in this list; choose one of: #{$l}';
+   @return null;
+}
+
+
+@function pow($base, $exponents) {
+  $raised: 1;
+
+  @for $i from 1 through $exponents {
+    $raised: $raised * $base;
+  }
+
+  @return $raised;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

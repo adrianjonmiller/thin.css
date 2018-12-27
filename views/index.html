@@ -1,0 +1,61 @@
+<extends src='views/layout.html'>
+  <block name='content'>
+    <div class="main flx--default gtr--xl">
+      <div class="main-menu col--1-1 tablet--1-3 fll--viewport-h origin">
+        <div class="fll--parent origin">
+          <h1 class="main-menu-heading typ--a3 col--2-3 abs--center-left">Thin, the anti-framework framework</h1>
+        </div>
+
+        <ul id="menu" class="main-menu-list rst--list fxd--center-right">
+          <li class="row--lg"><h1 class="typ--a3 rst--heading"><a href="#/" class="rst--link">thin</a></h1></li>
+          <each loop="nav in dato.allNavs">
+            <li class="row--lg js-link" data-id="#{{nav.sectionId}}">
+              <h4>
+                <a href="#{{nav.sectionId}}" class="row--collapse rst--link typ--a2">
+                  {{nav.name}} <br>
+                  <strong class="typ--a1"><small>{{nav.description}}</small></strong>
+                </a>
+              </h4>
+            </li>
+          </each>
+        </ul>
+        <a href="#menu" class="main-menu-open typ--center rst--link fxd--bottom-right js-menu">
+          <i data-feather="menu"></i>
+          <br>
+          <small>MENU</small>
+        </a>
+        <a href="#/" class="main-menu-close typ--center rst--link fxd--bottom-right js-menu">
+          <i data-feather="x"></i>
+          <br>
+          <small>CLOSE</small>
+        </a>
+      </div>
+      <div class="main-content col--1-1 tablet--2-3">
+        <each loop="group, key in dato">
+          <if condition="key !== 'allNavs'">
+            <section id="{{key}}" class="section">
+              <ul class="rst--list">
+                <each loop="item in group">
+                  <li class="flx--wrap gtr--xl typ--d1 row--lg">
+                    <div class="col--1-1 tablet--1-2">
+                      <span>.{{item.className}}</span>
+                      <p class="typ--a1">{{item.description}}</p>
+                    </div>
+                    <div class="col--1-1 tablet--1-2">
+                      <img class="classImage js-image" src="{{item.thumbnail.url}}" alt="">
+                    </div>
+                  </li>
+                </each>
+              </ul>
+            </section>
+          </if>
+        </each>
+        <section id="home" class="home fll--viewport-h">
+          <div class="fll--parent origin">
+            <h1 class="typ--a3 col--2-3 abs--center-center">Thin, the anti-framework framework</h1>
+          </div>
+        </section>
+      </div>
+    </div>
+  </block>
+</extends>

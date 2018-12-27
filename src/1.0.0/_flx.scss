@@ -1,0 +1,34 @@
+@import 'functions/set';
+@import 'functions/get';
+@import 'functions/extend';
+
+
+@mixin _flx {
+    // Flex position for grid
+  @include set (flex) {
+    display: flex;
+
+    > * {
+      margin-top: 0;
+    }
+  }
+
+  @at-root .flx {
+
+    &- {
+      &-default {
+        @include get(flex);
+      }
+
+      &-wrap {
+        @include get(flex);
+        flex-wrap: wrap;
+      }
+
+      &-column {
+        @include get(flex);
+        flex-direction: column;
+      }
+    }
+  }
+}

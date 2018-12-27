@@ -7,8 +7,6 @@
   @include set(abs) {
     position: absolute;
   }
-
-  @include get('abs');
   
   .origin {
     position: relative;

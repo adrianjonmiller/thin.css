@@ -1,19 +1,15 @@
 @import 'vars';
 
 @mixin _rws {
-  .rws- {
+  [class*="row--"] + .row- {
     @each $key, $size in $sizes {
       &-#{$key} {
-        margin-top: -#{$size};
-
-        > * {
-          padding-top: $size;
-        }
+        margin-top: $size;
       }
     }
+  }
 
-    &-collapse + * {
-      padding-top: 0;
-    }
+  .row--collapse + * {
+    margin-top: 0;
   }
 }
