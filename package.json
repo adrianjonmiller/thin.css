@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=production npm run build && node dist",
+    "test": "NODE_ENV=production PORT=3000 npm run build && node dist",
     "build": "babel lib -d dist --presets babel-preset-env",
     "watch": "PORT=3000 nodemon lib --exec babel-node --presets babel-preset-env",
     "build-thin": "node-sass --include-path scss src/default/index.scss cdn/thin.css",
