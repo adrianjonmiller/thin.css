@@ -2,7 +2,7 @@
   "name": "thin",
   "version": "1.0.0",
   "description": "thin.css cdn",
-  "main": "app.js",
+  "main": "dist",
   "directories": {
     "doc": "docs"
   },
