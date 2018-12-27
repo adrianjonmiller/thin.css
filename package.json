@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "nodemon lib  --exec babel-node --presets babel-preset-env",
+    "start": "NODE_ENV=production node lib  --exec babel-node --presets babel-preset-env",
+    "watch": "PORT=3000 nodemon lib  --exec babel-node --presets babel-preset-env",
     "build-thin": "node-sass --include-path scss src/default/index.scss cdn/thin.css",
     "watch-css": "nodemon -e scss -x \"npm run build-thin\""
   },

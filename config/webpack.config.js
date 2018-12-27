@@ -1,8 +1,10 @@
 import webpack from 'webpack';
 import path from 'path';
+const env = process.env.NODE_ENV;
 
 module.exports = {
   devtool: "eval-source-map",
+  mode: env === 'production' ? 'production' : 'development',
   entry: {
     main: [
       "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000",
