@@ -7,8 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "NODE_ENV=production node lib  --exec babel-node --presets babel-preset-env",
-    "watch": "PORT=3000 nodemon lib  --exec babel-node --presets babel-preset-env",
+    "start": "NODE_ENV=production npm run build && node dist",
+    "build": "babel lib -d dist --presets babel-preset-env",
+    "watch": "PORT=3000 nodemon lib --exec babel-node --presets babel-preset-env",
     "build-thin": "node-sass --include-path scss src/default/index.scss cdn/thin.css",
     "watch-css": "nodemon -e scss -x \"npm run build-thin\""
   },
@@ -44,6 +45,7 @@
     "symbiotic": "0.1.45"
   },
   "devDependencies": {
+    "babel-plugin-add-module-exports": "1.0.0",
     "css-loader": "2.0.2",
     "express": "4.16.4",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
