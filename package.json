@@ -10,7 +10,7 @@
     "start": "npm run build && node dist/app.js",
     "__start": "NODE_ENV=production npm run build && node dist",
     "test": "PORT=3000 npm run build && node dist",
-    "build": "babel lib/app.js --out-file dist/app.js --presets babel-preset-env",
+    "build": "babel lib -d dist --presets babel-preset-env",
     "__build": "babel lib -d dist --presets babel-preset-env",
     "watch": "PORT=3000 nodemon lib --exec babel-node --presets babel-preset-env",
     "build-thin": "node-sass --include-path scss src/default/index.scss cdn/thin.css",
