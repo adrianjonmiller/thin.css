@@ -21,11 +21,6 @@
     cursor: text;
   }
 
-  .centered {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .end {
     margin-left: auto;
   }
@@ -47,45 +42,9 @@
     color: #ffffff;
   }
 
-  .is-hidden {
-    &:not(:target) {
-      @include get(hide);
-    }
-  }
-
-  // Fill
-  .fill- {
-    &-h {
-      width: 100%;
-    }
-
-    &-v {
-      height: 100%;
-    }
-  }
-
-  // Scroll
-  .scroll- {
-    &-h {
-      overflow-x: auto;
-    }
-
-    &-v {
-      overflow-y: auto;
-    }
-  }
-
-  .paragraph- {
-    &-center {
-      text-align: center;
-    }
-
-    &-left {
-      text-align: left;
-    }
-
-    &-right {
-      text-align: right;
-    }
-  }
+  // .is-hidden {
+  //   &:not(:target) {
+  //     @include get(hide);
+  //   }
+  // }
 }

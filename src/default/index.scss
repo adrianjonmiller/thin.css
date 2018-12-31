@@ -12,6 +12,8 @@
 @import 'gtr';
 @import 'rws';
 @import 'typ';
+@import 'ofst';
+@import 'mrgn';
 
 @include _rst;
 @include _hlp;
@@ -22,5 +24,7 @@
 @include _fxd;
 @include _grd;
 @include _gtr;
+@include _ofst;
+@include _mrgn;
 @include _rws;
 @include _typ;

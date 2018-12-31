@@ -1,13 +1,46 @@
 @import 'functions/type-scale';
 
 @mixin _typ ($base: 1rem, $r: 2, $n: 5, $o: 3) {
-  $notes: (a, b, c, d, e, f, g);
+  $notes: (
+    ( roman: 'i',
+      arabic: 'a'
+    ),(
+      roman: 'ii',
+      arabic: 'b',
+    ),(
+      roman: 'iii',
+      arabic: c
+    ),(
+      roman: 'iv',
+      arabic: 'd'
+    ),(
+      roman: 'v',
+      arabic: 'e',
+    ),(
+      roman: 'vi',
+      arabic: 'f'
+    ),(
+      roman: 'vii',
+      arabic: 'g'
+    )
+  );
 
-  @for $octave from 0 through $o {
+  @for $octave from -$o through $o {
     @for $note from 1 through $n {
       $i: nth($notes, $note);
-      .typ--#{$i}#{$octave} {
-        font-size: scaleType($base, (($octave - 1) * $n + $note - 1), $r, $n);
+      $name: '';
+
+      @if ($octave > 0) {
+        $name: \+#{$octave}
+      }
+
+      @if ($octave < 0) {
+        $name: $octave;
+      }
+
+      .typ--#{map-get($i, 'roman')}#{$name},
+      .typ--#{map-get($i, 'arabic')}#{$octave} {
+        font-size: scaleType($base, (($octave) * $n + $note - 1), $r, $n);
       }
     }
   }

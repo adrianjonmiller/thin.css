@@ -41,7 +41,6 @@ h5 {
   
     &-list {
       transform: translate(100%, -50%);
-      padding: 1rem;
       padding-right: 0;
       transition: transform .25s ease;
       background: white;
@@ -69,7 +68,6 @@ h5 {
 
     &-close,
     &-open {
-      transform: translate(-2rem, -1rem);
       padding: .5rem;
       border-radius: 99px;
       background: white;
@@ -105,13 +103,8 @@ h5 {
   }
 }
 
-
-.home {
-  display: none;
-}
-
-section:not(:target) ~ .home {
+section:target ~ .home {
   @media screen and (min-width: 480px) {
-    display: block;
+    display: none;
   }
 }
