@@ -28,18 +28,24 @@
   @for $octave from -$o through $o {
     @for $note from 1 through $n {
       $i: nth($notes, $note);
-      $name: '';
+      $octaveRoman: '';
+      $octaveArabic: $octave;
+
 
       @if ($octave > 0) {
-        $name: \+#{$octave}
+        $octaveRoman: \+#{$octave}
       }
 
       @if ($octave < 0) {
-        $name: $octave;
+        $octaveRoman: $octave;
       }
 
-      .typ--#{map-get($i, 'roman')}#{$name},
-      .typ--#{map-get($i, 'arabic')}#{$octave} {
+      @if ($octave == 0) {
+        $octaveArabic: '';
+      } 
+
+      .typ--#{map-get($i, 'roman')}#{$octaveRoman},
+      .typ--#{map-get($i, 'arabic')}#{$octaveArabic} {
         font-size: scaleType($base, (($octave) * $n + $note - 1), $r, $n);
       }
     }
