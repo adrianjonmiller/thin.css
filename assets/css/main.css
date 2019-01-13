@@ -95,6 +95,12 @@ h5 {
   }
 }
 
+.sampleText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .backToTop {
   transform: translate(-1rem, -1rem);
 

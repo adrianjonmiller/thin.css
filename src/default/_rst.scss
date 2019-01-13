@@ -1,45 +1,47 @@
 @mixin _rst {
-  .rst {
-    @include set('rst') {
-      padding: 0;
-      margin: 0;
-      border: 0;
-      outline: 0;
-      min-width: 0;
-    }
+  @include set('rst') {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    min-width: 0;
+  }
 
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    font-size: 87.5%;
+  }
+
+  html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     @include get('rst');
+  }
 
+  body,
+  p,
+  legend,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @include get('rst');
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1em;
+  }
+
+  .rst {
     &- {
-      &-base {
-        font-size: 87.5%;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        @include get('rst');
-
-        body,
-        p,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-          @include get('rst');
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          line-height: 1em;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      }
-
       // Reset lists
       &-list {
         @include get('rst');
@@ -52,15 +54,14 @@
         text-decoration: none;
       }
 
+      &-legend {
+        display: table;
+        float: left;
+      }
+
       // Reset Fieldsets
       &-fieldset {
         @include get('rst');
-
-        > legend {
-          padding: 0;
-          display: table;
-          float: left;
-        }
 
         @at-root body:not(:-moz-handler-blocked) fieldset.rst--fieldset {
           display: table-cell;
