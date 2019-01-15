@@ -1,7 +1,7 @@
 {
-  "name": "thin",
-  "version": "1.0.0",
-  "description": "thin.css cdn",
+  "name": "thin.css",
+  "version": "1.0.1",
+  "description": "Simple, css framework for apps.",
   "main": "dist/thin.css",
   "directories": {
     "doc": "docs"
