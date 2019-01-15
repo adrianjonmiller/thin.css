@@ -8,5 +8,5 @@ old
 npm-debug.log
 src/vendor
 public
-dist
 .vscode
+docs

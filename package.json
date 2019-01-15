@@ -2,16 +2,16 @@
   "name": "thin",
   "version": "1.0.0",
   "description": "thin.css cdn",
-  "main": "app.js",
+  "main": "dist/thin.css",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start": "NODE_ENV=production npm run build && NODE_ENV=production node dist/index.js",
-    "test": "PORT=3000 npm run build && node dist",
-    "build": "babel lib -d dist --presets babel-preset-env",
+    "start": "NODE_ENV=production npm run build && NODE_ENV=production node docs/index.js",
+    "test": "PORT=3000 npm run build && node docs",
+    "build": "babel lib -d docs --presets babel-preset-env",
     "watch": "PORT=3000 nodemon lib --exec babel-node --presets babel-preset-env",
-    "build-thin": "node-sass --include-path scss src/default/index.scss cdn/thin.css",
+    "build-thin": "node-sass --include-path scss src/default/index.scss dist/thin.css",
     "watch-css": "nodemon -e scss -x \"npm run build-thin\""
   },
   "nodemonConfig": {
