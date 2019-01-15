@@ -12,6 +12,7 @@
     "build": "babel lib -d docs --presets babel-preset-env",
     "watch": "PORT=3000 nodemon lib --exec babel-node --presets babel-preset-env",
     "build-thin": "node-sass --include-path scss src/default/index.scss dist/thin.css",
+    "autoprefix": "postcss dist/thin.css --use autoprefixer -b 'last 2 versions' -d dist",
     "watch-css": "nodemon -e scss -x \"npm run build-thin\""
   },
   "nodemonConfig": {
@@ -66,6 +67,8 @@
   "devDependencies": {
     "mathsass": "0.10.1",
     "node-sass": "4.11.0",
-    "nodemon": "1.18.9"
+    "nodemon": "1.18.9",
+    "postcss": "7.0.13",
+    "postcss-cli": "6.1.1"
   }
 }
