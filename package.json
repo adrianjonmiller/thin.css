@@ -38,6 +38,13 @@
   },
   "homepage": "https://github.com/adrianjonmiller/thin#readme",
   "dependencies": {
+  },
+  "devDependencies": {
+    "mathsass": "0.10.1",
+    "node-sass": "4.11.0",
+    "nodemon": "1.18.9",
+    "postcss": "7.0.13",
+    "postcss-cli": "6.1.1",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
     "babel-loader": "8.0.4",
@@ -63,12 +70,5 @@
     "webpack": "4.28.2",
     "webpack-dev-middleware": "3.4.0",
     "webpack-hot-middleware": "2.24.3"
-  },
-  "devDependencies": {
-    "mathsass": "0.10.1",
-    "node-sass": "4.11.0",
-    "nodemon": "1.18.9",
-    "postcss": "7.0.13",
-    "postcss-cli": "6.1.1"
   }
 }
