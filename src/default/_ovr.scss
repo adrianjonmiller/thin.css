@@ -3,10 +3,50 @@
 @mixin _ovr {
   .ovr {
     &- {
+
+      &-hidden {
+          overflow: hidden;
+      }
+
+      &-scroll {
+
+        &-x {
+          overflow-x: scroll;
+        }
+
+        &-y {
+          overflow-y: scroll;
+        }
+      }
+
       &-ellipsis {
+        max-width: 100%;
         overflow: hidden;
-        white-space: nowrap;
         text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &-nowrap {
+        overflow: visible;
+        white-space: nowrap;
+      }
+
+      &-x {
+
+        &-hidden {
+          overflow-x: hidden;
+        }
+      }
+
+      &-y {
+          
+          &-hidden {
+            overflow-y: hidden;
+          }
+      }
+
+      &-break-word {
+        word-break: break-word;
       }
     }
   }
