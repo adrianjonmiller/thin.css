@@ -6,16 +6,23 @@
 
       &-hidden {
           overflow: hidden;
+
+          &-x {
+            overflow-x: hidden;
+          }
+
+          &-y {
+            overflow-y: hidden;
+          }
       }
 
       &-scroll {
-
         &-x {
-          overflow-x: scroll;
+          overflow-x: auto;
         }
 
         &-y {
-          overflow-y: scroll;
+          overflow-y: auto;
         }
       }
 
@@ -29,20 +36,6 @@
       &-nowrap {
         overflow: visible;
         white-space: nowrap;
-      }
-
-      &-x {
-
-        &-hidden {
-          overflow-x: hidden;
-        }
-      }
-
-      &-y {
-          
-          &-hidden {
-            overflow-y: hidden;
-          }
       }
 
       &-break-word {
