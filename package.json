@@ -1,6 +1,6 @@
 {
   "name": "thin.css",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple, css framework for apps.",
   "main": "dist/thin.css",
   "directories": {
@@ -36,9 +36,7 @@
   "bugs": {
     "url": "https://github.com/adrianjonmiller/thin/issues"
   },
-  "homepage": "https://github.com/adrianjonmiller/thin#readme"
-  "dependencies": {
-  },
+  "homepage": "https://github.com/adrianjonmiller/thin#readme",
   "devDependencies": {
     "mathsass": "0.10.1",
     "node-sass": "4.11.0",
