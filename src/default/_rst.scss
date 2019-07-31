@@ -5,6 +5,8 @@
     border: 0;
     outline: 0;
     min-width: 0;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   * {
@@ -53,6 +55,11 @@
       &-link {
         color: inherit;
         text-decoration: none;
+        outline: 0;
+
+        &:focus {
+          outline: 0;
+        }
       }
 
       &-legend {
@@ -78,16 +85,33 @@
         background: transparent;
         color: inherit;
         font: inherit;
+        outline: none;
         line-height: normal;
         text-align: inherit;
         -webkit-font-smoothing: inherit;
         -moz-osx-font-smoothing: inherit;
         -webkit-appearance: none;
-
-
+        
         &::-moz-focus-inner {
           border: 0;
           padding: 0;
+        }
+      }
+
+      &-select {
+        @include get('rst');
+
+        &:focus {
+          outline: 0;
+        }
+    
+        &:-moz-focusring {
+          color: transparent;
+          text-shadow: 0 0 0 #000;
+        }
+
+        option:not(:checked) {
+          color: black; /* prevent <option>s from becoming transparent as well */
         }
       }
 
