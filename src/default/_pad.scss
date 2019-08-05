@@ -1,5 +1,5 @@
-@mixin _mrgn {
-  .mrgn {
+@mixin _pad {
+  .pad {
     &- {
       &-all {
         @each $name, $size in $sizes {

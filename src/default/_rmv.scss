@@ -1,0 +1,36 @@
+@import 'functions/set';
+@import 'functions/get';
+
+@mixin _rmv {
+    .rmv {
+        @include set('removeScrollbar') {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE 10 */
+    
+            &::-webkit-scrollbar {
+                width: 0px;
+                background: transparent; /* Chrome/Safari/Webkit */
+            }
+        }
+
+    &- {
+        &-scrollbar {
+            @include get('removeScrollbar');
+
+                &-global {
+                    @include get('removeScrollbar');
+                    
+                    *:not(.add--scrollbar) {
+                        scrollbar-width: inherit; /* Firefox */
+                        -ms-overflow-style: inherit;  /* IE 10 */
+                
+                        &::-webkit-scrollbar {
+                            width: inherit;
+                            background: inherit; /* Chrome/Safari/Webkit */
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

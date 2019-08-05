@@ -3,7 +3,7 @@
 @mixin _ovr {
   .ovr {
     &- {
-
+      
       &-hidden {
           overflow: hidden;
 
@@ -18,10 +18,12 @@
 
       &-scroll {
         &-x {
+          @include get('defaultScrollbar');
           overflow-x: auto;
         }
 
         &-y {
+          @include get('defaultScrollbar');
           overflow-y: auto;
         }
       }
