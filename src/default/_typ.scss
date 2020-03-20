@@ -25,6 +25,18 @@
     )
   );
 
+  $weights: (
+    'thin': 100,
+    'extra-light': 200,
+    'light': 300,
+    'normal': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+    'extra-bold': 800,
+    'black': 900,
+  );
+
   @for $octave from -$o through $o {
     @for $note from 1 through $n {
       $i: nth($notes, $note);
@@ -47,6 +59,15 @@
       .typ--#{map-get($i, 'roman')}#{$octaveRoman},
       .typ--#{map-get($i, 'arabic')}#{$octaveArabic} {
         font-size: scaleType($base, (($octave) * $n + $note - 1), $r, $n);
+      }
+    }
+  }
+
+  .typ- {
+    @each $name, $weight in $weights {
+      &-#{$name},
+      &-#{$weight} {
+        font-weight: #{$weight};
       }
     }
   }
