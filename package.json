@@ -1,6 +1,6 @@
 {
   "name": "thin.css",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Simple, css framework for apps.",
   "main": "dist/thin.css",
   "directories": {
