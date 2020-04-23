@@ -1,5 +1,5 @@
 {
-  "name": "@adrianjonmiller/thin.css",
+  "name": "thin.css",
   "version": "1.0.21",
   "description": "Simple, css framework for apps.",
   "main": "dist/thin.css",
@@ -36,7 +36,7 @@
   "bugs": {
     "url": "https://github.com/adrianjonmiller/thin/issues"
   },
-  "homepage": "https://github.com/adrianjonmiller/thin#readme",
+  "homepage": "https://thin.style",
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
