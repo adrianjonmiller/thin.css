@@ -33,11 +33,6 @@
   }
 }
 
-// Origin
-.origin {
-  position: relative;
-}
-
 // Is Hidden
 .is-hidden:not(.is-open) {
   @extend %hide;

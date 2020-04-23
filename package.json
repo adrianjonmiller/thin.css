@@ -1,5 +1,5 @@
 {
-  "name": "thin.css",
+  "name": "@adrianjonmiller/thin.css",
   "version": "1.0.20",
   "description": "Simple, css framework for apps.",
   "main": "dist/thin.css",

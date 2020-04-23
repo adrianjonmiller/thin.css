@@ -2,17 +2,16 @@
 @import 'functions/get';
 @import 'functions/extend';
 
-
 @mixin _abs {
+  .origin {
+    position: relative;
+  }
+  
   @include set(abs) {
     position: absolute;
   }
 
   @include get('abs');
-  
-  .origin {
-    position: relative;
-  }
 
   .abs {
     @include get(abs);
