@@ -10,3 +10,5 @@ src/vendor
 public
 .vscode
 _old
+_ignore
+dist

@@ -1,0 +1,116 @@
+body {
+  font-family: 'Lato', 'Helvetica', 'sans-serif';
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 100;
+}
+
+.section {
+  padding: 10rem 3rem;
+  min-height: 100vh;
+}
+
+.section:not(:target) {
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+}
+
+.main {
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 480px) {
+    flex-wrap: nowrap;
+  }
+
+  &-menu {
+    background-color: white;
+    border-right: solid thin #ddd;
+
+    &-heading {
+      @media screen and (min-width: 480px) {
+        display: none;
+      }
+    }
+  
+    &-list {
+      transform: translate(100%, -50%);
+      padding-right: 0;
+      transition: transform .25s ease;
+      background: white;
+      height: 100vh;
+      width: 100vw;
+
+      @media screen and (min-width: 480px) {
+        height: auto;
+        width: 12rem;
+      }
+
+      li {
+        padding-right: 1rem;
+      }
+
+      &:target {
+        transform: translate(0, -50%);
+      }
+
+      @media screen and (min-width: 480px) {
+        position: absolute;
+        transform: translate(0, -50%);
+      }
+    }
+
+    &-close,
+    &-open {
+      padding: .5rem;
+      border-radius: 99px;
+      background: white;
+
+      @media screen and (min-width: 480px) {
+        display: none
+      }
+    }
+
+    &-list:not(:target) ~ &-close {
+      display: none;
+    }
+
+    &-list:target ~ &-open {
+      display: none;
+    }
+  }
+
+  &-content {
+
+    @media screen and (min-width: 480px) {
+      overflow: auto;
+      height: 100vh;
+    }
+  }
+}
+
+.sampleText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.backToTop {
+  transform: translate(-1rem, -1rem);
+
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+}
+
+section:target ~ .home {
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+}

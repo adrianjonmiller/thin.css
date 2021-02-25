@@ -3,17 +3,14 @@
   "version": "1.0.22",
   "description": "Simple, css framework for apps.",
   "main": "dist/thin.css",
+  "unpkg": "dist/thin.css",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start": "NODE_ENV=production npm run build && NODE_ENV=production node docs/index.js",
-    "test": "PORT=3000 npm run build && node docs",
-    "build": "babel lib -d docs --presets babel-preset-env",
-    "watch": "PORT=3000 nodemon lib --exec babel-node --presets babel-preset-env",
-    "build-thin": "node-sass --include-path scss src/default/index.scss dist/thin.css && npm run autoprefix",
+    "build": "node-sass --include-path scss src/default/index.scss dist/thin.css && npm run autoprefix",
     "autoprefix": "postcss dist/thin.css --use autoprefixer -b 'last 2 versions' -d dist",
-    "watch-css": "nodemon -e scss -x \"npm run build-thin\""
+    "watch": "nodemon -e scss -x \"npm run build\""
   },
   "nodemonConfig": {
     "ignore": [
