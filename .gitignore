@@ -9,4 +9,4 @@ npm-debug.log
 src/vendor
 public
 .vscode
-docs
+_old
