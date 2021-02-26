@@ -6,8 +6,6 @@ const markdownFilter = require('nunjucks-markdown-filter');
 const token = '30d8c651eebea64a994dcba84ddd9d';
 const query = require('./query')
 
-console.log(process.env.NODE_ENV)
-
 let env = nunjucks.configure('./views', {
   watch: process.env.NODE_ENV === 'dev'
 });
