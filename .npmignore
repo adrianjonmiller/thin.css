@@ -1,6 +1,6 @@
 _ignore
 .sass-cache
-_docs
+docs
 lib
 src
 .babelrc
