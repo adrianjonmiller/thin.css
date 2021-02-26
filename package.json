@@ -40,7 +40,7 @@
     "clean-dir": "1.0.3",
     "fibers": "5.0.0",
     "postcss": "8.2.6",
-    "sass": "1.32.8",
-    "postcss-cli": "8.3.1"
+    "postcss-cli": "8.3.1",
+    "sass": "1.32.8"
   }
 }
