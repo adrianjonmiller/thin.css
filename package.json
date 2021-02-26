@@ -8,10 +8,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "node lib",
-    "_build": "node-sass --include-path scss src/default/index.scss dist/thin.css && npm run autoprefix",
+    "build1.0": "node-sass --include-path scss src/default/index.scss dist/thin.css && npm run autoprefix",
+    "build2.0": "sass src/2.0/index.scss dist/thin.css && npm run autoprefix",
     "autoprefix": "postcss dist/thin.css --use autoprefixer -b 'last 2 versions' -d dist",
-    "watch": "sass --watch src/default.index.css dist/thin.css"
   },
   "nodemonConfig": {
     "ignore": [
