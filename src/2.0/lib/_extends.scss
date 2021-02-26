@@ -1,0 +1,53 @@
+%relative {
+  position: relative;
+}
+
+%absolute {
+  position: absolute;
+}
+
+%fixed {
+  position: fixed;
+}
+
+%top {
+  top: 0;
+}
+
+%bottom {
+  bottom: 0;
+}
+
+%left {
+  left: 0;
+}
+
+%right {
+  right: 0;
+}
+
+%centerY {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%centerX {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+%centerXY {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%remove-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10 */
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+}

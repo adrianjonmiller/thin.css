@@ -1,0 +1,69 @@
+@use 'lib/extends';
+
+.origin {
+  @extend %relative;
+
+  > .abs {
+    @extend %absolute;
+  
+    &--top {
+      @extend .abs;
+
+      &-left {
+        @extend .abs--top;
+        @extend %left;
+      }
+
+      &-center {
+        @extend .abs--top;
+        @extend %centerX;
+      }
+
+      &-right {
+        @extend .abs--top;
+        @extend %right;
+      }
+    }
+  
+    &--center {
+      @extend .abs;
+      @extend %centerY;
+
+      &-left {
+        @extend .abs--center;
+        @extend %left;
+      }
+
+      &-center {
+        @extend .abs--center;
+        @extend %centerXY;
+      }
+
+      &-right {
+        @extend .abs--center;
+        @extend %right;
+      }
+    }
+  
+    &--bottom {
+      @extend .abs;
+      bottom: 0;
+
+      &-left {
+        @extend .abs--bottom;
+        @extend %left;
+      }
+
+      &-center {
+        @extend .abs--bottom;
+        @extend %centerX;
+      }
+
+      &-center {
+        @extend .abs--bottom;
+        @extend %right;
+      }
+    }
+  }
+}
+

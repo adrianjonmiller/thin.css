@@ -1,0 +1,19 @@
+.flt {
+  &- {
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: right;
+    }
+
+    &-clear {
+      &:after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+    }
+  }
+}

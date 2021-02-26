@@ -1,0 +1,42 @@
+.ovr {
+  &- {
+    
+    &-hidden {
+        overflow: hidden;
+
+        &-x {
+          overflow-x: hidden;
+        }
+
+        &-y {
+          overflow-y: hidden;
+        }
+    }
+
+    &-scroll {
+      &-x {
+        overflow-x: auto;
+      }
+
+      &-y {
+        overflow-y: auto;
+      }
+    }
+
+    &-ellipsis {
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-nowrap {
+      overflow: visible;
+      white-space: nowrap;
+    }
+
+    &-break-word {
+      word-break: break-word;
+    }
+  }
+}

@@ -1,8 +1,8 @@
-$placeholders: () !global;
+$placeholders: () ;
 
 @mixin set ($name) {
   @if (index($placeholders, $name) == null) {
-    $placeholders: append($placeholders, $name) !global;
+    $placeholders: append($placeholders, $name) ;
     @at-root %#{$name} {
       @content;
     }

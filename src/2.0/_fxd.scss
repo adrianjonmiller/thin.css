@@ -1,0 +1,66 @@
+@use 'lib/extends';
+
+.fxd {
+  @extend %fixed;
+
+  &--top {
+    @extend .fxd;
+    @extend %top;
+
+    &-left {
+      @extend .fxd--top;
+      @extend %left;
+    }
+
+    &-center {
+      @extend .fxd--top;
+      @extend %centerX;
+    }
+
+    &-right {
+      @extend .fxd--top;
+      @extend %right;
+    }
+  }
+
+  &--center {
+    @extend .fxd;
+    @extend %centerY;
+
+    &-left {
+      @extend .fxd--center;
+      @extend %left;
+    }
+
+    &-center {
+      @extend .fxd--center;
+      @extend %centerXY;
+    }
+
+    &-right {
+      @extend .fxd--center;
+      @extend %right;
+    }
+  }
+
+  &--bottom {
+    @extend .fxd;
+    @extend %bottom;
+
+    &-left {
+      @extend .fxd--bottom;
+      @extend %left;
+    }
+
+    &-center {
+      @extend .fxd--bottom;
+      @extend %centerX;
+    }
+
+    &-center {
+      @extend .fxd--bottom;
+      @extend %right;
+    }
+  }
+}
+

@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function scale($f0, $i, $r: 2, $n: 5) {
+  @return $f0 * math.pow($r, $i/$n);
+}

@@ -1,0 +1,21 @@
+$sizes: (
+  xs: 0.25rem,
+  sm: 0.5rem,
+  md: 1rem,
+  lg: 2rem,
+  xl: 4rem,
+) !default;
+
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1200px;
+$desktop-upper-boundary: 1800px;
+
+$media-queries: (
+  base: 'screen',
+  phone: 'screen and (max-width: #{$phone-upper-boundary - 1})',
+  tabletPortrait: 'screen and (min-width: #{$phone-upper-boundary}) and (max-width: #{$tablet-portrait-upper-boundary - 1})',
+  tabletLandscape: 'screen and (min-width: #{$tablet-portrait-upper-boundary}) and (max-width: #{$tablet-landscape-upper-boundary - 1})',
+  desktop: 'screen and (min-width: #{$tablet-landscape-upper-boundary}) and (max-width: #{$desktop-upper-boundary - 1})',
+  desktopWide: 'screen and (min-width: #{$desktop-upper-boundary})'
+);

@@ -1,7 +1,7 @@
 @mixin extend ($name, $new) {
   @if index($placeholders, $name) != null {
     @if (index($placeholders, $new) == null) {
-      $placeholders: append($placeholders, $new) !global;
+      $placeholders: append($placeholders, $new) ;
       @at-root %#{$new} {
         @extend %#{$name};
         @content;

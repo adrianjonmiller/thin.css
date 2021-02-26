@@ -1,0 +1,63 @@
+@use 'lib/vars' as *;
+
+.pad {
+  &- {
+    &-all {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          padding: $size;
+        }
+      }
+    }
+    
+    &-v {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          padding-left: $size;
+          padding-right: $size;
+        }
+      }
+    }
+
+    &-h {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          padding-top: $size;
+          padding-bottom: $size;
+        }
+      }
+    }
+
+    &-top {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          padding-top: $size;
+        }
+      }
+    }
+
+    &-bottom {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          padding-bottom: $size;
+        }
+      }
+    }
+
+    &-left {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          padding-left: $size;
+        }
+      }
+    }
+
+    &-right {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          padding-right: $size;
+        }
+      }
+    }
+  }
+}

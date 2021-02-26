@@ -8,9 +8,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "node-sass --include-path scss src/default/index.scss dist/thin.css && npm run autoprefix",
+    "build": "node lib",
+    "_build": "node-sass --include-path scss src/default/index.scss dist/thin.css && npm run autoprefix",
     "autoprefix": "postcss dist/thin.css --use autoprefixer -b 'last 2 versions' -d dist",
-    "watch": "nodemon -e scss -x \"npm run build\""
+    "watch": "sass --watch src/default.index.css dist/thin.css"
   },
   "nodemonConfig": {
     "ignore": [
@@ -34,36 +35,8 @@
     "url": "https://github.com/adrianjonmiller/thin/issues"
   },
   "homepage": "https://thin.style",
-  "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-core": "6.26.3",
-    "babel-loader": "8.0.4",
-    "babel-plugin-add-module-exports": "1.0.0",
-    "babel-preset-env": "1.7.0",
-    "css-loader": "2.0.2",
-    "express": "4.16.4",
-    "extract-text-webpack-plugin": "4.0.0-beta.0",
-    "feather-icons": "4.9.0",
-    "mathsass": "0.10.1",
-    "mini-css-extract-plugin": "0.5.0",
-    "node-fetch": "2.3.0",
-    "node-sass": "^4.11.0",
-    "nodemon": "1.18.9",
-    "path": "0.12.7",
-    "postcss": "^7.0.13",
-    "postcss-cli": "^6.1.1",
-    "postcss-cssnext": "^3.1.0",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.1.1",
-    "postcss-simple-vars": "^5.0.1",
-    "postcss-stack": "^1.5.0",
-    "reshape-express": "1.0.0",
-    "reshape-standard": "3.3.0",
-    "style-loader": "0.23.1",
-    "symbiotic": "0.1.45",
-    "webpack": "4.28.2",
-    "webpack-dev-middleware": "3.4.0",
-    "webpack-hot-middleware": "2.24.3"
+  "dependencies": {
+    "fibers": "5.0.0",
+    "sass": "1.32.8"
   }
 }

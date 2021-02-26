@@ -1,0 +1,42 @@
+@use 'lib/vars' as *;
+
+.ofst {
+  &- {
+    &-left {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-left: $size;
+        }
+      }
+    }
+
+    &-right {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-right: $size;
+        }
+      }
+    }
+
+    &-top {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-top: $size;
+        }
+      }
+    }
+
+    &-bottom {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-bottom: $size;
+        }
+      }
+    }
+
+    &-centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

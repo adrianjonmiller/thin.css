@@ -1,0 +1,90 @@
+@use 'lib/type';
+
+$base: 1rem;
+$r: 2;
+$n: 5;
+$o: 3;
+
+
+$notes: (
+    ( roman: 'i',
+      arabic: 'a'
+    ),(
+      roman: 'ii',
+      arabic: 'b',
+    ),(
+      roman: 'iii',
+      arabic: c
+    ),(
+      roman: 'iv',
+      arabic: 'd'
+    ),(
+      roman: 'v',
+      arabic: 'e',
+    ),(
+      roman: 'vi',
+      arabic: 'f'
+    ),(
+      roman: 'vii',
+      arabic: 'g'
+    )
+  );
+
+  $weights: (
+    'thin': 100,
+    'extra-light': 200,
+    'light': 300,
+    'normal': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+    'extra-bold': 800,
+    'black': 900,
+  );
+
+  @for $octave from -$o through $o {
+    @for $note from 1 through $n {
+      $i: nth($notes, $note);
+      $octaveRoman: '';
+      $octaveArabic: $octave;
+
+
+      @if ($octave > 0) {
+        $octaveRoman: \+#{$octave}
+      }
+
+      @if ($octave < 0) {
+        $octaveRoman: $octave;
+      }
+
+      @if ($octave == 0) {
+        $octaveArabic: '';
+      } 
+
+      .typ--#{map-get($i, 'roman')}#{$octaveRoman},
+      .typ--#{map-get($i, 'arabic')}#{$octaveArabic} {
+        font-size: type.scale($base, (($octave) * $n + $note - 1), $r, $n);
+      }
+    }
+  }
+
+  .typ- {
+    @each $name, $weight in $weights {
+      &-#{$name},
+      &-#{$weight} {
+        font-weight: #{$weight};
+      }
+    }
+  }
+
+  .typ--center {
+    text-align: center
+  }
+
+  .typ--left {
+    text-align: left
+  }
+
+  .typ--right {
+    text-align: right
+  }

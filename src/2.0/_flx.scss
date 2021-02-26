@@ -1,0 +1,25 @@
+.flx {
+  display: flex;
+  
+  &--column {
+    @extend .flx;
+  }
+
+  &-wrap {
+    @extend .flx;
+    flex-wrap: wrap;
+  }
+
+  &-fill {
+    flex: 1;
+  }
+
+  &-end {
+    margin-left: auto;
+  }
+
+  &-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
