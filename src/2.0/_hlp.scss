@@ -1,0 +1,9 @@
+.selectable {
+  -webkit-touch-callout: all;
+  -webkit-user-select: all;
+  -khtml-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: element;
+  user-select: all;
+  cursor: text;
+}

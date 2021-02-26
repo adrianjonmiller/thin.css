@@ -1,7 +1,0 @@
-@mixin get ($name) {
-  @if index($placeholders, $name) != null {
-    @extend %#{$name};
-  } @else {
-    @debug "Sorry, but `#{$name}` is not defined";
-  }
-}
