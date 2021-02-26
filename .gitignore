@@ -12,3 +12,4 @@ public
 _old
 _ignore
 dist
+*.log
