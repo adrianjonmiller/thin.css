@@ -82,8 +82,6 @@ module.exports = `{
     description
     id
     position
-    thumbnail {
-      url
-    }
+    sampleText
   }
 }`

@@ -11,6 +11,14 @@ let env = nunjucks.configure('./views', {
   watch: process.env.NODE_ENV === 'dev'
 });
 
+env.addFilter('json', function (value, spaces) {
+  if (value instanceof nunjucks.runtime.SafeString) {
+    value = value.toString()
+  }
+  const jsonString = JSON.stringify(value, null, spaces).replace(/</g, '\\u003c')
+  return nunjucks.runtime.markSafe(jsonString)
+})
+
 env.addFilter('md', markdownFilter)
 
 const getDatoData = () => new Promise((result, reject) => {
