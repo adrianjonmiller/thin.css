@@ -19,14 +19,6 @@ $widths: ();
       display: none;
     }
   }
-
-  .is-hidden {
-    &:not([class~="@#{$device}--show"]) {
-      @media #{$query} {
-        display: none;
-      }
-    }
-  }
   
   @each $name, $value in $widths {
     [class~="@#{$device}--#{$name}"] {

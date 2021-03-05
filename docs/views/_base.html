@@ -5,19 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title></title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/thin.css" />
   <link rel="stylesheet" href="/main.css" />
 </head>
-<body class="js-body mrgn--top-xl origin">
-  <header></header>
+<body class="fll--viewport ovr--scroll-y origin">
+    {% block splash %}
+    {% endblock %}
   <main>
     {% block main%}
     {% endblock %}
   </main>
-  <footer class="abs--bottom-left">
-    <p>&copy; 2019 Knitch Studios.</p>
+  <footer class="footer origin">
+    <p class="abs--bottom-left">&copy; 2021 Mill Design</p>
   </footer>
+  <header class="header fxd--top-left fxd--top-right flx">
+    <nav class="header-nav flx-end ofst--right-md">
+      <ul class="rst--list flx gtr--md">
+        <li>
+          <a href="/" class="header-nav-link">Getting Started</a>
+        </li>
+        <li>
+          <a href="/docs.html" class="header-nav-link">Docs</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <script src="/main.js" type="application/javascript " ></script>
 </body>
 </html>

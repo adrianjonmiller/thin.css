@@ -1,87 +1,20 @@
-module.exports = `{
-  allNavs {
+module.exports = `query ClassSets {
+  allClassSets {
     description
-    id
+    examples {
+      code(markdown: false)
+    }
     name
-    position
-    sectionId
-  }
-  allAbsolutes {
-    className
-    createdAt
-    description
-    id
-    position
-    thumbnail {
-      url
+    classes {
+      example(markdown: true)
+      id
+      name
+      description
+      image {
+        url
+      }
     }
+    slug
   }
-  allFills {
-    className
-    createdAt
-    description
-    id
-    position
-    thumbnail {
-      url
-    }
-  }
-  allFixeds {
-    className
-    createdAt
-    description
-    id
-    position
-    thumbnail {
-      url
-    }
-  }
-  allFlexes {
-    className
-    createdAt
-    description
-    id
-    position
-    thumbnail {
-      url
-    }
-  }
-  allFloats {
-    className
-    createdAt
-    description
-    id
-    position
-    thumbnail {
-      url
-    }
-  }
-  allGutters {
-    className
-    createdAt
-    description
-    id
-    position
-    thumbnail {
-      url
-    }
-  }
-  allOffsets {
-    className
-    createdAt
-    description
-    id
-    position
-    thumbnail {
-      url
-    }
-  }
-  allTypographies {
-    className
-    createdAt
-    description
-    id
-    position
-    sampleText
-  }
-}`
+}
+`

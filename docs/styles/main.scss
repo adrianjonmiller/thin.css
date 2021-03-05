@@ -1,116 +1,84 @@
 body {
-  font-family: 'Lato', 'Helvetica', 'sans-serif';
-  font-weight: 300;
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 100;
+h1,h2,h3,h4,h5 {
+  font-weight: 400;
 }
 
-.section {
-  padding: 10rem 3rem;
-  min-height: 100vh;
+.header {
+  &-nav {
+    &-link {
+      height: 4rem;
+      display: inline-block;
+      line-height: 4rem;
+      text-decoration: none;
+      color: #000;
+    }
+  }
 }
 
-.section:not(:target) {
-  @media screen and (min-width: 480px) {
-    display: none;
+.splash {
+  height: 100%;
+  max-height: calc(100vh - 32rem);
+  min-height: 18rem;
+
+  &-logo {
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
+    max-width: 33%;
+    max-height: 33%;
   }
 }
 
 .main {
-  flex-wrap: wrap;
+  width: calc(100% - 4rem);
+  max-width: 48rem;
+  min-width: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  @media screen and (min-width: 480px) {
-    flex-wrap: nowrap;
+.codeBlock {
+  &-label {
+    font-family: 'Courier New', Courier, monospace;
   }
 
-  &-menu {
-    background-color: white;
-    border-right: solid thin #ddd;
+  &-label + &-pre {
+    margin-top: 0;
+  }
 
-    &-heading {
-      @media screen and (min-width: 480px) {
-        display: none;
-      }
-    }
+  &-pre {
+    border: solid thin gray;
+    border-radius: .25rem;
+
+    &-code {
   
-    &-list {
-      transform: translate(100%, -50%);
-      padding-right: 0;
-      transition: transform .25s ease;
-      background: white;
-      height: 100vh;
-      width: 100vw;
-
-      @media screen and (min-width: 480px) {
-        height: auto;
-        width: 12rem;
-      }
-
-      li {
-        padding-right: 1rem;
-      }
-
-      &:target {
-        transform: translate(0, -50%);
-      }
-
-      @media screen and (min-width: 480px) {
-        position: absolute;
-        transform: translate(0, -50%);
-      }
-    }
-
-    &-close,
-    &-open {
-      padding: .5rem;
-      border-radius: 99px;
-      background: white;
-
-      @media screen and (min-width: 480px) {
-        display: none
-      }
-    }
-
-    &-list:not(:target) ~ &-close {
-      display: none;
-    }
-
-    &-list:target ~ &-open {
-      display: none;
-    }
-  }
-
-  &-content {
-
-    @media screen and (min-width: 480px) {
-      overflow: auto;
-      height: 100vh;
     }
   }
 }
 
-.sampleText {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.footer {
+  height: 24rem;
 }
 
-.backToTop {
-  transform: translate(-1rem, -1rem);
+.docs {
+  &-nav {
 
-  @media screen and (min-width: 480px) {
-    display: none;
   }
-}
 
-section:target ~ .home {
-  @media screen and (min-width: 480px) {
-    display: none;
+
+  &-main {
+    margin-left: 21rem;
+    margin-right: auto;
+    width: calc(100% - 42rem);
+    max-width: 54rem;
+    min-width: 24rem;
+    line-height: 1.8em;
+
+    &-section {
+      min-height: 100vh;
+      padding-top: 35vh;
+    }
   }
 }

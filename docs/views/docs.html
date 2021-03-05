@@ -1,0 +1,51 @@
+{% extends "_base.html" %}
+
+{% block main %}
+<div class="docs">
+  <div class="docs-nav fxd--center-left ofst--left-xl">
+    <ul class="rst--list">  
+      {% for nav in data.allClassSets %}
+        <li class="row--lg js-link" data-id="#{{nav.sectionId}}">
+          <h4 class="typ--i+1">
+            <a href="#{{nav.slug}}" class="row--collapse rst--link typ--i+1">
+              {{nav.name}} <br>
+            </a>
+          </h4>
+        </li>
+      {% else %}
+        <li>This would display if the 'item' collection were empty</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="docs-main">
+  {% for classSet in data.allClassSets %}
+    <section id="{{classSet.slug}}" class="docs-main-section pad--top-xl pad--bottom-xl">
+      <h3 class="typ--i+1">
+        <code>{{classSet.name}}</code>
+      </h3>
+      <p class="typ--ii ofst--top-md">
+        {{classSet.description}}
+      </p>
+      <ul class="rst--list ofst--top-xl">
+        {% for item in  classSet.classes%}
+          <li class="typ--iv row--xl">
+            <p class="typ--iii">
+              <span class="typ--iv"><code>{{item.name}}</code></span> <br />
+              <small>{{item.description}}</small>
+            </p>
+            <div class="flx ofst--top-md">
+              <div>
+                {% if item.image %}
+                  <img class="js-image" src="{{item.image.url}}" alt="">
+                {% endif %}
+              </div>
+              <pre class="typ--v-1 ofst--left-md"><code>{{item.example}}</code></pre>
+            </div>
+          </li>
+          {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+  </div>
+</div>
+{% endblock %}
