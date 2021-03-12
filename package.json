@@ -10,14 +10,9 @@
   "scripts": {
     "clean": "cleandir ./dist",
     "compile": "sass src/2.0/index.scss dist/thin.css --style compressed",
-    "autoprefix": "postcss dist/thin.css --use autoprefixer -b 'last 2 versions' -d dist",
+    "compile:docs": "sass src/2.0/index.scss docs/assets/thin.css --style compressed",
+    "autoprefix": "postcss dist/thin.css -d dist",
     "build": "yarn clean && yarn compile && yarn autoprefix"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "src/app/**/*.js",
-      "public/**/*"
-    ]
   },
   "repository": {
     "type": "git",
@@ -38,6 +33,7 @@
   "devDependencies": {
     "autoprefixer": "10.2.4",
     "clean-dir": "1.0.3",
+    "cssnano": "4.1.10",
     "fibers": "5.0.0",
     "postcss": "8.2.6",
     "postcss-cli": "8.3.1",

@@ -14,16 +14,32 @@ $widths: ();
 }
 
 @each $device, $query in $media-queries {
-  [class~="@#{$device}--hide"] {
+  .\@#{$device}--hide {
     @media #{$query} {
       display: none;
     }
   }
   
   @each $name, $value in $widths {
-    [class~="@#{$device}--#{$name}"] {
+    .\@#{$device}--#{$name} {
       @media #{$query} {
         width: $value;
+      }
+    }
+  }
+  
+  .gtr- {
+    @each $key, $size in $sizes {
+      &-#{$key} {
+        margin-left: -#{$size};
+
+        @each $name, $value in $widths {
+          > .\@#{$device}--#{$name} {
+            @media #{$query} {
+              width: calc(#{$value} - #{$size});
+            }
+          }
+        }
       }
     }
   }

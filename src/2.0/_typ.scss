@@ -42,49 +42,53 @@ $notes: (
     'black': 900,
   );
 
-  @for $octave from -$o through $o {
-    @for $note from 1 through $n {
-      $i: nth($notes, $note);
-      $octaveRoman: '';
-      $octaveArabic: $octave;
-
-
-      @if ($octave > 0) {
-        $octaveRoman: \+#{$octave}
-      }
-
-      @if ($octave < 0) {
-        $octaveRoman: $octave;
-      }
-
-      @if ($octave == 0) {
-        $octaveArabic: '';
-      } 
-
-      .typ--#{map-get($i, 'roman')}#{$octaveRoman},
-      .typ--#{map-get($i, 'arabic')}#{$octaveArabic} {
-        font-size: type.scale($base, (($octave) * $n + $note - 1), $r, $n);
+.type- {
+  &- {
+    @for $octave from -$o through $o {
+      @for $note from 1 through $n {
+        $i: nth($notes, $note);
+        $octaveRoman: '';
+        $octaveArabic: $octave;
+  
+  
+        @if ($octave > 0) {
+          $octaveRoman: \+#{$octave}
+        }
+  
+        @if ($octave < 0) {
+          $octaveRoman: $octave;
+        }
+  
+        @if ($octave == 0) {
+          $octaveArabic: '';
+        } 
+  
+        .typ--#{map-get($i, 'roman')}#{$octaveRoman},
+        .typ--#{map-get($i, 'arabic')}#{$octaveArabic} {
+          font-size: type.scale($base, (($octave) * $n + $note - 1), $r, $n);
+        }
       }
     }
-  }
 
-  .typ- {
     @each $name, $weight in $weights {
-      &-#{$name},
-      &-#{$weight} {
+      &-weight-#{$name},
+      &-weight-#{$weight} {
         font-weight: #{$weight};
       }
     }
-  }
 
-  .typ--center {
-    text-align: center
-  }
+    &-align {
+      &-center {
+        text-align: center
+      }
 
-  .typ--left {
-    text-align: left
-  }
+      &-left {
+        text-align: left;
+      }
 
-  .typ--right {
-    text-align: right
+      &-right {
+        text-align: right;
+      }
+    }
   }
+}

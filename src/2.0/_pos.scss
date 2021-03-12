@@ -3,65 +3,65 @@
 .origin {
   @extend %relative;
 
-  > .abs {
+  > .pos {
     @extend %absolute;
   
     &--top {
-      @extend .abs;
+      @extend .pos;
       @extend %top;
 
       &-left {
-        @extend .abs--top;
+        @extend .pos--top;
         @extend %left;
       }
 
       &-center {
-        @extend .abs--top;
+        @extend .pos--top;
         @extend %centerX;
       }
 
       &-right {
-        @extend .abs--top;
+        @extend .pos--top;
         @extend %right;
       }
     }
   
     &--center {
-      @extend .abs;
+      @extend .pos;
       @extend %centerY;
 
       &-left {
-        @extend .abs--center;
+        @extend .pos--center;
         @extend %left;
       }
 
       &-center {
-        @extend .abs--center;
+        @extend .pos--center;
         @extend %centerXY;
       }
 
       &-right {
-        @extend .abs--center;
+        @extend .pos--center;
         @extend %right;
       }
     }
   
     &--bottom {
-      @extend .abs;
+      @extend .pos;
       bottom: 0;
 
       &-left {
-        @extend .abs--bottom;
+        @extend .pos--bottom;
         @extend %left;
       }
 
       &-center {
-        @extend .abs--bottom;
+        @extend .pos--bottom;
         @extend %centerX;
       }
 
       &-right {
-        @extend .abs--bottom;
+        @extend .pos--bottom;
         @extend %right;
       }
     }

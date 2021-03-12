@@ -1,13 +1,25 @@
 .flx {
   display: flex;
+  &- {
+    &-reverse {
+      @extend .flx;
+      flex-direction: row-reverse;
+    }
+    
+    &-column {
+      @extend .flx;
+      flex-direction: column;
+    }
   
-  &--column {
-    @extend .flx;
-  }
-
-  &-wrap {
-    @extend .flx;
-    flex-wrap: wrap;
+    &-column-reverse {
+      @extend .flx;
+      flex-direction: column-reverse;
+    }
+  
+    &-wrap {
+      @extend .flx;
+      flex-wrap: wrap;
+    }
   }
 
   &-fill {

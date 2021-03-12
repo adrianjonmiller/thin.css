@@ -1,4 +1,5 @@
 @use 'lib/extends';
+@use 'lib/vars' as *;
 
 * {
   @extend %border-box;
@@ -107,29 +108,17 @@ h6 {
     }
 
     &-input {
-      &[type=date],
-      &[type=datetime],
-      &[type=datetime-local],
-      &[type=email],
-      &[type=month],
-      &[type=number],
-      &[type=password],
-      &[type=range],
-      &[type=search],
-      &[type=tel],
-      &[type=text],
-      &[type=time],
-      &[type=url],
-      &[type=week],
-      &[type=file] {
-        @extend %reset;
-
-        &:focus {
-          outline:0;
+      @each $input in $inputs {
+        &-#{$input} {
+          @extend %reset;
+  
+          &:focus {
+            outline:0;
+          }
         }
       }
 
-      &input[type=search] {
+      &-search {
         -webkit-appearance: textfield;
         appearance: textfield;
         -webkit-box-sizing: content-box;

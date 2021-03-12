@@ -1,64 +1,64 @@
 @use 'lib/extends';
 
-.fxd {
+.vprt {
   @extend %fixed;
 
   &--top {
-    @extend .fxd;
+    @extend .vprt;
     @extend %top;
 
     &-left {
-      @extend .fxd--top;
+      @extend .vprt--top;
       @extend %left;
     }
 
     &-center {
-      @extend .fxd--top;
+      @extend .vprt--top;
       @extend %centerX;
     }
 
     &-right {
-      @extend .fxd--top;
+      @extend .vprt--top;
       @extend %right;
     }
   }
 
   &--center {
-    @extend .fxd;
+    @extend .vprt;
     @extend %centerY;
 
     &-left {
-      @extend .fxd--center;
+      @extend .vprt--center;
       @extend %left;
     }
 
     &-center {
-      @extend .fxd--center;
+      @extend .vprt--center;
       @extend %centerXY;
     }
 
     &-right {
-      @extend .fxd--center;
+      @extend .vprt--center;
       @extend %right;
     }
   }
 
   &--bottom {
-    @extend .fxd;
+    @extend .vprt;
     @extend %bottom;
 
     &-left {
-      @extend .fxd--bottom;
+      @extend .vprt--bottom;
       @extend %left;
     }
 
     &-center {
-      @extend .fxd--bottom;
+      @extend .vprt--bottom;
       @extend %centerX;
     }
 
     &-right {
-      @extend .fxd--bottom;
+      @extend .vprt--bottom;
       @extend %right;
     }
   }
