@@ -1,0 +1,84 @@
+@use 'lib/type';
+@use 'sass:list';
+@use 'sass:map';
+
+$base: 1rem;
+$r: 2;
+$n: 5;
+$o: 3;
+
+
+$notes: (
+  'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii'
+);
+
+$weights: (
+  'thin': 100,
+  'extraLight': 200,
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semiBold': 600,
+  'bold': 700,
+  'extraBold': 800,
+  'black': 900,
+);
+
+
+
+.type {
+  type-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  &- {
+    &-size {
+      @for $octave from -1 through $o {
+        @for $note from 1 through $n {
+          $i: list.nth($notes, $note);
+          $octaveSuffix: '';
+      
+      
+          @if ($octave > 0) {
+            $octaveSuffix: \+#{$octave}
+          }
+      
+          @if ($octave < 0) {
+            $octaveSuffix: $octave;
+          }
+      
+      
+          &-#{$i}#{$octaveSuffix} {
+            @extend .type;
+            font-size: type.scale($base, (($octave) * $n + $note - 1), $r, $n);
+          }
+        }
+      }
+    }
+    
+    @each $name, $weight in $weights {
+      &-weight-#{$name},
+      &-weight-#{$weight} {
+        @extend .type;
+        font-weight: #{$weight};
+      }
+    }
+
+    &-align {
+      &-center {
+        @extend .type;
+        text-align: center;
+      }
+
+      &-left {
+        @extend .type;
+        text-align: left;
+      }
+
+      &-right {
+        @extend .type;
+        text-align: right;
+      }
+    }
+  }
+}

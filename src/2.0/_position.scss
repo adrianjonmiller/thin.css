@@ -1,0 +1,83 @@
+@use 'lib/extends';
+
+.layout {
+  &- {
+    &-container {
+      @extend %relative;
+    }
+
+    &-top {
+      @extend %absolute;
+      @extend %top;
+
+      &-left {
+        @extend %absolute;
+        @extend %top;
+        @extend %left;
+      }
+
+      &-right {
+        @extend %absolute;
+        @extend %top;
+        @extend %right;
+      }
+
+      &-center {
+        @extend %absolute;
+        @extend %top;
+        @extend %centerX;
+      }
+    }
+
+    &-right {
+      @extend %absolute;
+      @extend %right;
+    }
+
+    &-bottom {
+      @extend %absolute;
+      @extend %bottom;
+
+      &-left {
+        @extend %absolute;
+        @extend %bottom;
+        @extend %left;
+      }
+
+      &-right {
+        @extend %absolute;
+        @extend %bottom;
+        @extend %right;
+      }
+
+      &-center {
+        @extend %absolute;
+        @extend %bottom;
+        @extend %centerX;
+      }
+    }
+
+    &-left {
+      @extend %absolute;
+      @extend %left;
+    }
+
+    &-center {
+      @extend %absolute;
+      @extend %centerXY;
+
+      &-left {
+        @extend %absolute;
+        @extend %centerY;
+        @extend %left;
+      }
+
+      &-right {
+        @extend %absolute;
+        @extend %centerY;
+        @extend %right;
+      }
+    }
+  }
+}
+

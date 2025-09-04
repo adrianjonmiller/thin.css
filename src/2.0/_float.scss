@@ -1,4 +1,4 @@
-.flt {
+.float {
   &- {
     &-left {
       float: left;
@@ -14,6 +14,14 @@
         clear: both;
         display: table;
       }
+    }
+
+    &-none {
+      float: none;
+    }
+
+    &-inherit {
+      float: inherit;
     }
   }
 }

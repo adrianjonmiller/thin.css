@@ -1,0 +1,356 @@
+@use 'lib/extends';
+@use 'lib/vars' as *;
+
+* {
+  @extend %border-box;
+}
+
+:root {
+  font-size: 87.5%;
+}
+
+html {
+  font-family: 'Helvetica', Arial, sans-serif;
+  @extend %reset;
+}
+
+body,
+p,
+legend,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %reset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1em;
+}
+
+.reset {
+  // List resets
+  &:is(ul, ol) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  &:is(li) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Button resets
+  &:is(button, input[type="button"], input[type="submit"], input[type="reset"]) {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    outline: none;
+    line-height: normal;
+    text-align: inherit;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+    
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+  }
+  
+  // Form element resets
+  &:is(input, select, textarea) {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font: inherit;
+    outline: none;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  // Select specific resets
+  &:is(select) {
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+    
+    option:not(:checked) {
+      color: black; /* prevent <option>s from becoming transparent as well */
+    }
+  }
+  
+  // Input search specific resets
+  &:is(input[type="search"]) {
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    
+    &::-webkit-search-decoration {
+      display: none;
+    }
+  }
+  
+  // Link resets
+  &:is(a) {
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+    
+    &:focus {
+      outline: 0;
+    }
+  }
+  
+  // Legend resets
+  &:is(legend) {
+    display: table;
+    float: left;
+  }
+  
+  // Fieldset resets
+  &:is(fieldset) {
+    @extend %reset;
+    
+    @at-root body:not(:-moz-handler-blocked) fieldset.reset {
+      display: table-cell;
+    }
+  }
+  
+  // Heading resets
+  &:is(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+  
+  // Paragraph resets
+  &:is(p) {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Table resets
+  &:is(table) {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  &:is(td, th) {
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  // Image resets
+  &:is(img) {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  // Video and audio resets
+  &:is(video, audio) {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  // Iframe resets
+  &:is(iframe) {
+    border: 0;
+    max-width: 100%;
+  }
+  
+  // Pre and code resets
+  &:is(pre, code) {
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Blockquote resets
+  &:is(blockquote) {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Address resets
+  &:is(address) {
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Abbreviation resets
+  &:is(abbr, acronym) {
+    border-bottom: none;
+    text-decoration: none;
+  }
+  
+  // Mark resets
+  &:is(mark) {
+    background: none;
+    color: inherit;
+  }
+  
+  // Small resets
+  &:is(small) {
+    font-size: inherit;
+  }
+  
+  // Sub and sup resets
+  &:is(sub, sup) {
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: baseline;
+  }
+  
+  // Details and summary resets
+  &:is(details, summary) {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Progress and meter resets
+  &:is(progress, meter) {
+    border: none;
+    background: none;
+  }
+  
+  // HR resets
+  &:is(hr) {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Dialog resets
+  &:is(dialog) {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Main content resets
+  &:is(main, article, section, aside, nav, header, footer) {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Figure and figcaption resets
+  &:is(figure, figcaption) {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Time resets
+  &:is(time) {
+    font-style: normal;
+  }
+  
+  // Ruby resets
+  &:is(ruby, rt, rp) {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Data resets
+  &:is(data) {
+    font-style: normal;
+  }
+  
+  // Samp resets
+  &:is(samp) {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  // Var resets
+  &:is(var) {
+    font-style: normal;
+  }
+  
+  // Cite resets
+  &:is(cite) {
+    font-style: normal;
+  }
+  
+  // Del and ins resets
+  &:is(del, ins) {
+    text-decoration: none;
+  }
+  
+  // Strong and em resets
+  &:is(strong, em) {
+    font-weight: inherit;
+    font-style: inherit;
+  }
+  
+  // B and i resets
+  &:is(b, i) {
+    font-weight: inherit;
+    font-style: inherit;
+  }
+  
+  // U resets
+  &:is(u) {
+    text-decoration: none;
+  }
+  
+  // S resets
+  &:is(s) {
+    text-decoration: none;
+  }
+  
+  // Kbd resets
+  &:is(kbd) {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  
+  // Q resets
+  &:is(q) {
+    quotes: none;
+    
+    &::before, &::after {
+      content: '';
+    }
+  }
+  
+  // Datalist resets
+  &:is(datalist) {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Optgroup resets
+  &:is(optgroup) {
+    font-weight: inherit;
+  }
+}

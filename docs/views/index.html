@@ -1,64 +1,12 @@
-{% extends "_base.html" %}
-{% block splash %}
-
-<div class="splash origin">
-  <img src="/logo.svg" class="splash-logo pos--center-center" />
-</div>
-
-{% endblock %}
-
-{% block main %}
-<div class="main">
-<h1 class="typ--v+1 typ--center">
-  Getting Started
-</h1>
-<h2 class="typ--center ofst--top-xl">
-CDN
-</h2>
-
-<div class="codeBlock ofst--top-xl">
-  <p class="codeBlock-label">
-    <span>CDN</span>
-  </p>
-  <pre class="codeBlock-pre pad--all-md"><code class="codeBlock-pre-code">https://unpkg.com/thin.css</code></pre>
-</div>
-
-
-<h2 class="typ--center ofst--top-xl">
-Installing
-</h2>
-
-<div class="codeBlock ofst--top-lg">
-  <p class="codeBlock-label">
-    <span>npm</span>
-  </p>
-  <pre class="codeBlock-pre pad--all-md"><code class="codeBlock-pre-code">npm i thin.css</code></pre>
-</div>
-
-<div class="codeBlock ofst--top-lg">
-  <p class="codeBlock-label">
-    <span>yarn</span>
-  </p>
-  <pre class="codeBlock-pre pad--all-md"><code class="codeBlock-pre-code">yarn add thin.css</code></pre>
-</div>
-
-<hr class="ofst--top-lg" />
-
-<div class="codeBlock ofst--top-lg">
-  <p class="codeBlock-label">
-    <span>ES6</span>
-  </p>
-  <pre class="codeBlock-pre pad--all-md"><code class="codeBlock-pre-code">import 'thin.css'</code></pre>
-  
-</div>
-
-<div class="codeBlock ofst--top-md">
-  <p class="codeBlock-label">
-    <span>CommonJs</span>
-  </p>
-  <pre class="codeBlock-pre pad--all-md ofst--top-md"><code class="codeBlock-pre-code">require('thin.css')</code></pre>
-</div>
-
-
-
-{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <h1>{{title}}</h1>
+          <p>Welcome to your new Clovie site!</p>
+  <script src="main.js"></script>
+</body>
+</html>

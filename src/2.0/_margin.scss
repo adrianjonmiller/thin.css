@@ -1,0 +1,163 @@
+@use 'lib/vars' as *;
+
+.margin {
+  &- {
+    &-left {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-left: $size;
+        }
+      }
+    }
+
+    &-right {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-right: $size;
+        }
+      }
+    }
+
+    &-top {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-top: $size;
+        }
+      }
+    }
+
+    &-bottom {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-bottom: $size;
+        }
+      }
+    }
+
+    &-auto {
+      margin: auto;
+
+      &-left {
+        margin-left: auto;
+      }
+
+      &-right {
+        margin-right: auto;
+      }
+
+      &-top {
+        margin-top: auto;
+      }
+      
+      &-bottom {
+        margin-bottom: auto;
+      }
+
+      &-horizontal {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &-vertical {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    // Horizontal and vertical margins
+    &-horizontal {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-left: $size;
+          margin-right: $size;
+        }
+      }
+    }
+
+    &-vertical {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-top: $size;
+          margin-bottom: $size;
+        }
+      }
+    }
+
+    // All sides with sizes
+    &-all {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin: $size;
+        }
+      }
+    }
+
+    // Corner combinations
+    &-topLeft {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-top: $size;
+          margin-left: $size;
+        }
+      }
+    }
+
+    &-topRight {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-top: $size;
+          margin-right: $size;
+        }
+      }
+    }
+
+    &-bottomLeft {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-bottom: $size;
+          margin-left: $size;
+        }
+      }
+    }
+
+    &-bottomRight {
+      @each $name, $size in $sizes {
+        &-#{$name} {
+          margin-bottom: $size;
+          margin-right: $size;
+        }
+      }
+    }
+
+    // Zero margins
+    &-zero {
+      margin: 0;
+
+      &-left {
+        margin-left: 0;
+      }
+
+      &-right {
+        margin-right: 0;
+      }
+
+      &-top {
+        margin-top: 0;
+      }
+
+      &-bottom {
+        margin-bottom: 0;
+      }
+
+      &-horizontal {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &-vertical {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -4,15 +4,21 @@
   "description": "Simple, css framework for apps.",
   "main": "dist/thin.css",
   "unpkg": "dist/thin.css",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "clean": "cleandir ./dist",
-    "compile": "sass src/2.0/index.scss dist/thin.css --style compressed",
-    "compile:docs": "sass src/2.0/index.scss docs/assets/thin.css --style compressed",
+    "clean": "rimraf ./dist",
+    "compile": "sass src/2.0/index.scss dist/thin.css --style compressed --source-map",
+    "compile:docs": "sass src/2.0/index.scss docs/assets/thin.css --style compressed --source-map",
     "autoprefix": "postcss dist/thin.css -d dist",
-    "build": "yarn clean && yarn compile && yarn autoprefix"
+    "build": "npm run clean && npm run compile && npm run autoprefix",
+    "dev": "npm run compile && npm run autoprefix",
+    "watch": "sass --watch src/2.0/index.scss:dist/thin.css --style compressed --source-map"
   },
   "repository": {
     "type": "git",
@@ -24,19 +30,18 @@
     "css",
     "cdn"
   ],
-  "author": "Adrian J Miller",
+  "author": "ajmill",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/adrianjonmiller/thin/issues"
   },
   "homepage": "https://thin.style",
   "devDependencies": {
-    "autoprefixer": "10.2.4",
-    "clean-dir": "1.0.3",
-    "cssnano": "4.1.10",
-    "fibers": "5.0.0",
-    "postcss": "8.2.6",
-    "postcss-cli": "8.3.1",
-    "sass": "1.32.8"
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.1",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "rimraf": "^6.0.1",
+    "sass": "^1.92.0"
   }
 }

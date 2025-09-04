@@ -1,0 +1,81 @@
+@use 'lib/extends';
+
+.fixed {
+  @extend %fixed;
+
+  &- {
+    &-top {
+      @extend %fixed;
+      @extend %top;
+
+      &-left {
+        @extend %fixed;
+        @extend %top;
+        @extend %left;
+      }
+
+      &-right {
+        @extend %fixed;
+        @extend %top;
+        @extend %right;
+      }
+
+      &-center {
+        @extend %fixed;
+        @extend %top;
+        @extend %centerX;
+      }
+    }
+
+    &-bottom {
+      @extend %fixed;
+      @extend %bottom;
+
+      &-left {
+        @extend %fixed;
+        @extend %bottom;
+        @extend %left;
+      }
+
+      &-right {
+        @extend %fixed;
+        @extend %bottom;
+        @extend %right;
+      }
+
+      &-center {
+        @extend %fixed;
+        @extend %bottom;
+        @extend %centerX;
+      }
+    }
+
+    &-left {
+      @extend %fixed;
+      @extend %left;
+
+      &-center {
+        @extend %fixed;
+        @extend %left;
+        @extend %centerY;
+      }
+      
+    }
+
+    &-right {
+      @extend %fixed;
+      @extend %right;
+
+      &-center {
+        @extend %fixed;
+        @extend %right;
+        @extend %centerY;
+      }
+    }
+
+    &-center {
+      @extend %fixed;
+      @extend %centerXY;
+    }
+  }
+}

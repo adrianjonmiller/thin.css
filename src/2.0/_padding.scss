@@ -1,6 +1,6 @@
 @use 'lib/vars' as *;
 
-.pad {
+.padding {
   &- {
     &-all {
       @each $name, $size in $sizes {
@@ -10,7 +10,7 @@
       }
     }
     
-    &-v {
+    &-vertical {
       @each $name, $size in $sizes {
         &-#{$name} {
           padding-left: $size;
@@ -19,7 +19,7 @@
       }
     }
 
-    &-h {
+    &-horizontal {
       @each $name, $size in $sizes {
         &-#{$name} {
           padding-top: $size;

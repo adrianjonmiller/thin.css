@@ -1,0 +1,87 @@
+.flex {
+  display: flex;
+  &-{
+      // Direction modifiers
+    &-column { @extend .flex; flex-direction: column; }
+    &-columnReverse { @extend .flex; flex-direction: column-reverse; }
+    &-rowReverse { @extend .flex; flex-direction: row-reverse; }
+    
+    // Wrap modifiers
+    &-wrap { @extend .flex; flex-wrap: wrap; }
+    &-wrapReverse { @extend .flex; flex-wrap: wrap-reverse; }
+    &-noWrap { @extend .flex; flex-wrap: nowrap; }
+    
+    // Justify content modifiers
+    &-start { @extend .flex; justify-content: flex-start; }
+    &-end { @extend .flex; justify-content: flex-end; }
+    &-center { @extend .flex; justify-content: center; }
+    &-between { @extend .flex; justify-content: space-between; }
+    &-around { @extend .flex; justify-content: space-around; }
+    
+    // Align items modifiers
+    &-items-start { @extend .flex; align-items: flex-start; }
+    &-items-center { @extend .flex; align-items: center; }
+    &-items-end { @extend .flex; align-items: flex-end; }
+    
+    // Compound modifiers (most common combinations)
+
+    &-column {
+      &-center { 
+        @extend .flex--column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      &-start { 
+        @extend .flex--column;
+        justify-content: flex-start;
+      }
+      
+      &-between { 
+        @extend .flex--column;
+        justify-content: space-between;
+      }
+      
+      &-wrap { 
+        @extend .flex--column;
+        flex-wrap: wrap;
+      }
+    }
+
+    &-columnReverse {
+      &-center { 
+        @extend .flex--columnReverse;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      &-start { 
+        @extend .flex--columnReverse;
+        justify-content: flex-start;
+      }
+      
+      &-between { 
+        @extend .flex--columnReverse;
+        justify-content: space-between;
+      }
+      
+      &-wrap { 
+        @extend .flex--columnReverse;
+        flex-wrap: wrap;
+      }
+    }
+    
+    &-wrap { 
+      &-center { 
+        @extend .flex--wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      &-between { 
+        @extend .flex--wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+}
