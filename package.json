@@ -1,6 +1,6 @@
 {
   "name": "thin.css",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Simple, css framework for apps.",
   "main": "dist/thin.css",
   "unpkg": "dist/thin.css",
