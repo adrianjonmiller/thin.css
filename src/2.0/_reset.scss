@@ -35,7 +35,7 @@ h6 {
   line-height: 1em;
 }
 
-.reset {
+:where(.reset) {
   // List resets
   &:is(ul, ol) {
     list-style: none;
