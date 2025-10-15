@@ -14,7 +14,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "compile": "sass src/2.0/index.scss dist/thin.css --style compressed --source-map",
-    "compile:docs": "sass src/2.0/index.scss docs/assets/thin.css --style compressed --source-map",
+    "compile:docs": "sass src/3.0/index.scss docs/assets/thin.css --style compressed --source-map",
     "autoprefix": "postcss dist/thin.css -d dist",
     "build": "npm run clean && npm run compile && npm run autoprefix",
     "dev": "npm run compile && npm run autoprefix",

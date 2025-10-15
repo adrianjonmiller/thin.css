@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Utility CSS – Examples & Recipes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Utility CSS – Examples & Recipes" />
+  
+  <link rel="stylesheet" href="https://unpkg.com/thin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
+  <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+<main class="margin--all-lg">
+  <h1>Utility CSS – Examples &amp; Recipes</h1>
+  <p>This guide shows how to build common UI structures using only the provided utility classes. It does not add any styles beyond your utilities.</p>
+
+  <!-- ========================================================= -->
+  <section id="layout-page" class="margin--top-md">
+    <h2>1) Page Frame: Sticky Header, Content, Sticky Footer</h2>
+    <p class="margin--top-sm">Use fixed positioning helpers for header and footer, and add padding on the main content to avoid overlap.</p>
+
+    <details class="margin--top-md" open>
+      <summary>Markup</summary>
+      <div class="codeBlock padding--all-md layout--container">
+      <button class="layout--top-right reset">Copy</button>
+      <pre class="js--highlight-html reset">&lt;header class="fixed--top fill--width padding--all-md"&gt;
+  &lt;nav class="flex--between flex--items-center"&gt;
+    &lt;a href="#home"&gt;Brand&lt;/a&gt;
+    &lt;div class="flex--items-center flex--gap"&gt;
+      &lt;a href="#docs" class="margin--left-md"&gt;Docs&lt;/a&gt;
+      &lt;a href="#login" class="margin--left-md"&gt;Login&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main class="margin--top-xl margin--bottom-xl margin--y-md"&gt;
+  &lt;article class="margin--x-lg"&gt;
+    &lt;h1 class="type--size-iv type--weight-700"&gt;Page Title&lt;/h1&gt;
+    &lt;p class="margin--top-sm"&gt;Intro copy goes here.&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;section class="margin--x-lg"&gt;...content...&lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer class="fixed--bottom fill--width padding--all-md"&gt;
+  &lt;p class="type--size-i-1"&gt;© Company&lt;/p&gt;
+&lt;/footer&gt;
+</pre>
+      </div>
+    </details>
+
+    <p><strong>Notes</strong></p>
+    <ul>
+      <li>Add <code>margin--top-xl</code> on <code>&lt;main&gt;</code> sized to your header height.</li>
+      <li>Swap to <code>.fixed--bottom-center</code> for a center docked control bar.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="hero" class="margin--top-md">
+    <h2>2) Centered Hero Section</h2>
+    <p>Full screen block with perfectly centered content using <code>.fill--screen</code> and <code>.flex--column-center</code>.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <div class="codeBlock">
+      <pre><code>&lt;section class="fill--screen flex--column-center padding--all-lg type--align-center"&gt;
+  &lt;h1 class="type--size-iv type--weight-700"&gt;Build faster with Utilities&lt;/h1&gt;
+  &lt;p class="margin--top-sm type--size-ii"&gt;No framework lock-in. Just classes.&lt;/p&gt;
+  &lt;div class="margin--top-md flex--center"&gt;
+    &lt;a href="#get-started" class="margin--right-sm"&gt;Get Started&lt;/a&gt;
+    &lt;a href="#docs"&gt;Read Docs&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+      </div>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="cards">
+    <h2>3) Responsive Card List with Wrapping</h2>
+    <p>Wrap cards and space them with margins. Equal heights come from flex column children.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;section aria-label="Feature list" class="flex--wrap-between"&gt;
+  &lt;article class="margin--bottom-md" style="width:320px"&gt;
+    &lt;header class="margin--bottom-sm"&gt;&lt;h3 class="type--size-iii type--weight-700"&gt;Card A&lt;/h3&gt;&lt;/header&gt;
+    &lt;p class="margin--bottom-sm"&gt;Short description.&lt;/p&gt;
+    &lt;footer&gt;&lt;a href="#"&gt;Learn more&lt;/a&gt;&lt;/footer&gt;
+  &lt;/article&gt;
+
+  &lt;article class="margin--bottom-md" style="width:320px"&gt;
+    &lt;header class="margin--bottom-sm"&gt;&lt;h3 class="type--size-iii type--weight-700"&gt;Card B&lt;/h3&gt;&lt;/header&gt;
+    &lt;p class="margin--bottom-sm"&gt;Longer description that wraps to show mixed heights.&lt;/p&gt;
+    &lt;footer&gt;&lt;a href="#"&gt;Learn more&lt;/a&gt;&lt;/footer&gt;
+  &lt;/article&gt;
+
+  &lt;article class="margin--bottom-md" style="width:320px"&gt;
+    &lt;header class="margin--bottom-sm"&gt;&lt;h3 class="type--size-iii type--weight-700"&gt;Card C&lt;/h3&gt;&lt;/header&gt;
+    &lt;p class="margin--bottom-sm"&gt;Another card.&lt;/p&gt;
+    &lt;footer&gt;&lt;a href="#"&gt;Learn more&lt;/a&gt;&lt;/footer&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+</code></pre>
+    </details>
+
+    <p><strong>Variant</strong>: equal-height cards</p>
+    <details>
+      <summary>Markup</summary>
+      <pre><code>&lt;section class="flex--wrap-between"&gt;
+  &lt;article class="flex--column-between" style="width:320px; min-height:220px"&gt;
+    &lt;div&gt;
+      &lt;h3 class="type--size-iii type--weight-700 margin--bottom-sm"&gt;Card&lt;/h3&gt;
+      &lt;p&gt;Text...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;footer class="margin--top-sm"&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/footer&gt;
+  &lt;/article&gt;
+  &lt;!-- repeat --&gt;
+&lt;/section&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="media-object">
+    <h2>4) Media Object (Avatar + Content)</h2>
+    <p>Classic layout for comments or notifications using flex alignment.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;article class="flex--items-start margin--x-md"&gt;
+  &lt;img alt="" src="#" width="48" height="48" class="margin--right-md" /&gt;
+  &lt;div&gt;
+    &lt;header class="margin--bottom-xs"&gt;
+      &lt;strong&gt;Ada Lovelace&lt;/strong&gt;
+      &lt;span class="margin--left-sm type--size-i-1"&gt;@ada&lt;/span&gt;
+    &lt;/header&gt;
+    &lt;p class="margin--bottom-sm"&gt;Here is a thoughtful message.&lt;/p&gt;
+    &lt;nav class="flex--items-center"&gt;
+      &lt;a href="#" class="margin--right-sm"&gt;Reply&lt;/a&gt;
+      &lt;a href="#"&gt;Share&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="sidebar">
+    <h2>5) Sidebar Layout</h2>
+    <p>Use a wrapping container and fixed column widths. No grid required.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;section class="flex"&gt;
+  &lt;aside style="width:260px" class="margin--right-lg"&gt;
+    &lt;nav class="flex--column"&gt;
+      &lt;a href="#" class="margin--bottom-sm"&gt;Dashboard&lt;/a&gt;
+      &lt;a href="#" class="margin--bottom-sm"&gt;Reports&lt;/a&gt;
+      &lt;a href="#"&gt;Settings&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/aside&gt;
+
+  &lt;section class="flex--column fill--width"&gt;
+    &lt;header class="margin--bottom-md"&gt;
+      &lt;h2 class="type--size-iii type--weight-700"&gt;Reports&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;article class="margin--bottom-md"&gt;...content...&lt;/article&gt;
+    &lt;article&gt;...content...&lt;/article&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="data-table">
+    <h2>6) Basic Data Table (Reset Scope)</h2>
+    <p>Wrap in <code>.reset</code> to neutralize default table spacing. Use utilities for alignment and spacing.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;div class="reset"&gt;
+  &lt;table class="fill--width"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th class="type--align-left padding--bottom-sm"&gt;Name&lt;/th&gt;
+        &lt;th class="type--align-right padding--bottom-sm"&gt;Amount&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class="padding--x-xs"&gt;Alpha&lt;/td&gt;
+        &lt;td class="type--align-right padding--x-xs"&gt;$120&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class="padding--x-xs"&gt;Beta with a long value that truncates&lt;/td&gt;
+        &lt;td class="type--align-right padding--x-xs"&gt;$75&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="forms">
+    <h2>7) Form Stack</h2>
+    <p><code>.reset</code> strips browser chrome so you can compose the layout cleanly.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;form class="reset fill--width" action="#" method="post"&gt;
+  &lt;fieldset class="reset margin--bottom-md"&gt;
+    &lt;legend class="type--weight-700 margin--bottom-sm"&gt;Contact&lt;/legend&gt;
+
+    &lt;label class="margin--bottom-xs" for="name"&gt;Name&lt;/label&gt;
+    &lt;input id="name" name="name" class="fill--width padding--all-sm margin--bottom-sm" /&gt;
+
+    &lt;label class="margin--bottom-xs" for="email"&gt;Email&lt;/label&gt;
+    &lt;input id="email" name="email" class="fill--width padding--all-sm margin--bottom-sm" /&gt;
+
+    &lt;label class="margin--bottom-xs" for="msg"&gt;Message&lt;/label&gt;
+    &lt;textarea id="msg" name="msg" rows="4" class="fill--width padding--all-sm"&gt;&lt;/textarea&gt;
+  &lt;/fieldset&gt;
+
+  &lt;div class="flex--between"&gt;
+    &lt;button type="reset"&gt;Reset&lt;/button&gt;
+    &lt;button type="submit"&gt;Send&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="modal">
+    <h2>8) Modal Pattern</h2>
+    <p>Use a fixed center container and an overlay that fills the viewport.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;!-- Overlay --&gt;
+&lt;div class="fixed fill--viewport" role="presentation" aria-hidden="true"&gt;&lt;/div&gt;
+
+&lt;!-- Dialog --&gt;
+&lt;div class="fixed--center padding--all-lg" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="min-width:320px; max-width:90vw"&gt;
+  &lt;h3 id="modal-title" class="type--size-iii type--weight-700 margin--bottom-sm"&gt;Confirm Action&lt;/h3&gt;
+  &lt;p class="margin--bottom-md"&gt;Are you sure you want to proceed?&lt;/p&gt;
+  &lt;div class="flex--end"&gt;
+    &lt;button class="margin--right-sm"&gt;Cancel&lt;/button&gt;
+    &lt;button&gt;Confirm&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="toast">
+    <h2>9) Toast / Notification</h2>
+    <p>Anchor to a viewport corner. Use a vertical stack for multiple items.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;aside class="fixed--bottom-right padding--all-md"&gt;
+  &lt;div class="margin--bottom-sm padding--all-sm"&gt;Saved successfully&lt;/div&gt;
+  &lt;div class="padding--all-sm"&gt;Profile updated&lt;/div&gt;
+&lt;/aside&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="media-list">
+    <h2>10) List With Thumbnails and Truncation</h2>
+    <p>Use <code>.overflow--ellipsis</code> to keep single-line titles tidy.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;ul class="reset"&gt;
+  &lt;li class="flex--items-center margin--bottom-sm"&gt;
+    &lt;img alt="" src="#" width="56" height="40" class="margin--right-md" /&gt;
+    &lt;span class="overflow--ellipsis" style="max-width:28ch"&gt;
+      Very long media title that will be truncated nicely
+    &lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class="flex--items-center"&gt;
+    &lt;img alt="" src="#" width="56" height="40" class="margin--right-md" /&gt;
+    &lt;span class="overflow--ellipsis" style="max-width:28ch"&gt;Another item&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="gridish">
+    <h2>11) Simple “Grid” Using Flex Wrap</h2>
+    <p>Fixed columns on large screens, natural wrapping on small screens.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;section class="flex--wrap-between"&gt;
+  &lt;div class="margin--bottom-md" style="width:24rem"&gt;Col 1&lt;/div&gt;
+  &lt;div class="margin--bottom-md" style="width:24rem"&gt;Col 2&lt;/div&gt;
+  &lt;div class="margin--bottom-md" style="width:24rem"&gt;Col 3&lt;/div&gt;
+  &lt;div class="margin--bottom-md" style="width:24rem"&gt;Col 4&lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="media-article">
+    <h2>12) Article With Floated Illustration</h2>
+    <p>Classic editorial layout using float utilities and a clearfix container.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;article class="float--clear"&gt;
+  &lt;img alt="" src="#" width="220" height="160" class="float--left margin--right-md margin--bottom-sm" /&gt;
+  &lt;h2 class="type--size-iii type--weight-700"&gt;A Nice Article&lt;/h2&gt;
+  &lt;p class="margin--top-sm"&gt;Paragraph text flows around the image...&lt;/p&gt;
+  &lt;p&gt;Another paragraph after the float.&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="toolbar">
+    <h2>13) Toolbar With Actions and Search</h2>
+    <p>Left group, center grow, right group. Use <code>.fill--width</code> on the search input to absorb space.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;div class="flex--items-center margin--x-md"&gt;
+  &lt;div class="flex--items-center"&gt;
+    &lt;button class="margin--right-sm"&gt;New&lt;/button&gt;
+    &lt;button&gt;Import&lt;/button&gt;
+  &lt;/div&gt>
+
+  &lt;div class="margin--auto-y fill--width padding--y-sm"&gt;
+    &lt;div class="reset"&gt;
+      &lt;input type="search" placeholder="Search" class="fill--width padding--all-sm" /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="flex--items-center"&gt;
+    &lt;button class="margin--right-sm"&gt;Share&lt;/button&gt;
+    &lt;button&gt;Export&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="wizard">
+    <h2>14) Stepper / Wizard Header</h2>
+    <p>Use <code>.flex--between</code> and text utilities for compact labels.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;nav aria-label="Steps" class="flex--between margin--bottom-md"&gt;
+  &lt;div class="type--align-center"&gt;
+    &lt;div class="type--weight-700"&gt;1&lt;/div&gt;
+    &lt;div class="type--size-i-1"&gt;Account&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="type--align-center"&gt;
+    &lt;div class="type--weight-700"&gt;2&lt;/div&gt;
+    &lt;div class="type--size-i-1"&gt;Profile&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="type--align-center"&gt;
+    &lt;div class="type--weight-700"&gt;3&lt;/div&gt;
+    &lt;div class="type--size-i-1"&gt;Confirm&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="split-cta">
+    <h2>15) Split Content With Sticky CTA</h2>
+    <p>Two columns. Make the CTA column sticky using fixed helpers where appropriate.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;section class="flex margin--x-lg"&gt;
+  &lt;article class="fill--width margin--right-lg"&gt;
+    &lt;h2 class="type--size-iii type--weight-700 margin--bottom-sm"&gt;Plan Details&lt;/h2&gt;
+    &lt;p class="margin--bottom-md"&gt;Long content...&lt;/p&gt;
+    &lt;p&gt;More long content...&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;aside style="width:320px"&gt;
+    &lt;div class="padding--all-md"&gt;
+      &lt;h3 class="type--size-ii type--weight-700 margin--bottom-sm"&gt;Ready?&lt;/h3&gt;
+      &lt;button&gt;Choose Plan&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+    </details>
+    <p>If you want it to stay visible while scrolling, swap the aside container to <code>.fixed--right</code> and add top/bottom offsets via inline style.</p>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="nav-tabs">
+    <h2>16) Tabs Without Styling</h2>
+    <p>Use an inline list inside <code>.reset</code> for a neutral tabs structure. Styling can come later.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;div class="reset"&gt;
+  &lt;ul class="flex--items-center margin--bottom-md"&gt;
+    &lt;li class="margin--right-md"&gt;&lt;button aria-current="page"&gt;Overview&lt;/button&gt;&lt;/li&gt;
+    &lt;li class="margin--right-md"&gt;&lt;button&gt;Activity&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;Settings&lt;/button&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;section&gt;
+  &lt;h3 class="type--size-ii type--weight-700"&gt;Overview&lt;/h3&gt;
+  &lt;p class="margin--top-sm"&gt;Tab content...&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="a11y">
+    <h2>17) Accessibility Helpers in Practice</h2>
+    <ul>
+      <li>Add <code>role</code>, <code>aria-*</code>, and proper landmarks to the structures above.</li>
+      <li>Use <code>type--align-right</code> for numeric columns in tables and receipts.</li>
+      <li>Use <code>overflow--ellipsis</code> with a <code>title</code> attribute to expose full text on hover.</li>
+    </ul>
+
+    <details>
+      <summary>Receipts example</summary>
+      <pre><code>&lt;div class="reset" role="region" aria-label="Order summary"&gt;
+  &lt;table class="fill--width"&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Subtotal&lt;/td&gt;&lt;td class="type--align-right"&gt;$120.00&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Tax&lt;/td&gt;&lt;td class="type--align-right"&gt;$9.60&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td class="type--weight-700"&gt;Total&lt;/td&gt;&lt;td class="type--align-right type--weight-700"&gt;$129.60&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="utilities-cheats">
+    <h2>18) Utility Combinations Cheat Sheet</h2>
+    <ul>
+      <li><strong>Center any box in parent</strong>: <code>layout--center</code> inside a <code>layout--container</code>.</li>
+      <li><strong>Center text block</strong>: <code>type--align-center margin--auto-y</code> with a fixed width.</li>
+      <li><strong>Sticky CTA bar</strong>: <code>fixed--bottom fill--width flex--between padding--all-sm</code>.</li>
+      <li><strong>Full-bleed section</strong>: <code>fill--viewportWidth margin--zero-y</code>.</li>
+      <li><strong>Visually limit lines</strong>: <code>overflow--ellipsis</code> plus <code>style="max-width:&lt;ch&gt;"</code>.</li>
+      <li><strong>Equal spacing in a row</strong>: <code>flex--between</code> on container, apply fixed widths to children.</li>
+    </ul>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="patterns-end">
+    <h2>19) Pattern: Settings Form + Aside Help</h2>
+    <p>Common app screen with a wide form and a narrow help block.</p>
+
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;section class="flex margin--x-lg"&gt;
+  &lt;form class="reset fill--width margin--right-lg"&gt;
+    &lt;h2 class="type--size-iii type--weight-700 margin--bottom-md"&gt;Profile Settings&lt;/h2&gt;
+
+    &lt;label class="margin--bottom-xs" for="handle"&gt;Handle&lt;/label&gt;
+    &lt;input id="handle" class="fill--width padding--all-sm margin--bottom-md" /&gt;
+
+    &lt;label class="margin--bottom-xs" for="bio"&gt;Bio&lt;/label&gt;
+    &lt;textarea id="bio" rows="6" class="fill--width padding--all-sm margin--bottom-md"&gt;&lt;/textarea&gt;
+
+    &lt;div class="flex--end"&gt;
+      &lt;button type="submit"&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;aside style="width:280px"&gt;
+    &lt;h3 class="type--size-ii type--weight-700 margin--bottom-sm"&gt;Tips&lt;/h3&gt;
+    &lt;p class="margin--bottom-sm"&gt;Use 3–5 words for handle.&lt;/p&gt;
+    &lt;p&gt;Bio supports basic text.&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/section&gt;
+</code></pre>
+    </details>
+  </section>
+
+  <!-- ========================================================= -->
+  <section id="footer">
+    <h2>20) Minimal Footer With Inline Links</h2>
+    <details open>
+      <summary>Markup</summary>
+      <pre><code>&lt;footer class="margin--top-xl padding--top-md"&gt;
+  &lt;nav class="reset"&gt;
+    &lt;ul class="flex--items-center"&gt;
+      &lt;li class="margin--right-md"&gt;&lt;a href="#"&gt;Privacy&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="margin--right-md"&gt;&lt;a href="#"&gt;Terms&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;p class="type--size-i-1 margin--top-sm"&gt;© 2025 Your Co&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+    </details>
+  </section>
+  <script src="/main.js"></script>
+
+</main>
+</body>
+</html>

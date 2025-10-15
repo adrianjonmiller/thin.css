@@ -1,0 +1,46 @@
+// Fill utilities - no base class needed, direct properties
+.fill {
+  &- {
+    // Individual dimension fills
+    &-width {
+      width: 100%;
+    }
+
+    &-height {
+      height: 100%;
+    }
+
+    &-viewportWidth {
+      width: 100vw;
+    }
+
+    &-viewportHeight {
+      height: 100vh;
+    }
+
+    // Full viewport fills
+    &-viewport {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    // Full parent container fills
+    &-parent {
+      width: 100%;
+      height: 100%;
+    }
+
+    // Common use case combinations
+    &-screen {
+      width: 100vw;
+      height: 100vh;
+      min-height: 100vh;
+    }
+
+    &-container {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+}

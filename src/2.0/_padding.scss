@@ -10,7 +10,7 @@
       }
     }
     
-    &-vertical {
+    &-x {
       @each $name, $size in $sizes {
         &-#{$name} {
           padding-left: $size;
@@ -19,7 +19,7 @@
       }
     }
 
-    &-horizontal {
+    &-y {
       @each $name, $size in $sizes {
         &-#{$name} {
           padding-top: $size;

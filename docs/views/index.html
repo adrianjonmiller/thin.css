@@ -1,12 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{title}}</title>
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
-  <h1>{{title}}</h1>
-          <p>Welcome to your new Clovie site!</p>
-  <script src="main.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Utility CSS – Examples & Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Utility CSS – Examples & Recipes" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/thin.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" />
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body class="body">
+
+    <header class="">
+      <h1>Thin CSS</h1>
+      <p>This guide shows how to build common UI structures using only the provided utility classes. It does not add any styles beyond your utilities.</p>
+    </header>
+
+    {{> nav }}
+
+    <main class="main margin--all-lg">
+      <!-- ========================================================= -->
+      <section id="getting-started" class="margin--top-md">
+        <h2>Getting Started</h2>
+        <p>To get started, include the following CSS file in your HTML:</p>
+        <pre class="js--highlight-html reset">&lt;link rel="stylesheet" href="https://unpkg.com/thin.css" /&gt;</pre>
+        <p>Then, start building your layouts with the provided utility classes.</p>
+        <p>For example:</p>
+        <pre class="js--highlight-html reset">&lt;div class="flex--center"&gt;
+      </section>
+
+      <script src="/main.js"></script>
+
+    </main>
+  </body>
 </html>

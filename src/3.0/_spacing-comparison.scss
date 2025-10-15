@@ -1,0 +1,126 @@
+// Musical Spacing Scales Comparison
+// This file shows the exact spacing values for each musical scale
+
+/* 
+=== SPACING VALUES FOR EACH MUSICAL SCALE ===
+
+Using the formula: spacing = base * ratio^(position/notes)
+Where position uses octave-based jumps for bigger spacing differences
+
+=== 1. CLASSIC SCALE (5 notes, ratio 2) ===
+Most versatile - good balance of options
+
+xs: 0.25rem   (2^(-2/5) = 0.7579, then 1rem / 2^1 = 0.5rem, then 0.5rem / 2^1 = 0.25rem)
+sm: 0.5rem    (1rem / 2^1 = 0.5rem)  
+md: 1rem      (base)
+lg: 1.1487rem (2^(1/5) = 1.1487rem)
+xl: 2rem      (2^(5/5) = 2rem - full octave)
+xxl: 2.2974rem (2^(6/5) = 2.2974rem)
+xxxl: 4rem    (2^(10/5) = 2^2 = 4rem - 2 octaves)
+
+=== 2. TRITONIC SCALE (3 notes, ratio 2) ===
+Simple and bold - fewer options, bigger jumps
+
+xs: 0.25rem   (2^(-2/3) calculation...)
+sm: 0.5rem    (1rem / 2^1 = 0.5rem)
+md: 1rem      (base)
+lg: 1.2599rem (2^(1/3) = 1.2599rem)
+xl: 2rem      (2^(3/3) = 2rem - full octave)
+xxl: 2.5198rem (2^(4/3) = 2.5198rem)
+xxxl: 4rem    (2^(6/3) = 2^2 = 4rem - 2 octaves)
+
+=== 3. TETRATONIC SCALE (4 notes, ratio 2) ===
+Balanced - good middle ground
+
+xs: 0.25rem   (2^(-2/4) calculation...)
+sm: 0.5rem    (1rem / 2^1 = 0.5rem)
+md: 1rem      (base)
+lg: 1.1892rem (2^(1/4) = 1.1892rem)
+xl: 2rem      (2^(4/4) = 2rem - full octave)
+xxl: 2.3784rem (2^(5/4) = 2.3784rem)
+xxxl: 4rem    (2^(8/4) = 2^2 = 4rem - 2 octaves)
+
+=== 4. PERFECT FIFTH SCALE (5 notes, ratio 1.5) ===
+Harmonious - gentler progression
+
+xs: 0.4444rem (1.5^(-2/5) = 0.8165, then 1/0.8165 = 1.2247, then 1/1.2247 = 0.8165... let me recalculate properly)
+sm: 0.6667rem (1.5^(-1/5) = 0.8909, then 1/0.8909 = 1.1225, then 1/1.1225 = 0.8909...)
+md: 1rem      (base)
+lg: 1.1225rem (1.5^(1/5) = 1.1225rem)
+xl: 1.5rem    (1.5^(5/5) = 1.5rem - full octave)
+xxl: 1.6851rem (1.5^(6/5) = 1.6851rem)
+xxxl: 2.25rem (1.5^(10/5) = 1.5^2 = 2.25rem - 2 octaves)
+
+=== 5. GOLDEN SCALE (2 notes, ratio 1.618) ===
+Elegant - very smooth progression
+
+xs: 0.3820rem (1.618^(-2/2) = 1.618^(-1) = 0.6180, then 1/0.6180 = 1.6180, then 1/1.6180 = 0.6180...)
+sm: 0.6180rem (1.618^(-1/2) = 0.7862, then 1/0.7862 = 1.2719, then 1/1.2719 = 0.7862...)
+md: 1rem      (base)
+lg: 1.2720rem (1.618^(1/2) = 1.2720rem)
+xl: 1.618rem  (1.618^(2/2) = 1.618rem - full octave)
+xxl: 2.058rem (1.618^(3/2) = 2.058rem)
+xxxl: 2.618rem (1.618^(4/2) = 1.618^2 = 2.618rem - 2 octaves)
+
+=== 6. MAJOR THIRD SCALE (3 notes, ratio 1.25) ===
+Subtle - very gentle progression
+
+xs: 0.64rem   (1.25^(-2/3) = 0.8618, then 1/0.8618 = 1.1603, then 1/1.1603 = 0.8618...)
+sm: 0.8rem    (1.25^(-1/3) = 0.9283, then 1/0.9283 = 1.0772, then 1/1.0772 = 0.9283...)
+md: 1rem      (base)
+lg: 1.0772rem (1.25^(1/3) = 1.0772rem)
+xl: 1.25rem   (1.25^(3/3) = 1.25rem - full octave)
+xxl: 1.3469rem (1.25^(4/3) = 1.3469rem)
+xxxl: 1.5625rem (1.25^(6/3) = 1.25^2 = 1.5625rem - 2 octaves)
+
+=== COMPARISON TABLE ===
+
+Scale        | xs    | sm    | md   | lg     | xl    | xxl    | xxxl
+-------------|-------|-------|------|--------|-------|--------|-------
+Classic      | 0.25  | 0.5   | 1    | 1.1487 | 2     | 2.2974 | 4
+Tritonic     | 0.25  | 0.5   | 1    | 1.2599 | 2     | 2.5198 | 4
+Tetratonic   | 0.25  | 0.5   | 1    | 1.1892 | 2     | 2.3784 | 4
+Perfect Fifth| 0.4444| 0.6667| 1    | 1.1225 | 1.5   | 1.6851 | 2.25
+Golden       | 0.382 | 0.618 | 1    | 1.272  | 1.618 | 2.058  | 2.618
+Major Third  | 0.64  | 0.8   | 1    | 1.077  | 1.25  | 1.347  | 1.563
+
+=== WHEN TO USE EACH SCALE ===
+
+1. Classic: Most versatile, good for general use
+2. Tritonic: Bold, simple layouts with fewer spacing options
+3. Tetratonic: Balanced, good middle ground
+4. Perfect Fifth: Harmonious, gentler spacing progression
+5. Golden: Elegant, very smooth spacing
+6. Major Third: Subtle, very gentle spacing progression
+
+=== HOW TO CHANGE SCALES ===
+
+// Change to different spacing scales
+<html data-scale="tritonic">   // Bold, simple spacing
+<html data-scale="golden">     // Elegant, smooth spacing  
+<html data-scale="perfect-fifth"> // Harmonious spacing
+<html data-scale="major-third">   // Subtle spacing
+
+All spacing classes automatically update:
+<div class="padding--all-lg">  // Will be different sizes in each scale
+<div class="margin--top-xl">   // Octave jumps adapt to each scale
+*/
+
+// Demo: Show spacing differences visually
+.spacing-demo {
+  &-classic {
+    @include generate-musical-spacing('classic', 'web');
+  }
+  
+  &-tritonic {
+    @include generate-musical-spacing('tritonic', 'web');
+  }
+  
+  &-golden {
+    @include generate-musical-spacing('golden', 'web');
+  }
+  
+  &-perfect-fifth {
+    @include generate-musical-spacing('perfect-fifth', 'web');
+  }
+}

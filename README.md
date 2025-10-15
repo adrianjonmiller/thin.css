@@ -118,13 +118,13 @@ Add consistent spacing with `.padding` and `.margin`:
 ```html
 <!-- Padding (xs, sm, md, lg, xl) -->
 <div class="padding--all-md">Medium padding all around</div>
-<div class="padding--vertical-lg padding--horizontal-sm">Large vertical, small horizontal padding</div>
+<div class="padding--x-lg padding--y-sm">Large vertical, small horizontal padding</div>
 <div class="padding--top-xl">Extra large top padding</div>
 
 <!-- Margins -->
 <div class="margin--top-lg">Large top margin</div>
 <div class="margin--bottom-md">Medium bottom margin</div>
-<div class="margin--auto-horizontal">Centered with auto margins</div>
+<div class="margin--auto-y">Centered with auto margins</div>
 
 <!-- Zero margins -->
 <div class="margin--zero">No margins</div>
@@ -228,7 +228,7 @@ Here's a complete example showing multiple utilities working together:
   <main class="padding--all-lg">
     <div class="flex--column">
       <!-- Hero section -->
-      <section class="flex--center padding--vertical-xl">
+      <section class="flex--center padding--x-xl">
         <div class="type--align-center">
           <h2 class="type--size-i+3 type--weight-bold margin--bottom-md">Welcome</h2>
           <p class="type--size-i+1 margin--bottom-lg">

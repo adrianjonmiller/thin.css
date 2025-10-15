@@ -1,0 +1,174 @@
+// Musical Interval System Demo
+// This file demonstrates how to use the new musical interval system
+
+/* 
+=== MUSICAL INTERVAL SYSTEM ===
+
+Based on Spencer Mortensen's Typographic Scale
+https://spencermortensen.com/articles/typographic-scale/
+
+The system uses the formula: f_i = f_0 * r^(i/n)
+Where:
+- f_0 = fundamental frequency (base size)
+- r = ratio of the scale  
+- n = number of notes in the scale
+- i = interval number (0, 1, 2, 3, 4...)
+
+=== AVAILABLE SCALES ===
+
+1. Tritonic Scale (3 notes, ratio 2) - Simple and bold
+   Intervals: i, ii, iii
+   
+2. Tetratonic Scale (4 notes, ratio 2) - Balanced  
+   Intervals: i, ii, iii, iv
+   
+3. Classic Typographic Scale (5 notes, ratio 2) - Most versatile (DEFAULT)
+   Intervals: i, ii, iii, iv, v
+   
+4. Perfect Fifth Scale (5 notes, ratio 1.5) - Harmonious
+   Intervals: i, ii, iii, iv, v
+   
+5. Golden Ratio Scale (2 notes, ratio 1.618) - Elegant
+   Intervals: i, ii
+   
+6. Major Third Scale (3 notes, ratio 1.25) - Subtle
+   Intervals: i, ii, iii
+
+=== AVAILABLE KEYS ===
+
+1. Web (1rem base) - Default
+2. Large (1.2rem base) - Large screens
+3. Small (0.875rem base) - Small screens  
+4. Print (12pt base) - Print media
+
+=== HOW TO USE ===
+
+1. Set Scale (affects available intervals and ratios):
+   <html data-scale="classic">
+   <html data-scale="tritonic">
+   <html data-scale="golden">
+
+2. Set Key (affects base frequency):
+   <html data-key="large">
+   <html data-key="small">
+   <html data-key="print">
+
+3. Use Typography Classes:
+   <h1 class="type--size-i+2">Large Heading</h1>
+   <h2 class="type--size-ii">Medium Heading</h2>
+   <p class="type--size-i">Body Text</p>
+   <small class="type--size-i-1">Small Text</small>
+
+4. Use Spacing Classes:
+   <div class="padding--all-md">1rem padding all around</div>
+   <div class="margin--top-lg">2rem top margin</div>
+   <div class="padding--left-right-xl">4rem horizontal padding</div>
+   <div class="margin--top-bottom-sm">0.5rem vertical margin</div>
+   <div class="padding--all-xxs">0.125rem padding all around</div>
+
+=== EXAMPLE: DIFFERENT SCALES ===
+
+**TYPography (Subtle intervals for readability):**
+
+Classic Scale (5 notes):
+- type--size-i: 1rem (base)
+- type--size-ii: 1.7411rem  
+- type--size-iii: 1.5157rem
+- type--size-iv: 1.3195rem
+- type--size-v: 1.1487rem
+
+Tritonic Scale (3 notes):
+- type--size-i: 1rem (base)
+- type--size-ii: 1.5874rem
+- type--size-iii: 1.2599rem
+
+Golden Scale (2 notes):
+- type--size-i: 1rem (base)  
+- type--size-ii: 1.618rem
+
+**SPACING (Pure octave-based jumps for layout structure):**
+
+All Scales - Pure Octave Spacing:
+- spacing-xxs: 0.125rem (3 octaves down)
+- spacing-xs: 0.25rem (2 octaves down)
+- spacing-sm: 0.5rem (1 octave down)
+- spacing-md: 1rem (base)
+- spacing-lg: 2rem (1 octave up)
+- spacing-xl: 4rem (2 octaves up)
+- spacing-xxl: 8rem (3 octaves up)
+- spacing-xxxl: 16rem (4 octaves up)
+
+=== SPACING SCALE COMPARISON ===
+
+**Classic Scale (Default - Most Versatile):**
+- xs: 0.25rem, sm: 0.5rem, md: 1rem, lg: 1.1487rem, xl: 2rem, xxl: 2.2974rem, xxxl: 4rem
+
+**Tritonic Scale (Simple & Bold):**
+- xs: 0.25rem, sm: 0.5rem, md: 1rem, lg: 1.2599rem, xl: 2rem, xxl: 2.5198rem, xxxl: 4rem
+
+**Perfect Fifth Scale (Harmonious):**
+- xs: 0.4444rem, sm: 0.6667rem, md: 1rem, lg: 1.1225rem, xl: 1.5rem, xxl: 1.6851rem, xxxl: 2.25rem
+
+**Golden Scale (Elegant):**
+- xs: 0.382rem, sm: 0.618rem, md: 1rem, lg: 1.272rem, xl: 1.618rem, xxl: 2.058rem, xxxl: 2.618rem
+
+**Major Third Scale (Subtle):**
+- xs: 0.64rem, sm: 0.8rem, md: 1rem, lg: 1.077rem, xl: 1.25rem, xxl: 1.347rem, xxxl: 1.563rem
+
+=== WHEN TO USE EACH SPACING SCALE ===
+
+1. **Classic**: General purpose, balanced progression
+2. **Tritonic**: Bold layouts, fewer spacing options needed
+3. **Perfect Fifth**: Harmonious, gentler spacing jumps
+4. **Golden**: Elegant, very smooth spacing progression
+5. **Major Third**: Subtle, very gentle spacing changes
+
+Alternative: Your Exponential Spacing (uncomment in _musical-system.scss):
+- xs: 0.25rem, sm: 0.5rem, md: 1rem, lg: 2rem, xl: 4rem, xxl: 8rem, xxxl: 16rem
+
+=== DYNAMIC CHANGES ===
+
+You can change scales and keys dynamically with JavaScript:
+
+// Change to tritonic scale
+document.documentElement.setAttribute('data-scale', 'tritonic');
+
+// Change to large screen key
+document.documentElement.setAttribute('data-key', 'large');
+
+// All spacing and typography will automatically update!
+
+*/
+
+// Demo styles showing different scales
+.demo-scale-comparison {
+  // Classic scale example
+  &.classic {
+    --musical-scale: classic;
+  }
+  
+  // Tritonic scale example  
+  &.tritonic {
+    --musical-scale: tritonic;
+  }
+  
+  // Golden scale example
+  &.golden {
+    --musical-scale: golden;
+  }
+}
+
+// Responsive key changes
+@media (min-width: 1200px) {
+  :root {
+    @include generate-musical-scale('classic', 'large', 3);
+    @include generate-musical-spacing('classic', 'large');
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    @include generate-musical-scale('classic', 'small', 3);
+    @include generate-musical-spacing('classic', 'small');
+  }
+}

@@ -1,0 +1,27 @@
+.float {
+  &- {
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: right;
+    }
+
+    &-clear {
+      &:after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+    }
+
+    &-none {
+      float: none;
+    }
+
+    &-inherit {
+      float: inherit;
+    }
+  }
+}

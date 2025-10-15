@@ -53,19 +53,19 @@
         margin-bottom: auto;
       }
 
-      &-horizontal {
+      &-y {
         margin-left: auto;
         margin-right: auto;
       }
 
-      &-vertical {
+      &-x {
         margin-top: auto;
         margin-bottom: auto;
       }
     }
 
     // Horizontal and vertical margins
-    &-horizontal {
+    &-y {
       @each $name, $size in $sizes {
         &-#{$name} {
           margin-left: $size;
@@ -74,7 +74,7 @@
       }
     }
 
-    &-vertical {
+    &-x {
       @each $name, $size in $sizes {
         &-#{$name} {
           margin-top: $size;
@@ -149,12 +149,12 @@
         margin-bottom: 0;
       }
 
-      &-horizontal {
+      &-y {
         margin-left: 0;
         margin-right: 0;
       }
 
-      &-vertical {
+      &-x {
         margin-top: 0;
         margin-bottom: 0;
       }

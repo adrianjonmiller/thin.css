@@ -1,0 +1,77 @@
+@use 'lib/musical-system' as *;
+@use 'sass:list';
+@use 'sass:map';
+
+// Font weight definitions
+$weights: (
+  'thin': 100,
+  'extraLight': 200,
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semiBold': 600,
+  'bold': 700,
+  'extraBold': 800,
+  'black': 900,
+);
+
+// Typography utilities using musical intervals
+.type {
+  type-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  &- {
+    // Musical interval sizes - dynamically generated based on current scale
+    &-size {
+      // Generate classes for different musical scales
+      // Each scale has different available intervals
+      $scales: ('tritonic', 'tetratonic', 'classic', 'perfect-fifth', 'golden', 'major-third');
+      
+      @each $scale in $scales {
+        $intervals: get-scale-intervals($scale);
+        $octaves: 3; // Number of octaves to generate
+        
+        @for $octave from -1 through $octaves {
+          @each $interval in $intervals {
+            $octave-suffix: '';
+            
+            @if ($octave > 0) {
+              $octave-suffix: '+#{$octave}';
+            } @else if ($octave < 0) {
+              $octave-suffix: '#{$octave}';
+            }
+            
+            &-#{$interval}#{$octave-suffix} {
+              // Use CSS custom properties that are dynamically set by the musical system
+              font-size: var(--musical-#{$interval}#{$octave-suffix});
+            }
+          }
+        }
+      }
+    }
+    
+    // Font weights
+    @each $name, $weight in $weights {
+      &-weight-#{$name},
+      &-weight-#{$weight} {
+        font-weight: #{$weight};
+      }
+    }
+
+    // Text alignment
+    &-align {
+      &-center {
+        text-align: center;
+      }
+
+      &-left {
+        text-align: left;
+      }
+
+      &-right {
+        text-align: right;
+      }
+    }
+  }
+}

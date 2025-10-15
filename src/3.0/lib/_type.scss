@@ -1,0 +1,27 @@
+@use "sass:math";
+
+// Musical interval scale function
+// Uses Perfect Fifth (1.5) as default ratio for harmonious scaling
+@function scale($f0, $i, $r: 1.5, $n: 5) {
+  @return $f0 * math.pow($r, math.div($i, $n));
+}
+
+// Spacing scale function using the same musical intervals
+@function spacing($size: 'md') {
+  $base: 1rem;
+  $ratio: 1.5; // Perfect Fifth
+  
+  @if $size == 'xs' {
+    @return $base / math.pow($ratio, 2); // 0.444rem
+  } @else if $size == 'sm' {
+    @return $base / $ratio; // 0.667rem
+  } @else if $size == 'md' {
+    @return $base; // 1rem
+  } @else if $size == 'lg' {
+    @return $base * $ratio; // 1.5rem
+  } @else if $size == 'xl' {
+    @return $base * math.pow($ratio, 2); // 2.25rem
+  } @else if $size == 'xxl' {
+    @return $base * math.pow($ratio, 3); // 3.375rem
+  }
+}

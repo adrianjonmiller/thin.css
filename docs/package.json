@@ -7,6 +7,10 @@
     "dev": "clovie watch"
   },
   "devDependencies": {
-    "clovie": "0.1.0"
+    "clovie": "0.1.4"
+  },
+  "dependencies": {
+    "highlight.js": "^11.11.1",
+    "symbiotic": "^2.0.1"
   }
 }
