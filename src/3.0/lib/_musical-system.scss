@@ -1,4 +1,6 @@
 @use "sass:math";
+@use "sass:map";
+@use "sass:list";
 
 // Musical Scale System based on Spencer Mortensen's Typographic Scale
 // https://spencermortensen.com/articles/typographic-scale/
@@ -151,12 +153,12 @@ $musical-keys: (
   // Generate interval variables for multiple octaves
   @for $octave from -1 through $octaves {
     @each $interval in $intervals {
-      $position: ($octave * $notes) + (index($intervals, $interval) - 1);
+      $position: ($octave * $notes) + (list.index($intervals, $interval) - 1);
       $size: $base * math.pow($ratio, math.div($position, $notes));
       
       $var-name: if($octave == 0, 
         '--musical-#{$interval}', 
-        '--musical-#{$interval}#{if($octave > 0, "+#{$octave}", $octave)}'
+        '--musical-#{$interval}#{if($octave > 0, "-above#{$octave}", "-below#{$octave}")}'
       );
       
       #{$var-name}: #{$size};

@@ -34,17 +34,21 @@ $weights: (
         
         @for $octave from -1 through $octaves {
           @each $interval in $intervals {
-            $octave-suffix: '';
+            $octaveSuffix: '';
             
             @if ($octave > 0) {
-              $octave-suffix: '+#{$octave}';
+              $octaveSuffix: \+#{$octave};
             } @else if ($octave < 0) {
-              $octave-suffix: '#{$octave}';
+              $octaveSuffix: #{$octave};
             }
             
-            &-#{$interval}#{$octave-suffix} {
+            &-#{$interval}#{$octaveSuffix} {
               // Use CSS custom properties that are dynamically set by the musical system
-              font-size: var(--musical-#{$interval}#{$octave-suffix});
+              $var-name: if($octave == 0, 
+                '--musical-#{$interval}', 
+                '--musical-#{$interval}#{if($octave > 0, "-above#{$octave}", "-below#{$octave}")}'
+              );
+              font-size: var(#{$var-name});
             }
           }
         }
