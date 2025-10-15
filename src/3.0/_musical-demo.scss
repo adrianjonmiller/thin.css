@@ -66,6 +66,18 @@ Where:
    <div class="margin--top-bottom-sm">0.5rem vertical margin</div>
    <div class="padding--all-xxs">0.125rem padding all around</div>
 
+   <!-- Auto margins -->
+   <div class="margin--left-right-auto">Centered horizontally</div>
+   <div class="margin--top-bottom-auto">Centered vertically</div>
+
+   <!-- Zero margins -->
+   <div class="margin--top-bottom-zero">No vertical margins</div>
+   <div class="margin--left-right-zero">No horizontal margins</div>
+
+   <!-- Zero padding -->
+   <div class="padding--all-zero">No padding</div>
+   <div class="padding--left-right-zero">No horizontal padding</div>
+
 === EXAMPLE: DIFFERENT SCALES ===
 
 **TYPography (Subtle intervals for readability):**

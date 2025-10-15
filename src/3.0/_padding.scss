@@ -6,6 +6,7 @@
   &- {
     // All sides padding using octave-based spacing scale
     &-all {
+      &-zero { padding: 0; }
       &-xxs { padding: var(--spacing-xxs); }      // 0.125rem
       &-xs { padding: var(--spacing-xs); }        // 0.25rem
       &-sm { padding: var(--spacing-sm); }        // 0.5rem
@@ -18,6 +19,7 @@
     
     // Horizontal padding (left and right)
     &-left-right {
+      &-zero { padding-left: 0; padding-right: 0; }
       &-xxs { padding-left: var(--spacing-xxs); padding-right: var(--spacing-xxs); }
       &-xs { padding-left: var(--spacing-xs); padding-right: var(--spacing-xs); }
       &-sm { padding-left: var(--spacing-sm); padding-right: var(--spacing-sm); }
@@ -30,6 +32,7 @@
 
     // Vertical padding (top and bottom)
     &-top-bottom {
+      &-zero { padding-top: 0; padding-bottom: 0; }
       &-xxs { padding-top: var(--spacing-xxs); padding-bottom: var(--spacing-xxs); }
       &-xs { padding-top: var(--spacing-xs); padding-bottom: var(--spacing-xs); }
       &-sm { padding-top: var(--spacing-sm); padding-bottom: var(--spacing-sm); }
@@ -42,6 +45,7 @@
 
     // Individual side padding
     &-top {
+      &-zero { padding-top: 0; }
       &-xxs { padding-top: var(--spacing-xxs); }
       &-xs { padding-top: var(--spacing-xs); }
       &-sm { padding-top: var(--spacing-sm); }
@@ -53,6 +57,7 @@
     }
 
     &-bottom {
+      &-zero { padding-bottom: 0; }
       &-xxs { padding-bottom: var(--spacing-xxs); }
       &-xs { padding-bottom: var(--spacing-xs); }
       &-sm { padding-bottom: var(--spacing-sm); }
@@ -64,6 +69,7 @@
     }
 
     &-left {
+      &-zero { padding-left: 0; }
       &-xxs { padding-left: var(--spacing-xxs); }
       &-xs { padding-left: var(--spacing-xs); }
       &-sm { padding-left: var(--spacing-sm); }
@@ -75,6 +81,7 @@
     }
 
     &-right {
+      &-zero { padding-right: 0; }
       &-xxs { padding-right: var(--spacing-xxs); }
       &-xs { padding-right: var(--spacing-xs); }
       &-sm { padding-right: var(--spacing-sm); }
