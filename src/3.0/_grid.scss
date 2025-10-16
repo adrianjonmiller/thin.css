@@ -20,16 +20,19 @@
       // Responsive grid templates - 768px, 1024px, 1440px breakpoints
       &-1 {
         &-768 { 
+          @extend .grid;
           @media screen and (min-width: 768px) { 
             grid-template-columns: repeat(1, 1fr); 
           } 
         }
         &-1024 { 
+          @extend .grid;
           @media screen and (min-width: 1024px) { 
             grid-template-columns: repeat(1, 1fr); 
           } 
         }
         &-1440 { 
+          @extend .grid;
           @media screen and (min-width: 1440px) { 
             grid-template-columns: repeat(1, 1fr); 
           } 
@@ -38,16 +41,19 @@
       
       &-2 {
         &-768 { 
+          @extend .grid;
           @media screen and (min-width: 768px) { 
             grid-template-columns: repeat(2, 1fr); 
           } 
         }
         &-1024 { 
+          @extend .grid;
           @media screen and (min-width: 1024px) { 
             grid-template-columns: repeat(2, 1fr); 
           } 
         }
         &-1440 { 
+          @extend .grid;
           @media screen and (min-width: 1440px) { 
             grid-template-columns: repeat(2, 1fr); 
           } 
@@ -56,16 +62,19 @@
       
       &-3 {
         &-768 { 
+          @extend .grid;
           @media screen and (min-width: 768px) { 
             grid-template-columns: repeat(3, 1fr); 
           } 
         }
         &-1024 { 
+          @extend .grid;
           @media screen and (min-width: 1024px) { 
             grid-template-columns: repeat(3, 1fr); 
           } 
         }
         &-1440 { 
+          @extend .grid;
           @media screen and (min-width: 1440px) { 
             grid-template-columns: repeat(3, 1fr); 
           } 
@@ -74,16 +83,19 @@
       
       &-4 {
         &-768 { 
+          @extend .grid;
           @media screen and (min-width: 768px) { 
             grid-template-columns: repeat(4, 1fr); 
           } 
         }
         &-1024 { 
+          @extend .grid;
           @media screen and (min-width: 1024px) { 
             grid-template-columns: repeat(4, 1fr); 
           } 
         }
         &-1440 { 
+          @extend .grid;
           @media screen and (min-width: 1440px) { 
             grid-template-columns: repeat(4, 1fr); 
           } 
@@ -92,16 +104,19 @@
       
       &-6 {
         &-768 { 
+          @extend .grid;
           @media screen and (min-width: 768px) { 
             grid-template-columns: repeat(6, 1fr); 
           } 
         }
         &-1024 { 
+          @extend .grid;
           @media screen and (min-width: 1024px) { 
             grid-template-columns: repeat(6, 1fr); 
           } 
         }
         &-1440 { 
+          @extend .grid;
           @media screen and (min-width: 1440px) { 
             grid-template-columns: repeat(6, 1fr); 
           } 
@@ -110,16 +125,19 @@
       
       &-12 {
         &-768 { 
+          @extend .grid;
           @media screen and (min-width: 768px) { 
             grid-template-columns: repeat(12, 1fr); 
           } 
         }
         &-1024 { 
+          @extend .grid;
           @media screen and (min-width: 1024px) { 
             grid-template-columns: repeat(12, 1fr); 
           } 
         }
         &-1440 { 
+          @extend .grid;
           @media screen and (min-width: 1440px) { 
             grid-template-columns: repeat(12, 1fr); 
           } 
