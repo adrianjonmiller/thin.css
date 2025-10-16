@@ -1,0 +1,208 @@
+@use 'lib/musical-system' as *;
+
+// Gap utility - works with both Flexbox and CSS Grid
+// Universal spacing utility using musical scale
+
+.gap {
+  &- {
+    // All gaps (both row and column) - apply at all screen sizes
+    &-zero { gap: 0; }
+    &-xxs { gap: var(--spacing-xxs); }      // 0.125rem
+    &-xs { gap: var(--spacing-xs); }        // 0.25rem
+    &-sm { gap: var(--spacing-sm); }        // 0.5rem
+    &-md { gap: var(--spacing-md); }        // 1rem
+    &-lg { gap: var(--spacing-lg); }        // 2rem
+    &-xl { gap: var(--spacing-xl); }        // 4rem
+    &-xxl { gap: var(--spacing-xxl); }      // 8rem
+    &-xxxl { gap: var(--spacing-xxxl); }    // 16rem
+    
+    // Responsive gap utilities - 768px, 1024px, 1440px breakpoints
+    &-zero {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: 0; 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: 0; 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: 0; 
+        } 
+      }
+    }
+    
+    &-xxs {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: var(--spacing-xxs); 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: var(--spacing-xxs); 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: var(--spacing-xxs); 
+        } 
+      }
+    }
+    
+    &-xs {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: var(--spacing-xs); 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: var(--spacing-xs); 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: var(--spacing-xs); 
+        } 
+      }
+    }
+    
+    &-sm {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: var(--spacing-sm); 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: var(--spacing-sm); 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: var(--spacing-sm); 
+        } 
+      }
+    }
+    
+    &-md {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: var(--spacing-md); 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: var(--spacing-md); 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: var(--spacing-md); 
+        } 
+      }
+    }
+    
+    &-lg {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: var(--spacing-lg); 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: var(--spacing-lg); 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: var(--spacing-lg); 
+        } 
+      }
+    }
+    
+    &-xl {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: var(--spacing-xl); 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: var(--spacing-xl); 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: var(--spacing-xl); 
+        } 
+      }
+    }
+    
+    &-xxl {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: var(--spacing-xxl); 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: var(--spacing-xxl); 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: var(--spacing-xxl); 
+        } 
+      }
+    }
+    
+    &-xxxl {
+      &-768 { 
+        @media screen and (min-width: 768px) { 
+          gap: var(--spacing-xxxl); 
+        } 
+      }
+      &-1024 { 
+        @media screen and (min-width: 1024px) { 
+          gap: var(--spacing-xxxl); 
+        } 
+      }
+      &-1440 { 
+        @media screen and (min-width: 1440px) { 
+          gap: var(--spacing-xxxl); 
+        } 
+      }
+    }
+    
+    // Column gap only (horizontal spacing)
+    &-x {
+      &-zero { column-gap: 0; }
+      &-xxs { column-gap: var(--spacing-xxs); }
+      &-xs { column-gap: var(--spacing-xs); }
+      &-sm { column-gap: var(--spacing-sm); }
+      &-md { column-gap: var(--spacing-md); }
+      &-lg { column-gap: var(--spacing-lg); }
+      &-xl { column-gap: var(--spacing-xl); }
+      &-xxl { column-gap: var(--spacing-xxl); }
+      &-xxxl { column-gap: var(--spacing-xxxl); }
+    }
+    
+    // Row gap only (vertical spacing)
+    &-y {
+      &-zero { row-gap: 0; }
+      &-xxs { row-gap: var(--spacing-xxs); }
+      &-xs { row-gap: var(--spacing-xs); }
+      &-sm { row-gap: var(--spacing-sm); }
+      &-md { row-gap: var(--spacing-md); }
+      &-lg { row-gap: var(--spacing-lg); }
+      &-xl { row-gap: var(--spacing-xl); }
+      &-xxl { row-gap: var(--spacing-xxl); }
+      &-xxxl { row-gap: var(--spacing-xxxl); }
+    }
+  }
+}

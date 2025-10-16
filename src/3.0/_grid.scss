@@ -1,0 +1,225 @@
+@use 'lib/musical-system' as *;
+
+// Grid System - Simple and effective for 90% of use cases
+// Based on CSS Grid with sensible defaults and musical spacing
+
+// Grid Container - establishes grid context
+.grid {
+  display: grid;
+  
+  &- {
+    // Basic grid templates - most common layouts (apply at all screen sizes)
+    &-cols {
+      &-1 { grid-template-columns: repeat(1, 1fr); }
+      &-2 { grid-template-columns: repeat(2, 1fr); }
+      &-3 { grid-template-columns: repeat(3, 1fr); }
+      &-4 { grid-template-columns: repeat(4, 1fr); }
+      &-6 { grid-template-columns: repeat(6, 1fr); }
+      &-12 { grid-template-columns: repeat(12, 1fr); }
+      
+      // Responsive grid templates - 768px, 1024px, 1440px breakpoints
+      &-1 {
+        &-768 { 
+          @media screen and (min-width: 768px) { 
+            grid-template-columns: repeat(1, 1fr); 
+          } 
+        }
+        &-1024 { 
+          @media screen and (min-width: 1024px) { 
+            grid-template-columns: repeat(1, 1fr); 
+          } 
+        }
+        &-1440 { 
+          @media screen and (min-width: 1440px) { 
+            grid-template-columns: repeat(1, 1fr); 
+          } 
+        }
+      }
+      
+      &-2 {
+        &-768 { 
+          @media screen and (min-width: 768px) { 
+            grid-template-columns: repeat(2, 1fr); 
+          } 
+        }
+        &-1024 { 
+          @media screen and (min-width: 1024px) { 
+            grid-template-columns: repeat(2, 1fr); 
+          } 
+        }
+        &-1440 { 
+          @media screen and (min-width: 1440px) { 
+            grid-template-columns: repeat(2, 1fr); 
+          } 
+        }
+      }
+      
+      &-3 {
+        &-768 { 
+          @media screen and (min-width: 768px) { 
+            grid-template-columns: repeat(3, 1fr); 
+          } 
+        }
+        &-1024 { 
+          @media screen and (min-width: 1024px) { 
+            grid-template-columns: repeat(3, 1fr); 
+          } 
+        }
+        &-1440 { 
+          @media screen and (min-width: 1440px) { 
+            grid-template-columns: repeat(3, 1fr); 
+          } 
+        }
+      }
+      
+      &-4 {
+        &-768 { 
+          @media screen and (min-width: 768px) { 
+            grid-template-columns: repeat(4, 1fr); 
+          } 
+        }
+        &-1024 { 
+          @media screen and (min-width: 1024px) { 
+            grid-template-columns: repeat(4, 1fr); 
+          } 
+        }
+        &-1440 { 
+          @media screen and (min-width: 1440px) { 
+            grid-template-columns: repeat(4, 1fr); 
+          } 
+        }
+      }
+      
+      &-6 {
+        &-768 { 
+          @media screen and (min-width: 768px) { 
+            grid-template-columns: repeat(6, 1fr); 
+          } 
+        }
+        &-1024 { 
+          @media screen and (min-width: 1024px) { 
+            grid-template-columns: repeat(6, 1fr); 
+          } 
+        }
+        &-1440 { 
+          @media screen and (min-width: 1440px) { 
+            grid-template-columns: repeat(6, 1fr); 
+          } 
+        }
+      }
+      
+      &-12 {
+        &-768 { 
+          @media screen and (min-width: 768px) { 
+            grid-template-columns: repeat(12, 1fr); 
+          } 
+        }
+        &-1024 { 
+          @media screen and (min-width: 1024px) { 
+            grid-template-columns: repeat(12, 1fr); 
+          } 
+        }
+        &-1440 { 
+          @media screen and (min-width: 1440px) { 
+            grid-template-columns: repeat(12, 1fr); 
+          } 
+        }
+      }
+    }
+    
+    // Auto-fit grids - responsive by nature
+    &-auto {
+      &-fit { 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      }
+      &-fill { 
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+      }
+    }
+    
+    // Alignment - justify items (horizontal alignment of grid items)
+    &-items {
+      &-start { justify-items: start; }
+      &-center { justify-items: center; }
+      &-end { justify-items: end; }
+      &-stretch { justify-items: stretch; }
+    }
+    
+    // Alignment - align items (vertical alignment of grid items)
+    &-content {
+      &-start { align-items: start; }
+      &-center { align-items: center; }
+      &-end { align-items: end; }
+      &-stretch { align-items: stretch; }
+    }
+    
+  }
+}
+
+// Grid Item - for individual grid children
+.grid-item {
+  // Column span modifiers - most common spans
+  &- {
+    &-span {
+      &-1 { grid-column: span 1; }
+      &-2 { grid-column: span 2; }
+      &-3 { grid-column: span 3; }
+      &-4 { grid-column: span 4; }
+      &-6 { grid-column: span 6; }
+      &-full { grid-column: 1 / -1; }
+    }
+    
+    // Row span modifiers
+    &-row {
+      &-span-1 { grid-row: span 1; }
+      &-span-2 { grid-row: span 2; }
+      &-span-3 { grid-row: span 3; }
+      &-span-full { grid-row: 1 / -1; }
+    }
+    
+    // Position modifiers - place items in specific grid areas
+    &-start {
+      &-1 { grid-column-start: 1; }
+      &-2 { grid-column-start: 2; }
+      &-3 { grid-column-start: 3; }
+      &-4 { grid-column-start: 4; }
+    }
+    
+    &-end {
+      &-1 { grid-column-end: 1; }
+      &-2 { grid-column-end: 2; }
+      &-3 { grid-column-end: 3; }
+      &-4 { grid-column-end: 4; }
+    }
+    
+    // Self alignment - override parent grid alignment for this item
+    &-self {
+      &-start { justify-self: start; }
+      &-center { justify-self: center; }
+      &-end { justify-self: end; }
+      &-stretch { justify-self: stretch; }
+    }
+    
+    // Compound modifiers - useful combinations
+    &-span-2 {
+      &-start-1 { 
+        @extend .grid-item--span-2;
+        grid-column-start: 1;
+      }
+    }
+    
+    &-span-3 {
+      &-start-1 { 
+        @extend .grid-item--span-3;
+        grid-column-start: 1;
+      }
+    }
+    
+    &-full {
+      &-center { 
+        @extend .grid-item--span-full;
+        justify-self: center;
+      }
+    }
+  }
+}
