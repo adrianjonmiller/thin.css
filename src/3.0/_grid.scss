@@ -8,17 +8,12 @@
   display: grid;
   
   &- {
-    // Basic grid templates - most common layouts (apply at all screen sizes)
+    // Grid column templates - base and responsive
     &-cols {
-      &-1 { grid-template-columns: repeat(1, 1fr); }
-      &-2 { grid-template-columns: repeat(2, 1fr); }
-      &-3 { grid-template-columns: repeat(3, 1fr); }
-      &-4 { grid-template-columns: repeat(4, 1fr); }
-      &-6 { grid-template-columns: repeat(6, 1fr); }
-      &-12 { grid-template-columns: repeat(12, 1fr); }
-      
-      // Responsive grid templates - 768px, 1024px, 1440px breakpoints
       &-1 {
+        @extend .grid;
+        grid-template-columns: repeat(1, 1fr);
+
         &-768 { 
           @extend .grid;
           @media screen and (min-width: 768px) { 
@@ -40,6 +35,9 @@
       }
       
       &-2 {
+        @extend .grid;
+        grid-template-columns: repeat(2, 1fr);
+        
         &-768 { 
           @extend .grid;
           @media screen and (min-width: 768px) { 
@@ -61,6 +59,9 @@
       }
       
       &-3 {
+        @extend .grid;
+        grid-template-columns: repeat(3, 1fr);
+        
         &-768 { 
           @extend .grid;
           @media screen and (min-width: 768px) { 
@@ -82,6 +83,9 @@
       }
       
       &-4 {
+        @extend .grid;
+        grid-template-columns: repeat(4, 1fr);
+        
         &-768 { 
           @extend .grid;
           @media screen and (min-width: 768px) { 
@@ -103,6 +107,9 @@
       }
       
       &-6 {
+        @extend .grid;
+        grid-template-columns: repeat(6, 1fr);
+        
         &-768 { 
           @extend .grid;
           @media screen and (min-width: 768px) { 
@@ -124,6 +131,9 @@
       }
       
       &-12 {
+        @extend .grid;
+        grid-template-columns: repeat(12, 1fr);
+        
         &-768 { 
           @extend .grid;
           @media screen and (min-width: 768px) { 
