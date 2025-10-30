@@ -1,0 +1,30 @@
+// App utilities
+.app {
+  &-{
+    // Viewport-sized block that accounts for mobile browser UI
+    &-viewport {
+      width: 100%;
+      min-height: 100vh; // fallback
+      height: 100dvh;    // modern/iOS correct height
+    }
+
+    // Fixed, full-screen frame that clips overflow (useful for SPA shells)
+    &-shell {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+    }
+
+    // Safe area padding for devices with display cutouts
+    &-safePad {
+      padding: env(safe-area-inset-top) env(safe-area-inset-right)
+               env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+  }
+}

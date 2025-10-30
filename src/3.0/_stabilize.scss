@@ -1,0 +1,15 @@
+@use 'lib/extends';
+
+.stabilize {
+  &:where(html) {
+    @extend %stabilize-window;
+
+    body {
+      @extend %stabilize-window;
+    }
+  }
+
+  &:where(body) {
+    @extend %stabilize-window;
+  }
+}

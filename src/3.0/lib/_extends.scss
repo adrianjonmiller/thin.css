@@ -12,6 +12,15 @@
   border-radius: 0;
 }
 
+// Global app environment stabilizers
+%stabilize-window {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+
 
 %remove-scrollbar {
   scrollbar-width: none; /* Firefox */
